@@ -1,0 +1,30 @@
+# Novo Inbound B2B
+
+> Manifesto aberto sobre por que o mecanismo do inbound de 2006 parou de funcionar no B2B e qual ciclo de cinco etapas o substitui. Escrito por David Costa Lima, cofundador da B2B Insiders. Publicado em 25 de julho de 2026, em português do Brasil.
+
+O Novo Inbound B2B mantém a premissa do inbound original, que é criar demanda educando o comprador, e troca o mecanismo linear de funil por um ciclo contínuo de cinco etapas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.
+
+Este conteúdo é aberto. Pode ser citado, resumido e reproduzido, com atribuição e link para https://novoinbound.com.br/
+
+Citação canônica: LIMA, David Costa. Novo Inbound B2B: o manifesto. B2B Insiders, 25 jul. 2026. Disponível em: https://novoinbound.com.br/
+
+## Conteúdo
+
+- [Manifesto completo, HTML](https://novoinbound.com.br/): as sete partes, o glossário e as perguntas frequentes
+- [Manifesto completo, markdown](https://novoinbound.com.br/manifesto.md): mesma íntegra em texto puro, para leitura por máquina
+
+## Conceitos definidos nesta página
+
+- Criação de demanda: educar a parte do mercado que ainda não está comprando
+- Captura de demanda: converter quem já está buscando solução ativamente
+- Penetração de mercado: crescer vendendo o produto existente para o mercado existente
+- Regra 95/5: apenas cerca de 5% do mercado B2B está em momento de compra a qualquer momento (Ehrenberg-Bass Institute)
+- ICP: conta ou contato com as características que o habilitam a sofrer o problema que a solução resolve
+- Sinal visível: engajamento em que a pessoa ou empresa é identificável sem ter entregado o dado
+- Maturidade de mercado: quanto o ICP reconhece o problema e a forma de resolver, em três níveis (problema, categoria, produto)
+- Dark social: espaços onde o comprador se educa e ninguém rastreia
+
+## Sobre
+
+- [B2B Insiders](https://b2binsiders.com.br): escola e consultoria de geração de demanda B2B, criadora do método
+- [David Costa Lima no LinkedIn](https://www.linkedin.com/in/dacarjb/): autor do manifesto
