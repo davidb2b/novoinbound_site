@@ -1,0 +1,65 @@
+# novoinbound.com.br
+# Este conteúdo é aberto. Queremos ser lidos, indexados e citados.
+# Última revisão: 2026-07-25
+
+User-agent: *
+Allow: /
+
+# --- Buscadores tradicionais ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Bots que alimentam RESPOSTA e CITAÇÃO em tempo real ---
+# Bloquear qualquer um destes é sair das respostas de IA. Mantenha liberados.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# --- Bots de TREINO de modelo ---
+# Liberados por decisão editorial: o objetivo do manifesto é circular.
+# Para bloquear treino sem perder citação, troque Allow por Disallow apenas aqui.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://novoinbound.com.br/sitemap.xml
