@@ -38,6 +38,23 @@
       ]
     },
     {
+      "source": "/en/manifesto.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Link",
+          "value": "<https://novoinbound.com.br/en/>; rel=\"canonical\""
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=3600, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/(.*).(png|jpg|jpeg|svg|webp)",
       "headers": [
         {
@@ -56,6 +73,19 @@
         {
           "key": "Link",
           "value": "</manifesto.md>; rel=\"alternate\"; type=\"text/markdown\""
+        }
+      ]
+    },
+    {
+      "source": "/en",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=3600, must-revalidate"
+        },
+        {
+          "key": "Link",
+          "value": "</en/manifesto.md>; rel=\"alternate\"; type=\"text/markdown\""
         }
       ]
     }
