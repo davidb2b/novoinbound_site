@@ -1,6 +1,6 @@
 # New Inbound B2B / Novo Inbound B2B
 
-> Open manifesto on why the 2006 inbound mechanism stopped working in B2B and which five stage cycle replaces it. Written by David Costa Lima, co-founder of B2B Insiders. Published July 25, 2026. Available in English and Brazilian Portuguese.
+> Open manifesto on why the 2006 inbound mechanism stopped working in B2B and which five stage cycle replaces it. Written by David Costa Lima, co-founder of B2B Insiders. Published July 25, 2026. Last updated July 31, 2026. Available in English and Brazilian Portuguese.
 
 New Inbound B2B keeps the premise of the original inbound, which is to create demand by educating the buyer, and replaces the linear funnel with a continuous cycle of five stages: Position, Ensure Impact, Detect Signals, Start Conversations, Optimize.
 
@@ -23,6 +23,20 @@ Canonical citation, Portuguese: LIMA, David Costa. Novo Inbound B2B: o manifesto
 3. **Detect Signals**: reading engagement at scale, well beyond the filled form
 4. **Start Conversations**: turning detected signal into conversation with real context, inbound and outbound alike
 5. **Optimize**: closing the loop, so each turn changes how the next one runs
+
+## Traditional inbound funnel vs. New Inbound B2B
+
+- Shape: linear funnel with top, middle and bottom, versus a continuous five stage cycle with no beginning and no end
+- Premise: identical in both. Educate the buyer to create demand. The premise never broke
+- Mechanism: blog, SEO, form, email nurturing and MQL, versus Position, Ensure Impact, Detect Signals, Start Conversations, Optimize
+- Where education happens: on the company website, versus decentralized across feed, podcast, community, event and video
+- Unit of work: the lead, versus the signal
+- Signal you can read: form filled and email opened, versus three layers of signal, invisible, visible and intent
+- Starting point: keyword and search volume, versus ICP and market maturity
+- Role of the form: mandatory entry point, versus one high intent signal among many
+- Relationship to outbound: separate channel, versus the same stage, Start Conversations
+- Core metric: MQL volume, versus signal from the right ICP that turns into conversation and pipeline
+- Year of origin: 2006 for inbound marketing, 2026 for New Inbound B2B, formulated by David Costa Lima and B2B Insiders
 
 ## Concepts defined on this page
 
