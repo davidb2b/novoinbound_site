@@ -37,963 +37,1082 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
-<style>
-*,*::before,*::after{box-sizing:border-box}
-:root{
-  --paper:#FFFFFF;
-  --paper-2:#F7F4EC;
-  --paper-3:#FDF7F0;
-  --tinta:#171310;
-  --tinta-2:#554d43;
-  --filete:#E2DDD1;
-  --filete-2:#EFEAE0;
-  --mute:#8f877a;
-  --vinho:#690c3f;
-  --vinho-2:#8d1a58;
-  --laranja:#ff6a2d;
-  --serif:'Newsreader',Georgia,'Times New Roman',serif;
-  --sans:'Host Grotesk',ui-sans-serif,system-ui,-apple-system,sans-serif;
-  --label:'Host Grotesk',ui-sans-serif,system-ui,-apple-system,sans-serif;
-  --col:760px;
-}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:88px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{
-  margin:0;background:var(--paper);color:var(--tinta);
-  font-family:var(--serif);font-size:19.5px;line-height:1.72;
-  font-variation-settings:"opsz" 16;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-}
-img,svg{max-width:100%;height:auto}
-a{color:inherit;text-decoration:none;border-bottom:1px solid var(--laranja);transition:background-color .15s}
-a:hover{background:var(--paper-3)}
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--vinho);outline-offset:3px;border-radius:2px}
-.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.skip{position:absolute;left:-9999px;top:0;background:var(--tinta);color:#fff;padding:12px 18px;font-family:var(--sans);font-size:15px;z-index:200;border:0}
-.skip:focus{left:12px;top:12px}
-
-/* ---------- barra superior ---------- */
-.topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--filete)}
-.topbar .in{max-width:1180px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;gap:18px}
-.brand{font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:-.01em;color:var(--tinta);border:0;white-space:nowrap}
-.brand:hover{background:none}
-.brand i{font-style:normal;color:var(--laranja);font-weight:600}
-.tb-tag{font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);border-left:1px solid var(--filete);padding-left:18px}
-.tb-sp{flex:1}
-.tb-time{font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--vinho);white-space:nowrap}
-.tb-a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--tinta-2);border-bottom:1px solid var(--filete);white-space:nowrap}
-.tb-btn{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--tinta-2);background:none;border:1px solid var(--filete);border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
-.tb-btn:hover{border-color:var(--laranja);color:var(--tinta)}
-.progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--laranja);width:0}
-
-/* ---------- coluna ---------- */
-.wrap{max-width:var(--col);margin:0 auto;padding:0 28px}
-main{display:block}
-article{display:block}
-.brk{--bw:min(1080px,calc(100vw - 48px));width:var(--bw);margin-left:calc((100% - var(--bw))/2);margin-right:0}
-
-/* ---------- hero ---------- */
-.hero{padding:64px 0 0}
-.hero .kick{font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--vinho);display:block;margin-bottom:22px}
-h1{
-  font-family:var(--serif);font-weight:600;font-variation-settings:"opsz" 44;
-  font-size:clamp(34px,5.4vw,56px);line-height:1.08;letter-spacing:-.022em;
-  margin:0 0 20px;text-wrap:balance;
-}
-h1 b{font-weight:600;color:var(--vinho)}
-.dek{font-family:var(--serif);font-size:clamp(19px,2.3vw,22px);line-height:1.6;color:var(--tinta-2);margin:0 0 8px;max-width:38em}
-
-/* autoria */
-.byline{display:flex;gap:18px;align-items:center;margin:34px 0 0;padding:22px 0 0;border-top:1px solid var(--filete)}
-.bl-face{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:0 0 84px;background:var(--paper-2);border:1px solid var(--filete);display:block}
-.bl-txt{min-width:0}
-.bl-lead{font-family:var(--sans);font-size:17px;line-height:1.5;color:var(--tinta);margin:0 0 6px}
-.bl-lead b{font-weight:700}
-.bl-note{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2);margin:0 0 10px;max-width:52em}
-.bl-meta{font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0;display:flex;flex-wrap:wrap;gap:4px 0}
-.bl-meta span:not(:last-child)::after{content:"·";margin:0 9px;color:var(--filete)}
-
-/* ---------- resposta curta ---------- */
-.short{margin:52px 0 0;padding:30px 32px;background:var(--paper-2);border-left:3px solid var(--laranja);position:relative}
-.short .lbl{display:block;font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px}
-.short p{font-family:var(--serif);font-size:20px;line-height:1.6;margin:0;color:var(--tinta);font-variation-settings:"opsz" 20}
-.short .perma{margin-left:8px}
-
-/* ---------- sumário ---------- */
-.toc-side{display:none}
-@media (min-width:1280px){
-  main,footer{margin-left:236px}
-  .toc-side{display:block;position:fixed;left:max(20px,calc(50vw - 660px));top:104px;width:200px;z-index:40}
-  .brk{--bw:min(1000px,calc(100vw - 340px))}
-  .toc-side .lbl{font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--filete)}
-  .toc-side ol{list-style:none;margin:0;padding:0;counter-reset:t}
-  .toc-side li{counter-increment:t;margin-bottom:9px}
-  .toc-side a{display:block;font-family:var(--sans);font-size:13px;line-height:1.35;color:var(--mute);border:0;padding-left:20px;position:relative}
-  .toc-side a::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;top:1px;font-size:10px;font-weight:600;letter-spacing:.04em;color:var(--filete)}
-  .toc-side a:hover{color:var(--tinta);background:none}
-  .toc-side a[aria-current="true"]{color:var(--vinho);font-weight:600}
-  .toc-side a[aria-current="true"]::before{color:var(--laranja)}
-}
-.toc-mob{margin:44px 0 0;border-top:2px solid var(--tinta);border-bottom:1px solid var(--filete)}
-@media (min-width:1280px){.toc-mob{display:none}}
-.toc-mob summary{list-style:none;cursor:pointer;padding:16px 0;font-family:var(--label);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--tinta);display:flex;align-items:center;justify-content:space-between}
-.toc-mob summary::-webkit-details-marker{display:none}
-.toc-mob summary::after{content:"+";font-size:19px;color:var(--laranja);font-weight:400}
-.toc-mob[open] summary::after{content:"−"}
-.toc-mob ol{list-style:none;margin:0;padding:0 0 18px;counter-reset:m}
-.toc-mob li{counter-increment:m;border-top:1px solid var(--filete-2)}
-.toc-mob a{display:block;padding:12px 0 12px 30px;font-family:var(--sans);font-size:15.5px;color:var(--tinta);border:0;position:relative}
-.toc-mob a::before{content:counter(m,decimal-leading-zero);position:absolute;left:0;top:14px;font-size:10.5px;font-weight:600;color:var(--laranja)}
-
-/* ---------- tipografia do corpo ---------- */
-.part{padding:64px 0 0}
-.partmark{margin-bottom:26px}
-.partmark .n{display:block;font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px}
-h2{font-family:var(--serif);font-weight:600;font-variation-settings:"opsz" 34;font-size:clamp(27px,3.7vw,36px);line-height:1.16;letter-spacing:-.016em;margin:0;text-wrap:balance}
-h3{font-family:var(--serif);font-weight:600;font-variation-settings:"opsz" 26;font-size:clamp(21px,2.6vw,25px);line-height:1.25;letter-spacing:-.01em;margin:46px 0 12px}
-h4{font-family:var(--sans);font-weight:600;font-size:17px;line-height:1.35;margin:30px 0 8px;color:var(--tinta)}
-p{margin:0 0 20px;max-width:38em}
-.answer{font-size:21px;line-height:1.62;color:var(--tinta);border-left:2px solid var(--laranja);padding-left:20px;font-variation-settings:"opsz" 22}
-ul,ol{margin:0 0 22px;padding-left:24px;max-width:38em}
-li{margin-bottom:9px;padding-left:4px}
-li::marker{color:var(--laranja)}
-b,strong{font-weight:600}
-hr{border:0;border-top:1px solid var(--filete);margin:44px 0}
-
-/* pull quote */
-.pq{margin:44px 0;padding:0 0 0 26px;border-left:3px solid var(--vinho)}
-.pq p{font-family:var(--serif);font-size:clamp(22px,3vw,27px);line-height:1.32;font-weight:600;font-variation-settings:"opsz" 30;letter-spacing:-.012em;color:var(--vinho);margin:0;max-width:20em}
-
-/* nota lateral / caixa */
-.note{margin:34px 0;padding:22px 24px;background:var(--paper-2);border:1px solid var(--filete)}
-.note p:last-child{margin-bottom:0}
-.note .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
-.note p{font-family:var(--sans);font-size:16px;line-height:1.6}
-
-/* etapa do ciclo */
-.etapa{margin:0 0 8px;padding:34px 0 0;border-top:1px solid var(--filete)}
-.etapa:first-of-type{border-top:2px solid var(--tinta)}
-.et-n{display:block;font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--laranja);margin-bottom:8px}
-.etapa h3{margin-top:0}
-.et-meta{margin:24px 0 34px;padding:18px 22px;background:var(--paper-2);border-left:2px solid var(--vinho)}
-.et-meta p{font-family:var(--sans);font-size:15.5px;line-height:1.55;margin:0 0 8px;max-width:none}
-.et-meta p:last-child{margin-bottom:0}
-.et-meta b{color:var(--vinho)}
-
-/* tabelas */
-.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--filete);background:var(--paper);margin:30px 0}
-table{width:100%;min-width:600px;border-collapse:collapse;font-family:var(--sans);font-size:15.5px;line-height:1.55}
-th,td{padding:13px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--filete-2)}
-thead th{font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);background:var(--paper-2);border-bottom:2px solid var(--tinta);white-space:nowrap}
-tbody th{font-weight:600;color:var(--tinta);width:20%}
-tbody td{color:var(--tinta-2)}
-tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
-caption{text-align:left;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);padding:12px 16px;border-bottom:1px solid var(--filete)}
-
-/* ---------- figuras ---------- */
-figure{margin:48px 0}
-figure .fig-in{border:1px solid var(--filete);background:var(--paper-2);padding:26px 24px}
-figure svg{display:block;width:100%;height:auto}
-figcaption{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2);margin-top:12px;max-width:44em}
-figcaption b{color:var(--tinta);font-weight:600}
-.fig-eq{margin:14px 0 0;border:1px solid var(--filete-2);background:var(--paper)}
-.fig-eq summary{list-style:none;cursor:pointer;padding:11px 16px;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between;align-items:center}
-.fig-eq summary::-webkit-details-marker{display:none}
-.fig-eq summary::after{content:"+";font-size:17px;color:var(--laranja);font-weight:400}
-.fig-eq[open] summary::after{content:"−"}
-.fig-eq .bd{padding:2px 16px 16px;font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--tinta-2)}
-.fig-eq .bd p{font-family:var(--sans);font-size:15px;margin:0 0 10px;max-width:none}
-.fig-eq .bd ul{font-family:var(--sans);font-size:15px;margin:0 0 10px;max-width:none}
-.fig-eq .bd li{margin-bottom:5px}
-.fig-eq .bd :last-child{margin-bottom:0}
-
-/* ---------- FAQ ---------- */
-.faq{border-top:2px solid var(--tinta);margin-top:26px}
-.qa{border-bottom:1px solid var(--filete)}
-.qa-h{margin:0}
-.qa-btn{width:100%;display:flex;gap:16px;align-items:flex-start;justify-content:space-between;background:none;border:0;cursor:pointer;padding:20px 0;text-align:left;font-family:var(--serif);font-size:20.5px;line-height:1.34;font-weight:600;font-variation-settings:"opsz" 22;color:var(--tinta)}
-.qa-btn:hover{color:var(--vinho)}
-.qa-ic{flex:0 0 22px;height:22px;position:relative;margin-top:6px}
-.qa-ic::before,.qa-ic::after{content:"";position:absolute;background:var(--laranja);left:50%;top:50%;transform:translate(-50%,-50%)}
-.qa-ic::before{width:15px;height:2px}
-.qa-ic::after{width:2px;height:15px;transition:transform .18s}
-.qa-btn[aria-expanded="true"] .qa-ic::after{transform:translate(-50%,-50%) scaleY(0)}
-.qa-bd{padding:0 0 22px;max-width:38em}
-.qa-bd p{font-size:18.5px;line-height:1.66;color:var(--tinta-2);margin:0 0 14px}
-.qa-bd p:last-child{margin-bottom:0}
-.qa-bd .perma{opacity:0}
-.qa:hover .qa-bd .perma,.qa-bd .perma:focus{opacity:1}
-
-/* ---------- glossário ---------- */
-.gloss{margin-top:26px;border-top:2px solid var(--tinta)}
-@media (min-width:900px){.gloss{column-count:2;column-gap:44px}}
-.gloss dl{margin:0;padding:20px 0;border-bottom:1px solid var(--filete);break-inside:avoid}
-.gloss dt{font-family:var(--sans);font-size:16.5px;font-weight:700;color:var(--tinta);margin-bottom:6px;display:flex;align-items:baseline;gap:6px}
-.gloss dd{margin:0;font-size:17px;line-height:1.6;color:var(--tinta-2)}
-.gloss dl:target{background:var(--paper-3)}
-.gloss dl:target dt{color:var(--vinho)}
-.perma{border:0;background:none;padding:0 2px;cursor:pointer;color:var(--filete);font-family:var(--sans);font-size:14px;line-height:1;transition:color .15s}
-.perma:hover{color:var(--laranja);background:none}
-.gloss dt .perma{opacity:0}
-.gloss dl:hover .perma,.perma:focus{opacity:1}
-
-/* ---------- ferramentas ---------- */
-.tools{background:var(--paper-2);border-top:1px solid var(--filete);border-bottom:1px solid var(--filete);margin-top:74px;padding:60px 0}
-.tool{background:var(--paper);border:1px solid var(--filete);padding:32px 30px;margin-bottom:26px}
-.tool:last-child{margin-bottom:0}
-.tool > .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px}
-.tool h3{margin:0 0 10px;font-size:clamp(22px,2.8vw,27px)}
-.tool .intro{font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--tinta-2);margin:0 0 24px;max-width:46em}
-.bar{height:4px;background:var(--filete-2);margin:0 0 8px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--laranja);width:0;transition:width .25s}
-.bar-t{font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 26px}
-fieldset{border:0;margin:0 0 26px;padding:0}
-legend{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.4;color:var(--tinta);margin-bottom:12px;padding:0}
-.opts{display:grid;gap:8px}
-.opt{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;border:1px solid var(--filete);background:var(--paper);cursor:pointer;font-family:var(--sans);font-size:15.5px;line-height:1.5;color:var(--tinta-2);transition:border-color .15s,background-color .15s}
-.opt:hover{border-color:var(--laranja)}
-.opt input{margin:3px 0 0;accent-color:var(--vinho);flex:0 0 auto}
-.opt.on{border-color:var(--vinho);background:var(--paper-3);color:var(--tinta)}
-.opt .k{font-weight:700;color:var(--vinho);flex:0 0 auto}
-.btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:11px 22px;border:1px solid var(--tinta);background:var(--tinta);color:#fff;cursor:pointer;border-radius:0}
-.btn:hover{background:var(--vinho);border-color:var(--vinho)}
-.btn.ghost{background:none;color:var(--tinta);border-color:var(--filete)}
-.btn.ghost:hover{background:none;border-color:var(--laranja);color:var(--vinho)}
-.btn[disabled]{opacity:.4;cursor:not-allowed}
-.btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.res{margin-top:26px;padding:26px 26px;border:1px solid var(--vinho);background:var(--paper-3)}
-.res .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--vinho);margin-bottom:10px}
-.res h4{font-family:var(--serif);font-size:25px;font-weight:600;font-variation-settings:"opsz" 26;margin:0 0 12px;color:var(--tinta)}
-.res p{font-family:var(--sans);font-size:16px;line-height:1.62;color:var(--tinta-2);margin:0 0 14px;max-width:none}
-.res ul{font-family:var(--sans);font-size:15.5px;line-height:1.55;color:var(--tinta-2);margin:0 0 14px;max-width:none;padding-left:20px}
-.res h5{font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:18px 0 8px}
-.res :last-child{margin-bottom:0}
-.taticas{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:8px;margin:0 0 22px}
-.tag{display:inline-block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--filete);color:var(--tinta-2);margin:0 5px 5px 0;background:var(--paper)}
-.tag.o{border-color:#d9c3a8;color:#8a5a1e;background:#FBF2E6}
-.tag.f{border-color:#d8b8c8;color:var(--vinho);background:#FBEFF5}
-.rowlist{margin:0;padding:0;list-style:none}
-.rowlist li{border-bottom:1px solid var(--filete-2);padding:14px 0;margin:0}
-.rowlist li:last-child{border-bottom:0}
-.rowlist .nm{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--tinta);margin:0 0 7px}
-.rowlist .lim{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2);margin:6px 0 0}
-.cegos{margin:0;padding-left:20px;font-family:var(--sans);font-size:15.5px;line-height:1.55;color:var(--tinta-2)}
-.cegos li{margin-bottom:8px}
-
-/* ---------- bloco citar ---------- */
-.cite{margin-top:74px;padding:34px 32px;border:1px solid var(--tinta);background:var(--paper)}
-.cite .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px}
-.cite h2{font-size:clamp(24px,3vw,30px);margin-bottom:14px}
-.cite p{font-family:var(--sans);font-size:16px;line-height:1.62;color:var(--tinta-2);max-width:46em}
-.ref-can{font-family:var(--sans);font-size:14.5px;line-height:1.6;color:var(--tinta);background:var(--paper-2);border-left:2px solid var(--laranja);padding:14px 16px;margin:18px 0 20px;word-break:break-word}
-
-/* ---------- encerramento ---------- */
-.end{margin-top:74px;padding:60px 0 0;border-top:2px solid var(--tinta)}
-.end p{font-size:20.5px}
-.cta{margin:44px 0 0;display:grid;gap:14px}
-.cta a{display:flex;gap:16px;align-items:baseline;border:1px solid var(--filete);border-left-width:3px;padding:20px 24px;font-family:var(--sans);text-decoration:none;transition:border-color .15s,background-color .15s}
-.cta a:hover{background:var(--paper-3)}
-.cta .c1{border-left-color:var(--laranja)}
-.cta .c2{border-left-color:var(--vinho)}
-.cta .c3{border-left-color:var(--filete)}
-.cta .r{font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);flex:0 0 76px;padding-top:4px}
-.cta .t{font-size:18px;font-weight:600;color:var(--tinta);display:block;margin-bottom:3px}
-.cta .d{font-size:15px;line-height:1.5;color:var(--tinta-2);display:block}
-
-/* ---------- referências ---------- */
-.refs{margin-top:64px;padding-top:34px;border-top:1px solid var(--filete)}
-.refs h2{font-size:clamp(22px,2.6vw,26px);margin-bottom:20px}
-.refs ol{list-style:none;padding:0;counter-reset:r;max-width:46em}
-.refs li{counter-increment:r;position:relative;padding-left:36px;margin-bottom:18px;font-family:var(--sans);font-size:15.5px;line-height:1.58;color:var(--tinta-2)}
-.refs li::before{content:"[" counter(r) "]";position:absolute;left:0;top:0;font-family:var(--label);font-size:12px;font-weight:600;color:var(--laranja)}
-.refs li a{color:var(--tinta);font-weight:500}
-sup.fn{font-size:.66em;line-height:0;vertical-align:super}
-sup.fn a{border:0;color:var(--laranja);font-weight:600;padding:0 1px}
-
-/* ---------- rodapé ---------- */
-footer{margin-top:74px;border-top:1px solid var(--filete);padding:34px 0 60px}
-footer .in{font-family:var(--sans);font-size:14.5px;line-height:1.6;color:var(--mute);display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between}
-footer a{color:var(--tinta-2);border-bottom-color:var(--filete)}
-
-/* ---------- toast ---------- */
-.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(14px);background:var(--tinta);color:#fff;font-family:var(--sans);font-size:14.5px;padding:11px 20px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:120}
-.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-
-/* ---------- responsivo ---------- */
-@media (max-width:900px){
-  body{font-size:18.5px;line-height:1.7}
-  .brk{width:auto;margin-left:0}
-  .hero{padding-top:44px}
-  .part{padding-top:52px}
-  .short{padding:24px 22px}
-  .cite{padding:26px 22px}
-  .tool{padding:26px 20px}
-  .answer{font-size:19.5px;padding-left:16px}
-  figure .fig-in{padding:18px 14px}
-  .taticas{grid-template-columns:1fr}
-}
-@media (max-width:620px){
-  .wrap{padding:0 20px}
-  .tb-tag{display:none}
-  .byline{gap:14px;align-items:flex-start}
-  .bl-face{width:64px;height:64px;flex-basis:64px}
-  .pq p{font-size:21px}
-  .qa-btn{font-size:18.5px}
-  table{min-width:0}
-  .tbl-wrap{border:0}
-  thead{display:none}
-  tbody,tbody tr,tbody th,tbody td{display:block;width:auto}
-  tbody tr{border:1px solid var(--filete);background:var(--paper);margin-bottom:14px}
-  tbody th{background:var(--paper-2);border-bottom:1px solid var(--filete);font-size:16px;padding:11px 14px}
-  tbody td{border-bottom:1px solid var(--filete-2);padding:11px 14px 13px;font-size:15px}
-  tbody td::before{content:attr(data-l);display:block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
-  tbody tr:last-child th{border-bottom:1px solid var(--filete)}
-  tbody tr:last-child td:last-child{border-bottom:0}
-  caption{padding:0 0 10px}
-  .cta a{flex-direction:column;gap:6px}
-  .cta .r{flex-basis:auto}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
-}
-@media print{
-  .topbar,.toc-side,.toc-mob,.cta,.fig-eq summary{display:none}
-  body{font-size:11pt}
-  .fig-eq{border:0}
-}
-
-/* ================= diagramas ================= */
-/* linha do tempo */
-.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:none}
-.tl-i{position:relative;padding:34px 20px 4px 0;margin:0}
-.tl-i::before{content:"";position:absolute;left:0;top:12px;right:0;height:2px;background:var(--filete)}
-.tl-i::after{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--paper-2);border:2px solid var(--laranja)}
-.tl-i:last-child::before{right:20px}
-.tl-now::after{background:var(--vinho);border-color:var(--vinho)}
-.tl-y{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--laranja);margin-bottom:7px}
-.tl-now .tl-y{color:var(--vinho)}
-.tl-t{display:block;font-family:var(--sans);font-size:16.5px;font-weight:700;line-height:1.3;color:var(--tinta);margin-bottom:7px}
-.tl-d{display:block;font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2)}
-@media (max-width:760px){
-  .tl{grid-template-columns:1fr}
-  .tl-i{padding:0 0 26px 26px}
-  .tl-i::before{left:6px;top:6px;bottom:0;right:auto;width:2px;height:auto}
-  .tl-i:last-child::before{bottom:auto;height:14px}
-  .tl-i::after{left:0;top:2px}
-}
-
-/* hub da conta */
-.hub{display:block}
-.hub-c{border:2px solid var(--vinho);background:var(--paper);padding:18px 22px;text-align:center;margin-bottom:16px}
-.hub-ct{display:block;font-family:var(--sans);font-size:19px;font-weight:700;color:var(--vinho)}
-.hub-cs{display:block;font-family:var(--sans);font-size:14.5px;color:var(--tinta-2);margin-top:4px}
-.hub-g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:none}
-.hub-i{margin:0;padding:15px 16px;border:1px solid var(--filete);background:var(--paper);position:relative}
-.hub-r{display:block;font-family:var(--sans);font-size:16px;font-weight:700;color:var(--tinta);margin-bottom:4px}
-.hub-ch{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--laranja)}
-.hub-n{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2);margin:16px 0 0;max-width:none;text-align:center}
-@media (max-width:760px){.hub-g{grid-template-columns:1fr 1fr}}
-@media (max-width:460px){.hub-g{grid-template-columns:1fr}}
-
-/* zonas de observabilidade */
-.zones{display:grid;gap:10px}
-.zone{padding:18px 22px;border:1px solid var(--filete);background:var(--paper)}
-.zone-h{display:block;font-family:var(--sans);font-size:18px;font-weight:700;color:var(--tinta);margin-bottom:3px}
-.zone-s{display:block;font-family:var(--sans);font-size:14.5px;color:var(--tinta-2);margin-bottom:9px}
-.zone-l{display:block;font-family:var(--label);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);line-height:1.7}
-.z1{border-left:4px solid var(--laranja)}
-.z1 .zone-l{color:#a8541f}
-.z2{border-left:4px solid #DE93B6;background:#FDF7F0}
-.z2 .zone-l{color:var(--vinho)}
-.z3{border-left:4px solid var(--tinta);background:var(--tinta)}
-.z3 .zone-h{color:#fff}
-.z3 .zone-s{color:#b9b0a4}
-.z3 .zone-l{color:#8f877a}
-
-/* comparação em três colunas */
-.cmp3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.cmp3-c{border:1px solid var(--filete);background:var(--paper);padding:20px 20px 6px}
-.cmp3-on{border-color:var(--vinho);border-width:2px;background:var(--paper-3)}
-.cmp3-k{display:block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
-.cmp3-on .cmp3-k{color:var(--vinho)}
-.cmp3-h{margin-top:0;font-family:var(--serif);font-size:21px;font-weight:600;font-variation-settings:"opsz" 24;margin:0 0 14px;color:var(--tinta)}
-.cmp3-d{margin:0}
-.cmp3-d dt{font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:3px}
-.cmp3-d dd{margin:0 0 13px;font-family:var(--sans);font-size:15px;line-height:1.5;color:var(--tinta-2)}
-.cmp3-on .cmp3-d dd{color:var(--tinta)}
-.cmp3-n{font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--tinta-2);margin:16px 0 0;max-width:none}
-@media (max-width:820px){.cmp3{grid-template-columns:1fr}}
-
-/* matriz de sinais */
-.mtx{position:relative;padding-left:34px}
-.mtx-ax{font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mute)}
-.mtx-ay{position:absolute;left:4px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left center;white-space:nowrap}
-.mtx-axx{display:block;text-align:center;margin-top:10px}
-.mtx-g{display:grid;grid-template-columns:112px repeat(3,1fr);gap:6px}
-.mtx-hd{font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--tinta);padding:0 0 4px;align-self:end}
-.mtx-rw{font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--tinta);display:flex;align-items:center}
-.mtx-cell{font-family:var(--sans);font-size:14.5px;line-height:1.35;font-weight:600;padding:16px 14px;min-height:64px;display:flex;align-items:center;border:1px solid var(--filete)}
-.mtx-l1{background:#FDF3E8;color:#8a5a1e;border-color:#F0DEC6}
-.mtx-l2{background:#FBEAF2;color:var(--vinho);border-color:#EFD3E1}
-.mtx-l3{background:var(--vinho);color:#fff;border-color:var(--vinho)}
-.mtx-empty{background:var(--paper);color:var(--mute);font-weight:400;font-style:italic;border-style:dashed}
-@media (max-width:700px){
-  .mtx{padding-left:0}
-  .mtx-ay{position:static;transform:none;display:block;margin-bottom:8px}
-  .mtx-g{grid-template-columns:1fr}
-  .mtx-hd{display:none}
-  .mtx-rw{margin-top:14px;padding-bottom:2px;border-bottom:1px solid var(--filete)}
-  .mtx-cell{min-height:0;padding:12px 14px}
-  .mtx-cell::before{content:attr(data-o);font-family:var(--label);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.72;display:block;margin-bottom:3px}
-  .mtx-cell{flex-direction:column;align-items:flex-start}
-}
-
-/* fluxo mercado a receita */
-.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:none}
-.flow li{margin:0;padding:16px 14px;border:1px solid var(--filete);background:var(--paper);position:relative}
-.flow li+li::before{content:"";position:absolute;left:-8px;top:50%;width:8px;height:1px;background:var(--filete)}
-.flow-n{display:block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.14em;color:var(--laranja);margin-bottom:6px}
-.flow-t{display:block;font-family:var(--sans);font-size:16px;font-weight:700;color:var(--tinta);margin-bottom:4px}
-.flow-d{display:block;font-family:var(--sans);font-size:13.5px;line-height:1.45;color:var(--tinta-2)}
-.flow-back{font-family:var(--sans);font-size:14.5px;color:var(--vinho);font-weight:600;margin:14px 0 0;max-width:none;padding-left:22px;position:relative}
-.flow-back::before{content:"↺";position:absolute;left:0;top:-1px;font-size:16px}
-.flow-note{font-family:var(--sans);font-size:13.5px;color:var(--mute);margin:8px 0 0;max-width:none}
-@media (max-width:900px){.flow{grid-template-columns:1fr 1fr}.flow li+li::before{display:none}}
-@media (max-width:460px){.flow{grid-template-columns:1fr}}
-
-/* ciclo */
-.ringbox{display:flex;flex-direction:column;align-items:center;gap:18px}
-.ringbox svg{max-width:460px;width:100%}
-.ring-orb{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:none}
-.ring-orb li{margin:0;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2);border:1px solid var(--filete);background:var(--paper);padding:6px 13px}
-.segg .segp{transition:opacity .3s}
-.segg .segt{fill:#8f877a;transition:fill .3s}
-.segg.on .segt{fill:#171310}
-.segg .segp{opacity:.45}
-.segg.on .segp{opacity:1}
-
-/* níveis de maturidade */
-.lvls{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px}
-.lvl{border:1px solid var(--filete);background:var(--paper-2);padding:16px 18px}
-.lvl-k{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--laranja);margin-bottom:7px}
-.lvl p{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2);margin:0;max-width:none}
-@media (max-width:820px){.lvls{grid-template-columns:1fr}}
-
-/* topbar compacta em telas pequenas */
-@media (max-width:720px){
-  .topbar .in{gap:12px;padding:0 20px}
-  .tb-time{display:none}
-  .tb-btn{padding:6px 12px;font-size:13px}
-}
-@media (max-width:420px){
-  .tb-a{font-size:0}
-  .tb-a::after{content:"EN";font-size:13.5px}
-}
-</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://novoinbound.com.br/#david","name":"David Costa Lima","givenName":"David","familyName":"Costa Lima","jobTitle":"Cofundador","url":"https://b2binsiders.com.br","image":"https://novoinbound.com.br/david-costa-lima.jpg","worksFor":{"@id":"https://novoinbound.com.br/#b2bi"},"knowsAbout":["Geração de demanda B2B","Inbound marketing","Posicionamento","Vendas complexas"],"sameAs":["https://www.linkedin.com/in/dacarjb/","https://b2binsiders.com.br"]},{"@type":"Organization","@id":"https://novoinbound.com.br/#b2bi","name":"B2B Insiders","url":"https://b2binsiders.com.br","description":"Escola e consultoria de geração de demanda para empresas B2B com vendas complexas.","founder":{"@id":"https://novoinbound.com.br/#david"},"sameAs":["https://www.linkedin.com/company/b2b-insiders/"]},{"@type":"Organization","@id":"https://novoinbound.com.br/#nib","name":"Novo Inbound B2B","url":"https://novoinbound.com.br/","description":"Método de geração de demanda que organiza a penetração de mercado em um ciclo contínuo de cinco etapas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.","parentOrganization":{"@id":"https://novoinbound.com.br/#b2bi"},"founder":{"@id":"https://novoinbound.com.br/#david"}},{"@type":"WebSite","@id":"https://novoinbound.com.br/#site","url":"https://novoinbound.com.br/","name":"Novo Inbound B2B","inLanguage":"pt-BR","publisher":{"@id":"https://novoinbound.com.br/#b2bi"}},{"@type":"WebPage","@id":"https://novoinbound.com.br/#page","url":"https://novoinbound.com.br/","name":"O funil de marketing morreu. O inbound marketing não.","isPartOf":{"@id":"https://novoinbound.com.br/#site"},"inLanguage":"pt-BR","datePublished":"2026-07-25","dateModified":"2026-07-31","primaryImageOfPage":{"@id":"https://novoinbound.com.br/#og"},"about":{"@id":"https://novoinbound.com.br/#nib"}},{"@type":"ImageObject","@id":"https://novoinbound.com.br/#og","url":"https://novoinbound.com.br/og-novo-inbound.png","width":1200,"height":630},{"@type":"TechArticle","@id":"https://novoinbound.com.br/#article","headline":"O funil de marketing morreu. O inbound marketing não.","alternativeHeadline":"Por que o mecanismo linear perdeu aderência e o que substitui o funil no B2B","description":"A forma de comprar no B2B mudou. Entenda por que o mecanismo linear perdeu aderência e conheça o ciclo do Novo Inbound B2B.","inLanguage":"pt-BR","isPartOf":{"@id":"https://novoinbound.com.br/#site"},"mainEntityOfPage":{"@id":"https://novoinbound.com.br/#page"},"author":{"@id":"https://novoinbound.com.br/#david"},"creator":{"@id":"https://novoinbound.com.br/#david"},"publisher":{"@id":"https://novoinbound.com.br/#b2bi"},"datePublished":"2026-07-25","dateModified":"2026-07-31","image":{"@id":"https://novoinbound.com.br/#og"},"wordCount":6100,"timeRequired":"PT28M","about":{"@id":"https://novoinbound.com.br/#nib"},"keywords":["novo inbound b2b","geração de demanda b2b","funil de marketing","inbound marketing","dark social","MQL","comitê de compra","maturidade de mercado"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"citation":"LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/","encoding":{"@type":"MediaObject","encodingFormat":"text/markdown","contentUrl":"https://novoinbound.com.br/manifesto.md"},"translationOfWork":{"@id":"https://novoinbound.com.br/en/#article"}},{"@type":"FAQPage","@id":"https://novoinbound.com.br/#faq","inLanguage":"pt-BR","isPartOf":{"@id":"https://novoinbound.com.br/#page"},"mainEntity":[{"@type":"Question","@id":"https://novoinbound.com.br/#faq-o-que-e-novo-inbound-b2b","name":"O que é o Novo Inbound B2B?","acceptedAnswer":{"@type":"Answer","text":"Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas. Ele organiza a penetração de mercado em cinco etapas contínuas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar. O método mantém a premissa do inbound, que é educar o comprador para construir demanda, mas atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-inbound-morreu","name":"O inbound marketing morreu?","acceptedAnswer":{"@type":"Answer","text":"Não. Educar compradores, ser encontrado e construir relacionamento antes da venda continuam sendo práticas fundamentais. O que perdeu aderência foi tratar Google, blog, formulário, e-mail, lead scoring e MQL como um mecanismo suficiente para representar toda a geração de demanda B2B."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-funil-morreu","name":"O funil de marketing morreu?","acceptedAnswer":{"@type":"Answer","text":"Como representação linear da jornada do comprador, sim. Como instrumento de gestão, não. O funil continua útil para visualizar oportunidades, conversão, pipeline e previsão de receita. Ele se torna insuficiente quando é usado como descrição literal do comportamento do comprador ou como único sistema operacional de marketing e vendas."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-mql-morreu","name":"O MQL morreu?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. O MQL pode continuar sendo uma classificação operacional. O problema é tratá-lo como prova de intenção comercial ou como única evidência de que o mercado está prestando atenção. Um MQL baseado em download, score ou perfil não equivale automaticamente a um comprador que deseja falar com vendas."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-abandonar-google-blog-email","name":"Preciso abandonar Google, blog e e-mail?","acceptedAnswer":{"@type":"Answer","text":"Não. Esses canais continuam úteis para capturar pesquisas existentes, aprofundar a educação e manter relacionamento. O que muda é o papel que ocupam. Eles deixam de ser tratados como o único centro da jornada e passam a integrar um sistema mais amplo de distribuição, sinais e conversas."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-conteudo-aberto","name":"Todo conteúdo deve ser aberto?","acceptedAnswer":{"@type":"Answer","text":"Conteúdo criado para circular e educar tende a ganhar força quando é aberto. Formulários fazem sentido quando existe uma troca que justifique a identificação, como uma ferramenta personalizada, inscrição, experiência exclusiva ou pedido de contato. A decisão deve partir do papel do conteúdo, não da necessidade interna de gerar leads."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-sinal-visivel-intencao","name":"Um sinal visível indica intenção de compra?","acceptedAnswer":{"@type":"Answer","text":"Não. Uma reação, comentário ou visita identificada pode demonstrar atenção ou consideração. Não prova intenção comercial. A força do sinal depende do comportamento, da recorrência, do contexto, do fit e da combinação com outros sinais."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-evitar-spam","name":"Como impedir que a detecção de sinais vire spam?","acceptedAnswer":{"@type":"Answer","text":"Criando critérios claros para iniciar conversas. Nem todo sinal pede abordagem. A conversa deve ter uma hipótese legítima de relevância, respeitar o contexto da interação e começar pelo assunto que produziu o sinal, não por uma tentativa imediata de agendar reunião."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-abm","name":"Novo Inbound B2B é a mesma coisa que ABM?","acceptedAnswer":{"@type":"Answer","text":"Não. Dentro do Novo Inbound B2B, ABM é uma escolha de foco, coordenação e personalização para um conjunto definido de contas. O ciclo é mais amplo. Ele organiza como a empresa se posiciona, distribui sua mensagem, detecta sinais, inicia conversas e aprende, com ou sem uma estratégia formal de ABM."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-demand-generation","name":"Isso não é apenas demand generation com outro nome?","acceptedAnswer":{"@type":"Answer","text":"O Novo Inbound B2B pertence ao campo de geração de demanda. Sua proposta específica é integrar posicionamento, distribuição, observabilidade, força dos sinais, conversas contextualizadas e otimização em um único ciclo operacional. O valor não está em inventar cada componente separadamente. Está em organizá-los de acordo com a forma como uma compra B2B complexa acontece hoje."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-medir-dark-social","name":"Como medir dark social?","acceptedAnswer":{"@type":"Answer","text":"Não é possível observá-lo integralmente. A empresa pode reduzir a zona de desconhecimento usando atribuição declarada, entrevistas, análise das conversas comerciais, pesquisa com clientes, busca de marca e padrões de tráfego direto. O objetivo não é iluminar tudo. É aprender o suficiente para tomar decisões melhores."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-tempo-de-resultado","name":"Em quanto tempo o método produz resultado?","acceptedAnswer":{"@type":"Answer","text":"Depende do ponto de partida, da duração do ciclo de venda, da força do posicionamento, do alcance existente e da capacidade de iniciar conversas. Alguns efeitos, como clareza de mensagem e melhoria da abordagem comercial, podem aparecer rapidamente. Construção de memória, preferência e penetração de mercado exige consistência e tempo."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-nao-indicado","name":"Para quem o método não é indicado?","acceptedAnswer":{"@type":"Answer","text":"O método tende a ser menos necessário em compras simples, imediatas, individuais e altamente transacionais. Ele ganha relevância conforme aumentam o risco, o ticket, o número de participantes, a necessidade de educação e a duração da decisão."}}]},{"@type":"HowTo","@id":"https://novoinbound.com.br/#howto","name":"Como funciona o ciclo do Novo Inbound B2B","description":"O ciclo do Novo Inbound B2B organiza a penetração de mercado em cinco etapas contínuas que se alimentam a cada volta.","inLanguage":"pt-BR","totalTime":"PT28M","about":{"@id":"https://novoinbound.com.br/#nib"},"step":[{"@type":"HowToStep","position":1,"name":"Posicionar","text":"Posicionamento é a associação que uma empresa deseja ocupar na mente do mercado e consegue sustentar na prática. A pergunta da etapa é qual associação queremos conquistar no mercado. O entregável principal é uma tese de posicionamento transformada em narrativa, mensagens, provas e situações de compra.","url":"https://novoinbound.com.br/#etapa-posicionar"},{"@type":"HowToStep","position":2,"name":"Garantir Impacto","text":"Garantir Impacto significa fazer a narrativa chegar ao mercado certo, com frequência e consistência suficientes para construir memória, compreensão e preferência. A pergunta da etapa é se estamos chegando às pessoas certas antes de elas precisarem comprar. O entregável principal é um sistema de distribuição capaz de transformar posicionamento em presença real no mercado.","url":"https://novoinbound.com.br/#etapa-garantir-impacto"},{"@type":"HowToStep","position":3,"name":"Detectar Sinais","text":"Detectar Sinais significa organizar as manifestações do mercado sem confundir visibilidade com propensão de compra. A pergunta da etapa é quem está prestando atenção, em que contexto e com qual intensidade. O entregável principal é um mapa de sinais que permita priorizar contas, pessoas e momentos.","url":"https://novoinbound.com.br/#etapa-detectar-sinais"},{"@type":"HowToStep","position":4,"name":"Iniciar Conversas","text":"Sinal não é autorização automática para vender. É contexto para decidir se uma conversa faz sentido, qual conversa deve ser iniciada e por quem. A pergunta da etapa é qual conversa este sinal justifica, se justificar alguma. O entregável principal são critérios e playbooks que transformem contexto em conversas úteis.","url":"https://novoinbound.com.br/#etapa-iniciar-conversas"},{"@type":"HowToStep","position":5,"name":"Otimizar","text":"O ciclo fecha aprendendo. A pergunta da etapa é o que o mercado nos ensinou e o que faremos diferente na próxima volta. O entregável principal é um sistema de aprendizado que conecta mercado, marketing, vendas e receita.","url":"https://novoinbound.com.br/#etapa-otimizar"}]},{"@type":"DefinedTermSet","@id":"https://novoinbound.com.br/#glossario","name":"Glossário do Novo Inbound B2B","inLanguage":"pt-BR","hasDefinedTerm":[{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-criacao-de-demanda","name":"Criação de demanda","description":"Educar compradores atuais e futuros para aumentar o reconhecimento do problema, a compreensão da categoria e a consideração pela empresa.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-captura-de-demanda","name":"Captura de demanda","description":"Receber, identificar e converter compradores que já estão procurando uma solução ou manifestaram intenção comercial.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-penetracao-de-mercado","name":"Penetração de mercado","description":"Aumentar presença, preferência e receita no mercado que a empresa escolheu disputar, por meio da aquisição de contas e da expansão de valor dentro delas.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-comprador-futuro","name":"Comprador futuro","description":"Pessoa ou conta que possui fit com a solução, mas não está em momento de compra.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-comprador-em-mercado","name":"Comprador em mercado","description":"Pessoa ou conta que está avaliando ativamente um problema, uma categoria ou fornecedores.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-comite-de-compra","name":"Comitê de compra","description":"Grupo de pessoas que influencia, avalia, aprova, utiliza ou pode bloquear uma decisão B2B.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-mql","name":"MQL","description":"Classificação utilizada por marketing para indicar que um contato atende a critérios definidos de perfil ou comportamento. Não representa necessariamente intenção comercial.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-maturidade-de-mercado","name":"Maturidade de mercado","description":"No Novo Inbound B2B, é uma lente para entender o quanto o mercado reconhece o problema, compreende a categoria e diferencia produtos ou fornecedores.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-sinal-de-atencao","name":"Sinal de atenção","description":"Comportamento que indica exposição ou consumo, sem necessariamente sugerir avaliação ativa de compra.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-sinal-de-consideracao","name":"Sinal de consideração","description":"Comportamento que sugere exploração mais profunda do problema, da categoria ou das alternativas.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-sinal-de-intencao-comercial","name":"Sinal de intenção comercial","description":"Manifestação explícita de interesse em avaliar uma solução, falar com a empresa, receber proposta ou compreender condições de compra.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-dark-social","name":"Dark social","description":"Conjunto de ambientes em que informação e recomendação circulam sem observação integral pelas ferramentas tradicionais de atribuição.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}},{"@type":"DefinedTerm","@id":"https://novoinbound.com.br/#g-abm","name":"ABM","description":"Estratégia de foco, coordenação e personalização de marketing e vendas para contas ou grupos de contas selecionados.","inDefinedTermSet":{"@id":"https://novoinbound.com.br/#glossario"}}]}]}</script>
+<link rel="stylesheet" href="/nib.css?v=2">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://novoinbound.com.br/#david","name":"David Costa Lima","givenName":"David","familyName":"Costa Lima","jobTitle":"Cofundador","url":"https://b2binsiders.com.br","image":"https://novoinbound.com.br/david-costa-lima.jpg","worksFor":{"@id":"https://novoinbound.com.br/#b2bi"},"knowsAbout":["Geração de demanda B2B","Inbound marketing","Posicionamento","Vendas complexas"],"sameAs":["https://www.linkedin.com/in/dacarjb/","https://b2binsiders.com.br"]},{"@type":"Organization","@id":"https://novoinbound.com.br/#b2bi","name":"B2B Insiders","url":"https://b2binsiders.com.br","description":"Escola e consultoria de geração de demanda para empresas B2B com vendas complexas.","founder":{"@id":"https://novoinbound.com.br/#david"},"sameAs":["https://www.linkedin.com/company/b2b-insiders/"]},{"@type":"Organization","@id":"https://novoinbound.com.br/#nib","name":"Novo Inbound B2B","url":"https://novoinbound.com.br/","description":"Método de geração de demanda que organiza a penetração de mercado em um ciclo contínuo de cinco etapas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.","parentOrganization":{"@id":"https://novoinbound.com.br/#b2bi"},"founder":{"@id":"https://novoinbound.com.br/#david"}},{"@type":"WebSite","@id":"https://novoinbound.com.br/#site","url":"https://novoinbound.com.br/","name":"Novo Inbound B2B","inLanguage":"pt-BR","publisher":{"@id":"https://novoinbound.com.br/#b2bi"}},{"@type":"WebPage","@id":"https://novoinbound.com.br/#page","url":"https://novoinbound.com.br/","name":"O funil de marketing morreu. O inbound marketing não.","isPartOf":{"@id":"https://novoinbound.com.br/#site"},"inLanguage":"pt-BR","datePublished":"2026-07-25","dateModified":"2026-07-31","primaryImageOfPage":{"@id":"https://novoinbound.com.br/#og"},"about":{"@id":"https://novoinbound.com.br/#nib"}},{"@type":"ImageObject","@id":"https://novoinbound.com.br/#og","url":"https://novoinbound.com.br/og-novo-inbound.png","width":1200,"height":630},{"@type":"TechArticle","@id":"https://novoinbound.com.br/#article","headline":"O funil de marketing morreu. O inbound marketing não.","alternativeHeadline":"Por que o mecanismo linear perdeu aderência e o que substitui o funil no B2B","description":"A forma de comprar no B2B mudou. Entenda por que o mecanismo linear perdeu aderência e conheça o ciclo do Novo Inbound B2B.","inLanguage":"pt-BR","isPartOf":{"@id":"https://novoinbound.com.br/#site"},"mainEntityOfPage":{"@id":"https://novoinbound.com.br/#page"},"author":{"@id":"https://novoinbound.com.br/#david"},"creator":{"@id":"https://novoinbound.com.br/#david"},"publisher":{"@id":"https://novoinbound.com.br/#b2bi"},"datePublished":"2026-07-25","dateModified":"2026-07-31","image":{"@id":"https://novoinbound.com.br/#og"},"wordCount":6100,"timeRequired":"PT28M","about":{"@id":"https://novoinbound.com.br/#nib"},"keywords":["novo inbound b2b","geração de demanda b2b","funil de marketing","inbound marketing","dark social","MQL","comitê de compra","maturidade de mercado"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"citation":"LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/","encoding":{"@type":"MediaObject","encodingFormat":"text/markdown","contentUrl":"https://novoinbound.com.br/manifesto.md"},"translationOfWork":{"@id":"https://novoinbound.com.br/en/#article"}},{"@type":"FAQPage","@id":"https://novoinbound.com.br/#faq","inLanguage":"pt-BR","isPartOf":{"@id":"https://novoinbound.com.br/#page"},"mainEntity":[{"@type":"Question","@id":"https://novoinbound.com.br/#faq-o-que-e-novo-inbound-b2b","name":"O que é o Novo Inbound B2B?","acceptedAnswer":{"@type":"Answer","text":"Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas. Ele organiza a penetração de mercado em cinco etapas contínuas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar. O método mantém a premissa do inbound, que é educar o comprador para construir demanda, mas atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-inbound-morreu","name":"O inbound marketing morreu?","acceptedAnswer":{"@type":"Answer","text":"Não. Educar compradores, ser encontrado e construir relacionamento antes da venda continuam sendo práticas fundamentais. O que perdeu aderência foi tratar Google, blog, formulário, e-mail, lead scoring e MQL como um mecanismo suficiente para representar toda a geração de demanda B2B."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-funil-morreu","name":"O funil de marketing morreu?","acceptedAnswer":{"@type":"Answer","text":"Como representação linear da jornada do comprador, sim. Como instrumento de gestão, não. O funil continua útil para visualizar oportunidades, conversão, pipeline e previsão de receita. Ele se torna insuficiente quando é usado como descrição literal do comportamento do comprador ou como único sistema operacional de marketing e vendas."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-mql-morreu","name":"O MQL morreu?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. O MQL pode continuar sendo uma classificação operacional. O problema é tratá-lo como prova de intenção comercial ou como única evidência de que o mercado está prestando atenção. Um MQL baseado em download, score ou perfil não equivale automaticamente a um comprador que deseja falar com vendas."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-abandonar-google-blog-email","name":"Preciso abandonar Google, blog e e-mail?","acceptedAnswer":{"@type":"Answer","text":"Não. Esses canais continuam úteis para capturar pesquisas existentes, aprofundar a educação e manter relacionamento. O que muda é o papel que ocupam. Eles deixam de ser tratados como o único centro da jornada e passam a integrar um sistema mais amplo de distribuição, sinais e conversas."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-conteudo-aberto","name":"Todo conteúdo deve ser aberto?","acceptedAnswer":{"@type":"Answer","text":"Conteúdo criado para circular e educar tende a ganhar força quando é aberto. Formulários fazem sentido quando existe uma troca que justifique a identificação, como uma ferramenta personalizada, inscrição, experiência exclusiva ou pedido de contato. A decisão deve partir do papel do conteúdo, não da necessidade interna de gerar leads."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-sinal-visivel-intencao","name":"Um sinal visível indica intenção de compra?","acceptedAnswer":{"@type":"Answer","text":"Não. Uma reação, comentário ou visita identificada pode demonstrar atenção ou consideração. Não prova intenção comercial. A força do sinal depende do comportamento, da recorrência, do contexto, do fit e da combinação com outros sinais."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-evitar-spam","name":"Como impedir que a detecção de sinais vire spam?","acceptedAnswer":{"@type":"Answer","text":"Criando critérios claros para iniciar conversas. Nem todo sinal pede abordagem. A conversa deve ter uma hipótese legítima de relevância, respeitar o contexto da interação e começar pelo assunto que produziu o sinal, não por uma tentativa imediata de agendar reunião."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-abm","name":"Novo Inbound B2B é a mesma coisa que ABM?","acceptedAnswer":{"@type":"Answer","text":"Não. Dentro do Novo Inbound B2B, ABM é uma escolha de foco, coordenação e personalização para um conjunto definido de contas. O ciclo é mais amplo. Ele organiza como a empresa se posiciona, distribui sua mensagem, detecta sinais, inicia conversas e aprende, com ou sem uma estratégia formal de ABM."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-demand-generation","name":"Isso não é apenas demand generation com outro nome?","acceptedAnswer":{"@type":"Answer","text":"O Novo Inbound B2B pertence ao campo de geração de demanda. Sua proposta específica é integrar posicionamento, distribuição, observabilidade, força dos sinais, conversas contextualizadas e otimização em um único ciclo operacional. O valor não está em inventar cada componente separadamente. Está em organizá-los de acordo com a forma como uma compra B2B complexa acontece hoje."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-medir-dark-social","name":"Como medir dark social?","acceptedAnswer":{"@type":"Answer","text":"Não é possível observá-lo integralmente. A empresa pode reduzir a zona de desconhecimento usando atribuição declarada, entrevistas, análise das conversas comerciais, pesquisa com clientes, busca de marca e padrões de tráfego direto. O objetivo não é iluminar tudo. É aprender o suficiente para tomar decisões melhores."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-tempo-de-resultado","name":"Em quanto tempo o método produz resultado?","acceptedAnswer":{"@type":"Answer","text":"Depende do ponto de partida, da duração do ciclo de venda, da força do posicionamento, do alcance existente e da capacidade de iniciar conversas. Alguns efeitos, como clareza de mensagem e melhoria da abordagem comercial, podem aparecer rapidamente. Construção de memória, preferência e penetração de mercado exige consistência e tempo."}},{"@type":"Question","@id":"https://novoinbound.com.br/#faq-nao-indicado","name":"Para quem o método não é indicado?","acceptedAnswer":{"@type":"Answer","text":"O método tende a ser menos necessário em compras simples, imediatas, individuais e altamente transacionais. Ele ganha relevância conforme aumentam o risco, o ticket, o número de participantes, a necessidade de educação e a duração da decisão."}}]},{"@type":"HowTo","@id":"https://novoinbound.com.br/#howto","name":"Como funciona o ciclo do Novo Inbound B2B","description":"O ciclo do Novo Inbound B2B organiza a penetração de mercado em cinco etapas contínuas que se alimentam a cada volta.","inLanguage":"pt-BR","totalTime":"PT28M","about":{"@id":"https://novoinbound.com.br/#nib"},"step":[{"@type":"HowToStep","position":1,"name":"Posicionar","text":"Posicionamento é a associação que uma empresa deseja ocupar na mente do mercado e consegue sustentar na prática. A pergunta da etapa é qual associação queremos conquistar no mercado. O entregável principal é uma tese de posicionamento transformada em narrativa, mensagens, provas e situações de compra.","url":"https://novoinbound.com.br/#etapa-posicionar"},{"@type":"HowToStep","position":2,"name":"Garantir Impacto","text":"Garantir Impacto significa fazer a narrativa chegar ao mercado certo, com frequência e consistência suficientes para construir memória, compreensão e preferência. A pergunta da etapa é se estamos chegando às pessoas certas antes de elas precisarem comprar. O entregável principal é um sistema de distribuição capaz de transformar posicionamento em presença real no mercado.","url":"https://novoinbound.com.br/#etapa-garantir-impacto"},{"@type":"HowToStep","position":3,"name":"Detectar Sinais","text":"Detectar Sinais significa organizar as manifestações do mercado sem confundir visibilidade com propensão de compra. A pergunta da etapa é quem está prestando atenção, em que contexto e com qual intensidade. O entregável principal é um mapa de sinais que permita priorizar contas, pessoas e momentos.","url":"https://novoinbound.com.br/#etapa-detectar-sinais"},{"@type":"HowToStep","position":4,"name":"Iniciar Conversas","text":"Sinal não é autorização automática para vender. É contexto para decidir se uma conversa faz sentido, qual conversa deve ser iniciada e por quem. A pergunta da etapa é qual conversa este sinal justifica, se justificar alguma. O entregável principal são critérios e playbooks que transformem contexto em conversas úteis.","url":"https://novoinbound.com.br/#etapa-iniciar-conversas"},{"@type":"HowToStep","position":5,"name":"Otimizar","text":"O ciclo fecha aprendendo. A pergunta da etapa é o que o mercado nos ensinou e o que faremos diferente na próxima volta. O entregável principal é um sistema de aprendizado que conecta mercado, marketing, vendas e receita.","url":"https://novoinbound.com.br/#etapa-otimizar"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
-
 <header class="topbar">
-  <div class="in">
-    <a class="brand" href="/"><i>[</i>Novo Inbound<i>]</i></a>
-    <span class="tb-tag">Manifesto</span>
-    <span class="tb-sp"></span>
-    <span class="tb-time" id="tbtime">28 min de leitura</span>
-    <a class="tb-a" href="/en/" hreflang="en" lang="en">Read in English</a>
-    <button class="tb-btn" type="button" id="share" data-url="https://novoinbound.com.br/">Compartilhar</button>
-  </div>
-  <div class="progress" id="prog"></div>
+<div class="in">
+<a class="brand" href="/"><i>[</i>Novo Inbound<i>]</i></a>
+<span class="tb-tag">Manifesto</span>
+<span class="tb-sp"></span>
+<span class="tb-time" id="tbtime">28 min de leitura</span>
+<a class="tb-a" href="/en/" hreflang="en" lang="en">Read in English</a>
+<button class="tb-btn" type="button" id="share" data-url="https://novoinbound.com.br/">Compartilhar</button>
+</div>
+<div class="progress" id="prog"></div>
 </header>
-
 <nav class="toc-side" id="tocside" aria-label="Sumário do manifesto">
-  <span class="lbl">Sumário</span>
-  <ol>
-    <li><a href="#funil">O que morreu no funil de marketing?</a></li>
-    <li><a href="#inbound">Por que o inbound continua?</a></li>
-    <li><a href="#compra">O que mudou na compra B2B?</a></li>
-    <li><a href="#metodo">O que é o Novo Inbound B2B?</a></li>
-    <li><a href="#ciclo">Como funciona o ciclo?</a></li>
-    <li><a href="#sinais">Como ler e medir sinais?</a></li>
-    <li><a href="#faq">Perguntas frequentes</a></li>
-    <li><a href="#glossario">Glossário</a></li>
-    <li><a href="#ferramentas">Ferramentas</a></li>
-  </ol>
+<span class="lbl">Sumário</span>
+<ol>
+<li><a href="#funil">O que morreu no funil de marketing?</a></li>
+<li><a href="#inbound">Por que o inbound continua?</a></li>
+<li><a href="#compra">O que mudou na compra B2B?</a></li>
+<li><a href="#metodo">O que é o Novo Inbound B2B?</a></li>
+<li><a href="#ciclo">Como funciona o ciclo?</a></li>
+<li><a href="#sinais">Como ler e medir sinais?</a></li>
+<li><a href="#faq">Perguntas frequentes</a></li>
+<li><a href="#glossario">Glossário</a></li>
+<li><a href="#ferramentas">Ferramentas</a></li>
+</ol>
 </nav>
-
 <main id="conteudo">
 <article>
-
 <header class="hero wrap">
-  <span class="kick">Novo Inbound B2B · Manifesto</span>
-  <h1>O funil de marketing morreu. <b>O inbound marketing não.</b></h1>
-  <p class="dek">A forma como as empresas B2B compram mudou, e marketing e vendas precisam mudar junto. Entenda por que o mecanismo linear perdeu aderência e conheça o ciclo do Novo Inbound B2B.</p>
-  <div class="byline">
-    <img class="bl-face" src="/david-costa-lima.jpg" width="84" height="84" alt="Retrato de David Costa Lima" fetchpriority="high" decoding="async">
-    <div class="bl-txt">
-      <p class="bl-lead">Por <a href="https://www.linkedin.com/in/dacarjb/" rel="author me"><b>David Costa Lima</b></a>, cofundador da <a href="https://b2binsiders.com.br">B2B Insiders</a>.</p>
-      <p class="bl-note">O Novo Inbound B2B é um método de geração de demanda criado pela B2B Insiders a partir de operações em empresas brasileiras com vendas complexas.</p>
-      <p class="bl-meta"><span>Publicado em <time datetime="2026-07-25">25 de julho de 2026</time></span><span>Atualizado em <time datetime="2026-07-31">31 de julho de 2026</time></span><span>Leitura de 28 minutos</span><span>Conteúdo aberto</span><span>Sem formulário</span></p>
-    </div>
-  </div>
+<span class="kick">Novo Inbound B2B · Manifesto</span>
+<h1>O funil de marketing morreu. <b>O inbound marketing não.</b></h1>
+<p class="dek">A forma como as empresas B2B compram mudou, e marketing e vendas precisam mudar junto. Entenda por que o mecanismo linear perdeu aderência e conheça o ciclo do Novo Inbound B2B.</p>
+<div class="byline">
+<img class="bl-face" src="/david-costa-lima.jpg" width="84" height="84" alt="Retrato de David Costa Lima" fetchpriority="high" decoding="async">
+<div class="bl-txt">
+<p class="bl-lead">Por <a href="https://www.linkedin.com/in/dacarjb/" rel="author me"><b>David Costa Lima</b></a>, cofundador da <a href="https://b2binsiders.com.br">B2B Insiders</a>.</p>
+<p class="bl-note">O Novo Inbound B2B é um método de geração de demanda criado pela B2B Insiders a partir de operações em empresas brasileiras com vendas complexas.</p>
+<p class="bl-meta"><span>Publicado em <time datetime="2026-07-25">25 de julho de 2026</time></span><span>Atualizado em <time datetime="2026-07-31">31 de julho de 2026</time></span><span>Leitura de 28 minutos</span><span>Conteúdo aberto</span><span>Sem formulário</span></p>
+</div>
+</div>
 </header>
-
 <section class="wrap" id="resposta" aria-labelledby="h-resposta">
-  <div class="short">
-    <span class="lbl" id="h-resposta">A resposta curta</span>
-    <p>O funil de marketing morreu como representação linear da jornada do comprador. O inbound marketing continua válido porque sua premissa não depende do funil: educar o mercado antes da venda continua criando demanda. O Novo Inbound B2B atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível.<button class="perma" type="button" data-anchor="resposta" title="Copiar link desta resposta" aria-label="Copiar link da resposta curta">#</button></p>
-  </div>
-
-  <figure class="brk" id="fig-transformacao">
-    <div class="fig-in">
-      <svg viewBox="0 0 1000 200" role="img" aria-labelledby="fig1t" preserveAspectRatio="xMidYMid meet">
-        <title id="fig1t">O funil linear de marketing se transforma em uma rede de compradores, canais e sinais organizada pelo ciclo do Novo Inbound B2B.</title>
-        <g fill="none" stroke="#690c3f" stroke-width="1.6">
-          <path d="M55 34 H245 L172 118 V166 H128 V118 Z"/>
-        </g>
-        <g fill="#690c3f" opacity=".1">
-          <path d="M62 41 H238 L214 68 H86 Z"/>
-          <path d="M92 78 H208 L180 110 H120 Z"/>
-          <path d="M132 122 H168 V160 H132 Z"/>
-        </g>
-        <g stroke="#E2DDD1" stroke-width="1.3">
-          <path d="M410 44 L500 96 M500 96 L596 40 M410 44 L466 150 M466 150 L560 158 M560 158 L596 40 M500 96 L560 158 M410 44 L596 40 M466 150 L500 96 M596 40 L648 104 M648 104 L560 158 M352 104 L410 44 M352 104 L466 150"/>
-        </g>
-        <g fill="#ff6a2d">
-          <circle cx="410" cy="44" r="9"/><circle cx="500" cy="96" r="12"/><circle cx="596" cy="40" r="9"/>
-          <circle cx="466" cy="150" r="11"/><circle cx="560" cy="158" r="8"/><circle cx="648" cy="104" r="10"/>
-          <circle cx="352" cy="104" r="7"/>
-        </g>
-        <g fill="#690c3f" opacity=".55">
-          <circle cx="437" cy="92" r="3.4"/><circle cx="533" cy="52" r="3.4"/><circle cx="614" cy="126" r="3.4"/>
-          <circle cx="392" cy="132" r="3.4"/><circle cx="528" cy="128" r="3.4"/>
-        </g>
-        <g transform="translate(872,100)">
-          <circle r="54" fill="none" stroke="#F7F4EC" stroke-width="26"/>
-          <g transform="rotate(-90)" fill="none" stroke-width="26">
-            <circle r="54" stroke="#FDD9BC" stroke-dasharray="61.26 278.03" stroke-dashoffset="0.00"/>
-            <circle r="54" stroke="#F9C0B4" stroke-dasharray="61.26 278.03" stroke-dashoffset="-67.86"/>
-            <circle r="54" stroke="#F2A9B9" stroke-dasharray="61.26 278.03" stroke-dashoffset="-135.72"/>
-            <circle r="54" stroke="#DE93B6" stroke-dasharray="61.26 278.03" stroke-dashoffset="-203.58"/>
-            <circle r="54" stroke="#C57FAE" stroke-dasharray="61.26 278.03" stroke-dashoffset="-271.43"/>
-          </g>
-          <circle r="30" fill="#FFFFFF" stroke="#E2DDD1" stroke-width="1.2"/>
-          <path d="M0 -78 A78 78 0 0 1 55 -55" fill="none" stroke="#690c3f" stroke-width="2.2"/>
-          <path d="M55 -55 l1 12 l-11 -3 Z" fill="#690c3f"/>
-        </g>
-        <g fill="none" stroke="#171310" stroke-width="1.6">
-          <path d="M282 100 H320"/><path d="M312 94 l8 6 l-8 6"/>
-          <path d="M700 100 H756"/><path d="M748 94 l8 6 l-8 6"/>
-        </g>
-      </svg>
-    </div>
-    <figcaption><b>A compra deixou de seguir uma linha.</b> A operação precisa aprender a trabalhar como ciclo. À esquerda, o funil linear. No centro, várias pessoas entrando por canais diferentes e influenciando umas às outras. À direita, o ciclo do Novo Inbound B2B.</figcaption>
-    <details class="fig-eq">
-      <summary>Descrição em texto do diagrama</summary>
-      <div class="bd">
-        <p>O diagrama mostra três estados em sequência.</p>
-        <ul>
-          <li><b>Funil.</b> Uma forma linear que estreita de cima para baixo, com três faixas: topo, meio e fundo. Uma entrada, uma saída, uma direção.</li>
-          <li><b>Rede.</b> Sete pessoas conectadas entre si por linhas, sem começo nem fim definidos. Algumas conexões são visíveis, outras aparecem como pontos menores que representam interações que a empresa não consegue observar.</li>
-          <li><b>Ciclo.</b> Um anel de cinco segmentos que gira continuamente, com uma seta de rotação por fora, representando o ciclo do Novo Inbound B2B.</li>
-        </ul>
-      </div>
-    </details>
-  </figure>
-
-  <details class="toc-mob" id="tocmob">
-    <summary>Sumário</summary>
-    <ol>
-      <li><a href="#funil">O que morreu no funil de marketing?</a></li>
-      <li><a href="#inbound">Por que o inbound continua?</a></li>
-      <li><a href="#compra">O que mudou na compra B2B?</a></li>
-      <li><a href="#metodo">O que é o Novo Inbound B2B?</a></li>
-      <li><a href="#ciclo">Como funciona o ciclo?</a></li>
-      <li><a href="#sinais">Como ler e medir sinais?</a></li>
-      <li><a href="#faq">Perguntas frequentes</a></li>
-      <li><a href="#glossario">Glossário</a></li>
-      <li><a href="#ferramentas">Ferramentas</a></li>
-    </ol>
-  </details>
+<div class="short">
+<span class="lbl" id="h-resposta">A resposta curta</span>
+<p>O funil de marketing morreu como representação linear da jornada do comprador. O inbound marketing continua válido porque sua premissa não depende do funil: educar o mercado antes da venda continua criando demanda. O Novo Inbound B2B atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível.<button class="perma" type="button" data-anchor="resposta" aria-label="Copiar link">#</button></p>
+</div>
+<figure class="brk" id="fig-transformacao">
+<div class="fig-in">
+<svg viewBox="0 0 1000 200" role="img" aria-labelledby="fig1t" preserveAspectRatio="xMidYMid meet">
+<title id="fig1t">O funil linear de marketing se transforma em uma rede de compradores, canais e sinais organizada pelo ciclo do Novo Inbound B2B.</title>
+<g fill="none" stroke="#690c3f" stroke-width="1.6">
+<path d="M55 34 H245 L172 118 V166 H128 V118 Z"/>
+</g>
+<g fill="#690c3f" opacity=".1">
+<path d="M62 41 H238 L214 68 H86 Z"/>
+<path d="M92 78 H208 L180 110 H120 Z"/>
+<path d="M132 122 H168 V160 H132 Z"/>
+</g>
+<g stroke="#E2DDD1" stroke-width="1.3">
+<path d="M410 44 L500 96 M500 96 L596 40 M410 44 L466 150 M466 150 L560 158 M560 158 L596 40 M500 96 L560 158 M410 44 L596 40 M466 150 L500 96 M596 40 L648 104 M648 104 L560 158 M352 104 L410 44 M352 104 L466 150"/>
+</g>
+<g fill="#ff6a2d">
+<circle cx="410" cy="44" r="9"/><circle cx="500" cy="96" r="12"/><circle cx="596" cy="40" r="9"/>
+<circle cx="466" cy="150" r="11"/><circle cx="560" cy="158" r="8"/><circle cx="648" cy="104" r="10"/>
+<circle cx="352" cy="104" r="7"/>
+</g>
+<g fill="#690c3f" opacity=".55">
+<circle cx="437" cy="92" r="3.4"/><circle cx="533" cy="52" r="3.4"/><circle cx="614" cy="126" r="3.4"/>
+<circle cx="392" cy="132" r="3.4"/><circle cx="528" cy="128" r="3.4"/>
+</g>
+<g transform="translate(872,100)">
+<circle r="54" fill="none" stroke="#F7F4EC" stroke-width="26"/>
+<g transform="rotate(-90)" fill="none" stroke-width="26">
+<circle r="54" stroke="#FDD9BC" stroke-dasharray="61.26 278.03" stroke-dashoffset="0.00"/>
+<circle r="54" stroke="#F9C0B4" stroke-dasharray="61.26 278.03" stroke-dashoffset="-67.86"/>
+<circle r="54" stroke="#F2A9B9" stroke-dasharray="61.26 278.03" stroke-dashoffset="-135.72"/>
+<circle r="54" stroke="#DE93B6" stroke-dasharray="61.26 278.03" stroke-dashoffset="-203.58"/>
+<circle r="54" stroke="#C57FAE" stroke-dasharray="61.26 278.03" stroke-dashoffset="-271.43"/>
+</g>
+<circle r="30" fill="#FFFFFF" stroke="#E2DDD1" stroke-width="1.2"/>
+<path d="M0 -78 A78 78 0 0 1 55 -55" fill="none" stroke="#690c3f" stroke-width="2.2"/>
+<path d="M55 -55 l1 12 l-11 -3 Z" fill="#690c3f"/>
+</g>
+<g fill="none" stroke="#171310" stroke-width="1.6">
+<path d="M282 100 H320"/><path d="M312 94 l8 6 l-8 6"/>
+<path d="M700 100 H756"/><path d="M748 94 l8 6 l-8 6"/>
+</g>
+</svg>
+</div>
+<figcaption><b>A compra deixou de seguir uma linha.</b> A operação precisa aprender a trabalhar como ciclo. À esquerda, o funil linear. No centro, várias pessoas entrando por canais diferentes e influenciando umas às outras. À direita, o ciclo do Novo Inbound B2B.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>O diagrama mostra três estados em sequência.</p>
+<ul>
+<li><b>Funil.</b> Uma forma linear que estreita de cima para baixo, com três faixas: topo, meio e fundo. Uma entrada, uma saída, uma direção.</li>
+<li><b>Rede.</b> Sete pessoas conectadas entre si por linhas, sem começo nem fim definidos. Algumas conexões são visíveis, outras aparecem como pontos menores que representam interações que a empresa não consegue observar.</li>
+<li><b>Ciclo.</b> Um anel de cinco segmentos que gira continuamente, com uma seta de rotação por fora, representando o ciclo do Novo Inbound B2B.</li>
+</ul>
+</div>
+</details>
+</figure>
+<details class="toc-mob" id="tocmob">
+<summary>Sumário</summary>
+<ol>
+<li><a href="#funil">O que morreu no funil de marketing?</a></li>
+<li><a href="#inbound">Por que o inbound continua?</a></li>
+<li><a href="#compra">O que mudou na compra B2B?</a></li>
+<li><a href="#metodo">O que é o Novo Inbound B2B?</a></li>
+<li><a href="#ciclo">Como funciona o ciclo?</a></li>
+<li><a href="#sinais">Como ler e medir sinais?</a></li>
+<li><a href="#faq">Perguntas frequentes</a></li>
+<li><a href="#glossario">Glossário</a></li>
+<li><a href="#ferramentas">Ferramentas</a></li>
+</ol>
+</details>
 </section>
-
 <section class="part wrap" id="funil" aria-labelledby="h-funil">
-  <div class="partmark"><span class="n">Parte um</span><h2 id="h-funil">O que significa dizer que o funil de marketing morreu?</h2></div>
-  <p>Vamos começar pela provocação.</p>
-  <p class="answer">O funil de marketing morreu.</p>
-  <p>Não estou dizendo que a empresa deve apagar os estágios do CRM. Também não estou dizendo que pipeline, conversão e forecast deixaram de importar.</p>
-  <p>Estou falando de outra coisa.</p>
-  <p>Morreu a ideia de que o comprador percorre uma sequência previsível de conscientização, consideração e decisão, uma etapa de cada vez, até finalmente chegar a vendas.</p>
-  <p>Esse modelo é simples de desenhar. Também é confortável de administrar. Cada canal ocupa uma parte, cada métrica representa um avanço e cada contato parece estar a caminho de algum lugar.</p>
-  <p>Só que a compra B2B real não se comporta assim.</p>
-  <p>Ela acontece com várias pessoas. Começa em momentos diferentes. Passa por canais que a empresa não controla. Avança, recua, para, recomeça e muda de direção quando uma nova pessoa entra na decisão.</p>
-  <p>O funil de receita continua útil para mostrar o que já virou oportunidade.</p>
-  <p>O funil de marketing deixou de ser suficiente para explicar tudo o que fez aquela oportunidade existir.</p>
-  <p>Essa distinção é importante porque evita uma discussão falsa.</p>
-  <p>O problema não é usar um funil para administrar pipeline.</p>
-  <p>O problema é usar esse funil como se ele fosse um mapa fiel do comportamento do comprador.</p>
-  <p>Não é.</p>
+<div class="partmark"><span class="n">Parte um</span><h2 id="h-funil">O que significa dizer que o funil de marketing morreu?</h2></div>
+<p>Vamos começar pela provocação.</p>
+<p class="answer">O funil de marketing morreu.</p>
+<p>Não estou dizendo que a empresa deve apagar os estágios do CRM. Também não estou dizendo que pipeline, conversão e forecast deixaram de importar.</p>
+<p>Estou falando de outra coisa.</p>
+<p>Morreu a ideia de que o comprador percorre uma sequência previsível de conscientização, consideração e decisão, uma etapa de cada vez, até finalmente chegar a vendas.</p>
+<p>Esse modelo é simples de desenhar. Também é confortável de administrar. Cada canal ocupa uma parte, cada métrica representa um avanço e cada contato parece estar a caminho de algum lugar.</p>
+<p>Só que a compra B2B real não se comporta assim.</p>
+<p>Ela acontece com várias pessoas. Começa em momentos diferentes. Passa por canais que a empresa não controla. Avança, recua, para, recomeça e muda de direção quando uma nova pessoa entra na decisão.</p>
+<p>O funil de receita continua útil para mostrar o que já virou oportunidade.</p>
+<p>O funil de marketing deixou de ser suficiente para explicar tudo o que fez aquela oportunidade existir.</p>
+<p>Essa distinção é importante porque evita uma discussão falsa.</p>
+<p>O problema não é usar um funil para administrar pipeline.</p>
+<p>O problema é usar esse funil como se ele fosse um mapa fiel do comportamento do comprador.</p>
+<p>Não é.</p>
 </section>
-
 <section class="part wrap" id="inbound" aria-labelledby="h-inbound">
-  <div class="partmark"><span class="n">Parte dois</span><h2 id="h-inbound">Se o funil morreu, por que o inbound não morreu?</h2></div>
-  <p class="answer">Porque inbound e funil não são a mesma coisa. A premissa central do inbound continua válida: participar da educação do comprador cria demanda e aumenta a chance de uma empresa ser considerada quando o momento de compra chega.</p>
-  <p>Isso não ficou menos importante.</p>
-  <p>Ficou mais.</p>
-  <p>Quanto maior o risco da decisão, mais o comprador precisa entender o problema, comparar caminhos, reduzir incerteza e construir consenso antes de escolher.</p>
-  <p>O que perdeu aderência foi o mecanismo que o mercado aprendeu a usar para colocar essa premissa em prática:</p>
-  <ol>
-    <li>A pessoa pesquisa no Google.</li>
-    <li>Encontra um post no blog.</li>
-    <li>Preenche um formulário.</li>
-    <li>Entra em uma sequência de e-mails.</li>
-    <li>Acumula pontos no lead scoring.</li>
-    <li>Vira MQL.</li>
-    <li>É enviada para vendas.</li>
-  </ol>
-  <p>Essa sequência foi uma resposta brilhante ao comportamento e à tecnologia de outra época.</p>
-  <p>O problema é continuar tratando essa resposta como se ela fosse universal.</p>
-  <p>Hoje, o comprador aprende em muito mais lugares. A decisão envolve mais pessoas. Parte importante da jornada é invisível. O conteúdo genérico se tornou abundante. A inteligência artificial passou a responder antes mesmo de o comprador visitar um site.</p>
-  <p>A premissa continua.</p>
-  <p>O mecanismo precisa mudar.</p>
-  <p>É daí que nasce o Novo Inbound B2B.</p>
-
-  <h3 id="papel-do-marketing">Qual é o papel do marketing nessa história?</h3>
-  <p>No Novo Inbound B2B, tratamos o principal mandato do marketing como aumentar a penetração da empresa no mercado que ela escolheu disputar.</p>
-  <p>Penetrar um mercado significa tornar a empresa conhecida, compreendida, considerada e escolhida pelas contas que ela tem condições reais de atender.</p>
-  <p>Depois da entrada, significa continuar construindo valor, preferência e espaço dentro dessas contas.</p>
-  <p>Isso não reduz toda a disciplina de marketing a uma função. Produto, preço, marca, experiência, distribuição e retenção continuam fazendo parte do trabalho.</p>
-  <p>A ideia é estabelecer uma pergunta comum para orientar a operação:</p>
-  <p><b>O que estamos fazendo está aumentando nossa presença e nossa preferência no mercado que escolhemos?</b></p>
-  <p>Repara como essa pergunta muda a conversa.</p>
-  <p>Um conteúdo pode gerar tráfego sem aumentar consideração.</p>
-  <p>Uma campanha pode gerar leads sem alcançar as contas certas.</p>
-  <p>Um evento pode lotar sem mudar a percepção do mercado.</p>
-  <p>Um relatório pode mostrar crescimento em todas as métricas e, mesmo assim, vendas continuar conversando com as mesmas poucas empresas de sempre.</p>
-  <p>Se a tática funciona dentro do canal, mas não aumenta a presença da empresa no mercado, o que exatamente ela está entregando?</p>
-  <p>Esse é o ponto.</p>
-  <blockquote class="pq"><p>Marketing não deveria trabalhar para alimentar um painel. Deveria trabalhar para mover um mercado.</p></blockquote>
-  <p>Foi justamente uma mudança no comportamento desse mercado que deu origem ao inbound.</p>
-
-  <h3 id="por-que-funcionou">Por que o inbound funcionou tão bem?</h3>
-  <p class="answer">Porque ele conectou uma ideia antiga a um comportamento novo.</p>
-  <p>No início dos anos 2000, a internet estava mudando a relação entre empresas e compradores.</p>
-  <p>Brian Halligan vinha de uma trajetória ligada a vendas e gestão de empresas de tecnologia. Dharmesh Shah escrevia sobre startups no OnStartups e construía uma audiência ao redor de conteúdo útil.</p>
-  <p>Os dois se conheceram como estudantes no MIT e perceberam uma mudança importante: as pessoas estavam usando a internet para pesquisar, aprender e formar opinião antes de falar com uma empresa.</p>
-  <p>Em vez de depender exclusivamente de propaganda e prospecção para interromper potenciais compradores, uma empresa poderia ser encontrada enquanto essas pessoas procuravam respostas.</p>
-  <p>Em 2006, Halligan e Shah fundaram a HubSpot e deram a essa abordagem o nome de inbound marketing. A própria HubSpot apresenta sua origem como uma resposta à mudança na forma como as pessoas pesquisavam e compravam. Os compradores queriam informação útil, não apenas interrupção.<sup class="fn"><a href="#ref-1" id="fnr-1">[1]</a></sup></p>
-  <p>A inovação não foi inventar conteúdo.</p>
-  <p>Também não foi inventar a educação de mercado.</p>
-  <p>Empresas educam compradores desde muito antes da internet.</p>
-  <p>A inovação foi perceber que o comportamento havia mudado e construir um mecanismo compatível com as tecnologias daquele momento.</p>
-  <p>O Google permitia que uma pessoa encontrasse uma resposta no instante em que procurava.</p>
-  <p>O blog permitia que a empresa publicasse sem depender de mídia tradicional.</p>
-  <p>O formulário transformava um visitante desconhecido em um contato identificável.</p>
-  <p>O e-mail criava continuidade.</p>
-  <p>O histórico de comportamento ajudava a estimar quando uma conversa comercial poderia fazer sentido.</p>
-  <p>Lido dentro dessa lógica, o lead não era o objetivo final.</p>
-  <p>Era a ponte entre uma pessoa que estava se educando e uma empresa que queria continuar participando dessa educação.</p>
-  <p>O objetivo não era preencher o CRM.</p>
-  <p>Era ganhar o direito de permanecer na jornada do comprador.</p>
-  <p>E funcionou.</p>
-  <p>A HubSpot transformou essa mudança de comportamento em uma categoria, um software e um movimento global. O conceito de inbound passou a orientar como uma geração inteira de profissionais pensava aquisição, conteúdo e relacionamento.</p>
-  <p>O problema começou quando o mercado transformou a ponte em destino.</p>
-
-  <h3 id="onde-desviou">Onde o inbound desviou?</h3>
-  <p>Em muitas operações, participar da educação do comprador virou gerar a maior quantidade possível de contatos.</p>
-  <p>O formulário deixou de ser uma ponte e virou uma linha de produção.</p>
-  <p>O conteúdo deixou de ser avaliado pelo que ajudava o mercado a compreender e passou a ser avaliado pela quantidade de cadastros que produzia.</p>
-  <p>O MQL deixou de ser um sinal entre vários e virou a unidade de entrega do marketing para vendas.</p>
-  <p>A conta parecia simples:</p>
-  <p>Mais conteúdo deveria gerar mais tráfego.</p>
-  <p>Mais tráfego deveria gerar mais formulários.</p>
-  <p>Mais formulários deveriam gerar mais MQLs.</p>
-  <p>Mais MQLs deveriam gerar mais pipeline.</p>
-  <p>Quando a última parte não acontecia, surgia a explicação conhecida: faltava alinhamento entre marketing e vendas.</p>
-  <p>Às vezes faltava mesmo.</p>
-  <p>Mas, em muitas empresas, o problema começava antes.</p>
-  <p>O sistema estava tratando a entrega de um contato como evidência de demanda.</p>
-  <p>Só que entregar um e-mail não significa estar avaliando uma compra.</p>
-  <p>Baixar um material não significa ter orçamento.</p>
-  <p>Participar de um webinar não significa querer falar com vendas.</p>
-  <p>Atingir um score não transforma automaticamente curiosidade em prioridade empresarial.</p>
-  <blockquote class="pq"><p>O MQL virou a unidade de produção de um marketing pressionado a provar volume, mesmo quando não conseguia provar demanda.</p></blockquote>
-  <p>Isso não aconteceu porque formulário, automação ou lead scoring fossem ruins.</p>
-  <p>Essas ferramentas cumpriam uma função importante e continuam úteis.</p>
-  <p>O desvio foi transformar as ferramentas disponíveis em uma teoria universal sobre como o comprador se comporta.</p>
-  <p>Enquanto o relatório mostrava uma sequência organizada, a compra real ficava cada vez menos organizada.</p>
-
-  <figure class="brk" id="fig-linha-do-tempo">
-    <div class="fig-in">
-      <ol class="tl" role="list">
-        <li class="tl-i">
-          <span class="tl-y">2004 a 2006</span>
-          <span class="tl-t">O comportamento muda e o inbound nasce</span>
-          <span class="tl-d">As pessoas passam a pesquisar antes de falar com uma empresa. Google, blog, formulário e e-mail formam um mecanismo novo e compatível com esse comportamento.</span>
-        </li>
-        <li class="tl-i">
-          <span class="tl-y">Anos 2010</span>
-          <span class="tl-t">O mecanismo vira escala</span>
-          <span class="tl-d">Blog, formulário, automação, lead scoring e MQL viram linha de produção. A meta de volume substitui a pergunta sobre compreensão do mercado.</span>
-        </li>
-        <li class="tl-i">
-          <span class="tl-y">Anos 2020</span>
-          <span class="tl-t">A educação se distribui</span>
-          <span class="tl-d">Compra em grupo, canais distribuídos, dark social e conteúdo abundante. O relatório continua linear, a compra não.</span>
-        </li>
-        <li class="tl-i tl-now">
-          <span class="tl-y">Agora</span>
-          <span class="tl-t">Novo Inbound B2B</span>
-          <span class="tl-d">A premissa permanece. O mecanismo é atualizado para um ciclo de cinco etapas que trabalha com posicionamento, distribuição, sinais, conversas e aprendizado.</span>
-        </li>
-      </ol>
-    </div>
-    <figcaption><b>O inbound não perdeu sua premissa.</b> O mercado transformou um mecanismo contextual em uma fórmula universal.</figcaption>
-    <details class="fig-eq">
-      <summary>Descrição em texto do diagrama</summary>
-      <div class="bd">
-        <p>Linha do tempo em quatro marcos. De 2004 a 2006, a mudança no comportamento de pesquisa dá origem ao inbound. Nos anos 2010, blog, formulário, automação, lead scoring e MQL viram escala industrial. Nos anos 2020, a educação se distribui, a compra vira coletiva e parte da jornada deixa de ser observável. Agora, o Novo Inbound B2B atualiza o mecanismo sem abandonar a premissa.</p>
-      </div>
-    </details>
-  </figure>
+<div class="partmark"><span class="n">Parte dois</span><h2 id="h-inbound">Se o funil morreu, por que o inbound não morreu?</h2></div>
+<p class="answer">Porque inbound e funil não são a mesma coisa. A premissa central do inbound continua válida: participar da educação do comprador cria demanda e aumenta a chance de uma empresa ser considerada quando o momento de compra chega.</p>
+<p>Isso não ficou menos importante.</p>
+<p>Ficou mais.</p>
+<p>Quanto maior o risco da decisão, mais o comprador precisa entender o problema, comparar caminhos, reduzir incerteza e construir consenso antes de escolher.</p>
+<p>O que perdeu aderência foi o mecanismo que o mercado aprendeu a usar para colocar essa premissa em prática:</p>
+<ol>
+<li>A pessoa pesquisa no Google.</li>
+<li>Encontra um post no blog.</li>
+<li>Preenche um formulário.</li>
+<li>Entra em uma sequência de e-mails.</li>
+<li>Acumula pontos no lead scoring.</li>
+<li>Vira MQL.</li>
+<li>É enviada para vendas.</li>
+</ol>
+<p>Essa sequência foi uma resposta brilhante ao comportamento e à tecnologia de outra época.</p>
+<p>O problema é continuar tratando essa resposta como se ela fosse universal.</p>
+<p>Hoje, o comprador aprende em muito mais lugares. A decisão envolve mais pessoas. Parte importante da jornada é invisível. O conteúdo genérico se tornou abundante. A inteligência artificial passou a responder antes mesmo de o comprador visitar um site.</p>
+<p>A premissa continua.</p>
+<p>O mecanismo precisa mudar.</p>
+<p>É daí que nasce o Novo Inbound B2B.</p>
+<h3 id="papel-do-marketing">Qual é o papel do marketing nessa história?</h3>
+<p>No Novo Inbound B2B, tratamos o principal mandato do marketing como aumentar a penetração da empresa no mercado que ela escolheu disputar.</p>
+<p>Penetrar um mercado significa tornar a empresa conhecida, compreendida, considerada e escolhida pelas contas que ela tem condições reais de atender.</p>
+<p>Depois da entrada, significa continuar construindo valor, preferência e espaço dentro dessas contas.</p>
+<p>Isso não reduz toda a disciplina de marketing a uma função. Produto, preço, marca, experiência, distribuição e retenção continuam fazendo parte do trabalho.</p>
+<p>A ideia é estabelecer uma pergunta comum para orientar a operação:</p>
+<p><b>O que estamos fazendo está aumentando nossa presença e nossa preferência no mercado que escolhemos?</b></p>
+<p>Repara como essa pergunta muda a conversa.</p>
+<p>Um conteúdo pode gerar tráfego sem aumentar consideração.</p>
+<p>Uma campanha pode gerar leads sem alcançar as contas certas.</p>
+<p>Um evento pode lotar sem mudar a percepção do mercado.</p>
+<p>Um relatório pode mostrar crescimento em todas as métricas e, mesmo assim, vendas continuar conversando com as mesmas poucas empresas de sempre.</p>
+<p>Se a tática funciona dentro do canal, mas não aumenta a presença da empresa no mercado, o que exatamente ela está entregando?</p>
+<p>Esse é o ponto.</p>
+<blockquote class="pq"><p>Marketing não deveria trabalhar para alimentar um painel. Deveria trabalhar para mover um mercado.</p></blockquote>
+<p>Foi justamente uma mudança no comportamento desse mercado que deu origem ao inbound.</p>
+<h3 id="por-que-funcionou">Por que o inbound funcionou tão bem?</h3>
+<p class="answer">Porque ele conectou uma ideia antiga a um comportamento novo.</p>
+<p>No início dos anos 2000, a internet estava mudando a relação entre empresas e compradores.</p>
+<p>Brian Halligan vinha de uma trajetória ligada a vendas e gestão de empresas de tecnologia. Dharmesh Shah escrevia sobre startups no OnStartups e construía uma audiência ao redor de conteúdo útil.</p>
+<p>Os dois se conheceram como estudantes no MIT e perceberam uma mudança importante: as pessoas estavam usando a internet para pesquisar, aprender e formar opinião antes de falar com uma empresa.</p>
+<p>Em vez de depender exclusivamente de propaganda e prospecção para interromper potenciais compradores, uma empresa poderia ser encontrada enquanto essas pessoas procuravam respostas.</p>
+<p>Em 2006, Halligan e Shah fundaram a HubSpot e deram a essa abordagem o nome de inbound marketing. A própria HubSpot apresenta sua origem como uma resposta à mudança na forma como as pessoas pesquisavam e compravam. Os compradores queriam informação útil, não apenas interrupção.<sup class="fn"><a href="#ref-1" id="fnr-1">[1]</a></sup></p>
+<p>A inovação não foi inventar conteúdo.</p>
+<p>Também não foi inventar a educação de mercado.</p>
+<p>Empresas educam compradores desde muito antes da internet.</p>
+<p>A inovação foi perceber que o comportamento havia mudado e construir um mecanismo compatível com as tecnologias daquele momento.</p>
+<p>O Google permitia que uma pessoa encontrasse uma resposta no instante em que procurava.</p>
+<p>O blog permitia que a empresa publicasse sem depender de mídia tradicional.</p>
+<p>O formulário transformava um visitante desconhecido em um contato identificável.</p>
+<p>O e-mail criava continuidade.</p>
+<p>O histórico de comportamento ajudava a estimar quando uma conversa comercial poderia fazer sentido.</p>
+<p>Lido dentro dessa lógica, o lead não era o objetivo final.</p>
+<p>Era a ponte entre uma pessoa que estava se educando e uma empresa que queria continuar participando dessa educação.</p>
+<p>O objetivo não era preencher o CRM.</p>
+<p>Era ganhar o direito de permanecer na jornada do comprador.</p>
+<p>E funcionou.</p>
+<p>A HubSpot transformou essa mudança de comportamento em uma categoria, um software e um movimento global. O conceito de inbound passou a orientar como uma geração inteira de profissionais pensava aquisição, conteúdo e relacionamento.</p>
+<p>O problema começou quando o mercado transformou a ponte em destino.</p>
+<h3 id="onde-desviou">Onde o inbound desviou?</h3>
+<p>Em muitas operações, participar da educação do comprador virou gerar a maior quantidade possível de contatos.</p>
+<p>O formulário deixou de ser uma ponte e virou uma linha de produção.</p>
+<p>O conteúdo deixou de ser avaliado pelo que ajudava o mercado a compreender e passou a ser avaliado pela quantidade de cadastros que produzia.</p>
+<p>O MQL deixou de ser um sinal entre vários e virou a unidade de entrega do marketing para vendas.</p>
+<p>A conta parecia simples:</p>
+<p>Mais conteúdo deveria gerar mais tráfego.</p>
+<p>Mais tráfego deveria gerar mais formulários.</p>
+<p>Mais formulários deveriam gerar mais MQLs.</p>
+<p>Mais MQLs deveriam gerar mais pipeline.</p>
+<p>Quando a última parte não acontecia, surgia a explicação conhecida: faltava alinhamento entre marketing e vendas.</p>
+<p>Às vezes faltava mesmo.</p>
+<p>Mas, em muitas empresas, o problema começava antes.</p>
+<p>O sistema estava tratando a entrega de um contato como evidência de demanda.</p>
+<p>Só que entregar um e-mail não significa estar avaliando uma compra.</p>
+<p>Baixar um material não significa ter orçamento.</p>
+<p>Participar de um webinar não significa querer falar com vendas.</p>
+<p>Atingir um score não transforma automaticamente curiosidade em prioridade empresarial.</p>
+<blockquote class="pq"><p>O MQL virou a unidade de produção de um marketing pressionado a provar volume, mesmo quando não conseguia provar demanda.</p></blockquote>
+<p>Isso não aconteceu porque formulário, automação ou lead scoring fossem ruins.</p>
+<p>Essas ferramentas cumpriam uma função importante e continuam úteis.</p>
+<p>O desvio foi transformar as ferramentas disponíveis em uma teoria universal sobre como o comprador se comporta.</p>
+<p>Enquanto o relatório mostrava uma sequência organizada, a compra real ficava cada vez menos organizada.</p>
+<figure class="brk" id="fig-linha-do-tempo">
+<div class="fig-in">
+<ol class="tl" role="list">
+<li class="tl-i">
+<span class="tl-y">2004 a 2006</span>
+<span class="tl-t">O comportamento muda e o inbound nasce</span>
+<span class="tl-d">As pessoas passam a pesquisar antes de falar com uma empresa. Google, blog, formulário e e-mail formam um mecanismo novo e compatível com esse comportamento.</span>
+</li>
+<li class="tl-i">
+<span class="tl-y">Anos 2010</span>
+<span class="tl-t">O mecanismo vira escala</span>
+<span class="tl-d">Blog, formulário, automação, lead scoring e MQL viram linha de produção. A meta de volume substitui a pergunta sobre compreensão do mercado.</span>
+</li>
+<li class="tl-i">
+<span class="tl-y">Anos 2020</span>
+<span class="tl-t">A educação se distribui</span>
+<span class="tl-d">Compra em grupo, canais distribuídos, dark social e conteúdo abundante. O relatório continua linear, a compra não.</span>
+</li>
+<li class="tl-i tl-now">
+<span class="tl-y">Agora</span>
+<span class="tl-t">Novo Inbound B2B</span>
+<span class="tl-d">A premissa permanece. O mecanismo é atualizado para um ciclo de cinco etapas que trabalha com posicionamento, distribuição, sinais, conversas e aprendizado.</span>
+</li>
+</ol>
+</div>
+<figcaption><b>O inbound não perdeu sua premissa.</b> O mercado transformou um mecanismo contextual em uma fórmula universal.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>Linha do tempo em quatro marcos. De 2004 a 2006, a mudança no comportamento de pesquisa dá origem ao inbound. Nos anos 2010, blog, formulário, automação, lead scoring e MQL viram escala industrial. Nos anos 2020, a educação se distribui, a compra vira coletiva e parte da jornada deixa de ser observável. Agora, o Novo Inbound B2B atualiza o mecanismo sem abandonar a premissa.</p>
+</div>
+</details>
+</figure>
 </section>
-
 <section class="part wrap" id="compra" aria-labelledby="h-compra">
-  <div class="partmark"><span class="n">Parte três</span><h2 id="h-compra">O que mudou na forma de comprar?</h2></div>
-  <p class="answer">Três mudanças fizeram o mecanismo antigo perder aderência:</p>
-  <ol>
-    <li>A compra B2B se tornou visivelmente coletiva.</li>
-    <li>A educação do comprador se descentralizou.</li>
-    <li>O conteúdo genérico perdeu valor.</li>
-  </ol>
-  <p>Vamos olhar para cada uma.</p>
-
-  <h3 id="compra-coletiva">1. A compra B2B se tornou visivelmente coletiva</h3>
-  <p>A compra B2B provavelmente nunca foi tão linear quanto os diagramas sugeriam.</p>
-  <p>A diferença é que hoje conseguimos enxergar melhor sua complexidade.</p>
-  <p>Em uma compra simples, uma única pessoa pode reconhecer o problema, comparar opções e decidir.</p>
-  <p>Em uma venda complexa, o número de participantes aumenta, os critérios entram em conflito e o risco precisa ser aceito por diferentes áreas.</p>
-  <p>Uma pessoa quer resolver o problema operacional.</p>
-  <p>Outra controla o orçamento.</p>
-  <p>Outra avalia o risco técnico.</p>
-  <p>Outra teme a implementação.</p>
-  <p>Outra pode interromper tudo sem jamais aparecer em uma reunião comercial.</p>
-  <p>Agora pensa comigo.</p>
-  <p>Essas pessoas entram juntas na jornada?</p>
-  <p>Não.</p>
-  <p>Uma encontra a empresa no LinkedIn. Outra pesquisa o nome no Google. Outra escuta um episódio de podcast. Outra pede a opinião de um par. Outra só conhece o fornecedor quando recebe internamente uma apresentação quase pronta.</p>
-  <p>Existem várias jornadas acontecendo ao mesmo tempo dentro da mesma conta.</p>
-  <p>Pesquisas do Gartner descrevem a compra B2B como um conjunto de tarefas que os compradores revisitam, e não como uma sequência linear. A organização também aponta grupos de compra formados por várias pessoas, que pesquisam e se comunicam em momentos diferentes.<sup class="fn"><a href="#ref-2" id="fnr-2">[2]</a></sup><sup class="fn"><a href="#ref-3" id="fnr-3">[3]</a></sup></p>
-  <p>Uma estratégia centrada apenas em contatos individuais enxerga fragmentos.</p>
-  <p>Uma estratégia centrada no mercado e nas contas tenta compreender o movimento coletivo.</p>
-
-  <figure class="brk" id="fig-compra-coletiva">
-    <div class="fig-in">
-      <div class="hub">
-        <div class="hub-c"><span class="hub-ct">Uma conta</span><span class="hub-cs">Seis pessoas, seis entradas, uma decisão</span></div>
-        <ul class="hub-g" role="list">
-          <li class="hub-i"><span class="hub-r">Operação</span><span class="hub-ch">Entra por LinkedIn</span></li>
-          <li class="hub-i"><span class="hub-r">Marketing</span><span class="hub-ch">Entra por Google</span></li>
-          <li class="hub-i"><span class="hub-r">Tecnologia</span><span class="hub-ch">Entra por podcast</span></li>
-          <li class="hub-i"><span class="hub-r">Financeiro</span><span class="hub-ch">Entra por recomendação</span></li>
-          <li class="hub-i"><span class="hub-r">Liderança</span><span class="hub-ch">Entra por evento</span></li>
-          <li class="hub-i"><span class="hub-r">Usuário</span><span class="hub-ch">Entra por inteligência artificial</span></li>
-        </ul>
-        <p class="hub-n">Antes de falar com o fornecedor, essas pessoas conversam entre si, trocam material e constroem uma leitura comum.</p>
-      </div>
-    </div>
-    <figcaption><b>Uma conta não percorre uma jornada.</b> Várias pessoas percorrem jornadas diferentes e precisam construir uma decisão comum.</figcaption>
-    <details class="fig-eq">
-      <summary>Descrição em texto do diagrama</summary>
-      <div class="bd">
-        <p>No centro está a conta. Ao redor, seis participantes de áreas diferentes, cada um entrando na jornada por um canal distinto: operação pelo LinkedIn, marketing pelo Google, tecnologia por podcast, financeiro por recomendação, liderança por evento e usuário por uma ferramenta de inteligência artificial. Linhas de influência ligam essas pessoas entre si antes de qualquer contato com o fornecedor.</p>
-      </div>
-    </details>
-  </figure>
-
-  <h3 id="educacao-distribuida">2. A educação do comprador se descentralizou</h3>
-  <p>Quando o inbound surgiu, Google, blog e e-mail formavam um sistema especialmente poderoso.</p>
-  <p>A empresa atraía uma pessoa, identificava seu interesse e continuava a conversa em canais que controlava.</p>
-  <p>Hoje, a educação circula por uma rede muito mais ampla.</p>
-  <p>O comprador aprende em:</p>
-  <ul>
-    <li>Posts de especialistas.</li>
-    <li>Newsletters.</li>
-    <li>Podcasts.</li>
-    <li>Vídeos.</li>
-    <li>Eventos.</li>
-    <li>Comunidades fechadas.</li>
-    <li>Grupos de WhatsApp.</li>
-    <li>Mensagens privadas.</li>
-    <li>Conversas com colegas.</li>
-    <li>Sites de avaliação.</li>
-    <li>Conteúdo produzido por clientes.</li>
-    <li>Respostas de mecanismos de inteligência artificial.</li>
-  </ul>
-  <p>Parte dessa atividade é visível.</p>
-  <p>Parte deixa sinais incompletos.</p>
-  <p>Parte não deixa sinal algum.</p>
-  <p>É o que o mercado costuma chamar de dark social: os espaços em que informação, opinião e recomendação circulam sem serem observados integralmente pelas ferramentas tradicionais de atribuição.</p>
-  <p>Dark social não significa que nada possa ser aprendido.</p>
-  <p>Entrevistas, atribuição declarada, análise das conversas de vendas e pesquisa com clientes ajudam a reconstruir parte do caminho.</p>
-  <p>Mas nenhuma plataforma mostrará a jornada inteira.</p>
-
-  <figure class="brk" id="fig-educacao-distribuida">
-    <div class="fig-in">
-      <div class="zones">
-        <div class="zone z1">
-          <span class="zone-h">Visível</span>
-          <span class="zone-s">Você sabe quem é e o que aconteceu</span>
-          <span class="zone-l">Formulário · Comentário · Evento identificado · Resposta a uma newsletter</span>
-        </div>
-        <div class="zone z2">
-          <span class="zone-h">Parcialmente visível</span>
-          <span class="zone-s">Você vê o movimento, mas só parte da identidade</span>
-          <span class="zone-l">Visitas de conta · Consumo recorrente · Compartilhamentos</span>
-        </div>
-        <div class="zone z3">
-          <span class="zone-h">Invisível</span>
-          <span class="zone-s">Acontece e não deixa sinal utilizável</span>
-          <span class="zone-l">WhatsApp · Conversa com pares · Mensagem privada · Podcast não identificado · Recomendação</span>
-        </div>
-      </div>
-    </div>
-    <figcaption><b>A jornada não desaparece quando deixa de ser observável.</b> A empresa mede a camada visível e precisa aprender a raciocinar sobre as outras duas.</figcaption>
-    <details class="fig-eq">
-      <summary>Descrição em texto do diagrama</summary>
-      <div class="bd">
-        <p>A educação do comprador é dividida em três camadas.</p>
-        <ul>
-          <li><b>Visível:</b> formulário, comentário, evento identificado e resposta.</li>
-          <li><b>Parcialmente visível:</b> visitas de conta, consumo recorrente e compartilhamentos.</li>
-          <li><b>Invisível:</b> WhatsApp, conversa com pares, mensagem privada, podcast não identificado e recomendação.</li>
-        </ul>
-        <p>A camada visível costuma ser a menor das três e é a única que aparece integralmente nos relatórios.</p>
-      </div>
-    </details>
-  </figure>
-
-  <p>Isso muda o papel do conteúdo.</p>
-  <p>Se o objetivo é criar demanda, o conteúdo precisa conseguir circular. Precisa ser encontrado, consumido, citado e compartilhado sem exigir que o comprador se identifique antes de receber valor.</p>
-  <p>O formulário continua fazendo sentido quando existe uma troca real: uma inscrição, uma ferramenta, uma experiência personalizada ou um pedido de contato.</p>
-  <p>O que deixa de fazer sentido é colocar uma barreira em todo conteúdo apenas porque a operação precisa produzir leads.</p>
-  <blockquote class="pq"><p>O formulário não mede quem você educou. Mede quem aceitou se identificar.</p></blockquote>
-  <p>E atenção: isso não elimina o papel de vendas.</p>
-  <p>O próprio Gartner aponta que compradores valorizam experiências digitais, mas que a combinação entre conteúdo digital e interação humana pode produzir decisões de maior qualidade.<sup class="fn"><a href="#ref-2">[2]</a></sup></p>
-  <p>O vendedor não desaparece.</p>
-  <p>Ele entra em outro momento e com outra função: ajudar a interpretar, reduzir risco, construir consenso e avançar uma decisão que começou antes dele.</p>
-
-  <h3 id="conteudo-generico">3. O conteúdo genérico perdeu valor</h3>
-  <p>Durante muito tempo, publicar conteúdo era um diferencial por si só.</p>
-  <p>Poucas empresas B2B tinham capacidade de produzir com consistência. Poucas dominavam SEO. Poucas transformavam o conhecimento interno em material acessível ao mercado.</p>
-  <p>Quando o modelo se popularizou, conteúdo virou operação de volume.</p>
-  <p>Surgiram calendários industriais, metas de publicação e milhares de textos construídos para ocupar uma palavra-chave, mesmo quando não havia uma ideia nova por trás.</p>
-  <p>A inteligência artificial generativa reduziu drasticamente o custo de produzir esse tipo de informação.</p>
-  <p>Hoje, qualquer empresa consegue gerar dezenas de explicações corretas, organizadas e aparentemente completas sobre quase qualquer assunto.</p>
-  <p>Além disso, o comprador pode receber uma síntese diretamente em um mecanismo de inteligência artificial, sem necessariamente visitar cada página utilizada para construir a resposta.</p>
-  <p>Isso reduz a importância do conteúdo?</p>
-  <p>Não.</p>
-  <p>Aumenta a exigência.</p>
-  <p>Quando informação básica é abundante, o que permanece escasso?</p>
-  <ul>
-    <li>Experiência real.</li>
-    <li>Ponto de vista.</li>
-    <li>Evidência própria.</li>
-    <li>Síntese original.</li>
-    <li>Capacidade de explicar uma mudança antes de ela virar consenso.</li>
-    <li>Coragem para afirmar algo que possa ser discutido e testado.</li>
-  </ul>
-  <p>A própria orientação do Google para experiências generativas recomenda conteúdo não comoditizado, construído a partir de experiência e perspectiva próprias.<sup class="fn"><a href="#ref-4" id="fnr-4">[4]</a></sup></p>
-  <blockquote class="pq"><p>A inteligência artificial não matou o conteúdo. Matou a vantagem de publicar conteúdo sem ideia.</p></blockquote>
-
-  <h3 id="canais-continuam">Então Google, blog, e-mail e MQL não servem mais?</h3>
-  <p class="answer">Servem.</p>
-  <p>Google não morreu.</p>
-  <p>Blog não morreu.</p>
-  <p>E-mail não morreu.</p>
-  <p>Formulário não morreu.</p>
-  <p>Lead scoring não morreu.</p>
-  <p>MQL não morreu.</p>
-  <p>O funil de receita também não morreu.</p>
-  <p>Todos continuam úteis em contextos específicos.</p>
-  <p>Google e blog continuam fundamentais para capturar pesquisas existentes.</p>
-  <p>Formulários continuam úteis quando existe intenção de contato ou uma troca que justifique a identificação.</p>
-  <p>E-mail continua sendo um canal importante de continuidade.</p>
-  <p>Lead scoring continua podendo ajudar a priorizar comportamentos.</p>
-  <p>MQL continua podendo funcionar como uma classificação operacional.</p>
-  <p>O que morreu foi a ideia de que esse conjunto consegue, sozinho, representar toda a geração de demanda.</p>
-  <p>Ele mostra quem chegou aos canais que a empresa controla.</p>
-  <p>Não mostra necessariamente quem ouviu, aprendeu, compartilhou, recomendou, comparou ou construiu preferência em outros ambientes.</p>
-  <p>Se o marketing só enxerga quem preencheu formulário, ele enxerga apenas a parte do mercado que aceitou ser vista.</p>
-  <p>O restante não deixou de existir.</p>
-  <p>Apenas não entrou no relatório.</p>
+<div class="partmark"><span class="n">Parte três</span><h2 id="h-compra">O que mudou na forma de comprar?</h2></div>
+<p class="answer">Três mudanças fizeram o mecanismo antigo perder aderência:</p>
+<ol>
+<li>A compra B2B se tornou visivelmente coletiva.</li>
+<li>A educação do comprador se descentralizou.</li>
+<li>O conteúdo genérico perdeu valor.</li>
+</ol>
+<p>Vamos olhar para cada uma.</p>
+<h3 id="compra-coletiva">1. A compra B2B se tornou visivelmente coletiva</h3>
+<p>A compra B2B provavelmente nunca foi tão linear quanto os diagramas sugeriam.</p>
+<p>A diferença é que hoje conseguimos enxergar melhor sua complexidade.</p>
+<p>Em uma compra simples, uma única pessoa pode reconhecer o problema, comparar opções e decidir.</p>
+<p>Em uma venda complexa, o número de participantes aumenta, os critérios entram em conflito e o risco precisa ser aceito por diferentes áreas.</p>
+<p>Uma pessoa quer resolver o problema operacional.</p>
+<p>Outra controla o orçamento.</p>
+<p>Outra avalia o risco técnico.</p>
+<p>Outra teme a implementação.</p>
+<p>Outra pode interromper tudo sem jamais aparecer em uma reunião comercial.</p>
+<p>Agora pensa comigo.</p>
+<p>Essas pessoas entram juntas na jornada?</p>
+<p>Não.</p>
+<p>Uma encontra a empresa no LinkedIn. Outra pesquisa o nome no Google. Outra escuta um episódio de podcast. Outra pede a opinião de um par. Outra só conhece o fornecedor quando recebe internamente uma apresentação quase pronta.</p>
+<p>Existem várias jornadas acontecendo ao mesmo tempo dentro da mesma conta.</p>
+<p>Pesquisas do Gartner descrevem a compra B2B como um conjunto de tarefas que os compradores revisitam, e não como uma sequência linear. A organização também aponta grupos de compra formados por várias pessoas, que pesquisam e se comunicam em momentos diferentes.<sup class="fn"><a href="#ref-2" id="fnr-2">[2]</a></sup><sup class="fn"><a href="#ref-3" id="fnr-3">[3]</a></sup></p>
+<p>Uma estratégia centrada apenas em contatos individuais enxerga fragmentos.</p>
+<p>Uma estratégia centrada no mercado e nas contas tenta compreender o movimento coletivo.</p>
+<figure class="brk" id="fig-compra-coletiva">
+<div class="fig-in">
+<div class="hub">
+<div class="hub-c"><span class="hub-ct">Uma conta</span><span class="hub-cs">Seis pessoas, seis entradas, uma decisão</span></div>
+<ul class="hub-g" role="list">
+<li class="hub-i"><span class="hub-r">Operação</span><span class="hub-ch">Entra por LinkedIn</span></li>
+<li class="hub-i"><span class="hub-r">Marketing</span><span class="hub-ch">Entra por Google</span></li>
+<li class="hub-i"><span class="hub-r">Tecnologia</span><span class="hub-ch">Entra por podcast</span></li>
+<li class="hub-i"><span class="hub-r">Financeiro</span><span class="hub-ch">Entra por recomendação</span></li>
+<li class="hub-i"><span class="hub-r">Liderança</span><span class="hub-ch">Entra por evento</span></li>
+<li class="hub-i"><span class="hub-r">Usuário</span><span class="hub-ch">Entra por inteligência artificial</span></li>
+</ul>
+<p class="hub-n">Antes de falar com o fornecedor, essas pessoas conversam entre si, trocam material e constroem uma leitura comum.</p>
+</div>
+</div>
+<figcaption><b>Uma conta não percorre uma jornada.</b> Várias pessoas percorrem jornadas diferentes e precisam construir uma decisão comum.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>No centro está a conta. Ao redor, seis participantes de áreas diferentes, cada um entrando na jornada por um canal distinto: operação pelo LinkedIn, marketing pelo Google, tecnologia por podcast, financeiro por recomendação, liderança por evento e usuário por uma ferramenta de inteligência artificial. Linhas de influência ligam essas pessoas entre si antes de qualquer contato com o fornecedor.</p>
+</div>
+</details>
+</figure>
+<h3 id="educacao-distribuida">2. A educação do comprador se descentralizou</h3>
+<p>Quando o inbound surgiu, Google, blog e e-mail formavam um sistema especialmente poderoso.</p>
+<p>A empresa atraía uma pessoa, identificava seu interesse e continuava a conversa em canais que controlava.</p>
+<p>Hoje, a educação circula por uma rede muito mais ampla.</p>
+<p>O comprador aprende em:</p>
+<ul>
+<li>Posts de especialistas.</li>
+<li>Newsletters.</li>
+<li>Podcasts.</li>
+<li>Vídeos.</li>
+<li>Eventos.</li>
+<li>Comunidades fechadas.</li>
+<li>Grupos de WhatsApp.</li>
+<li>Mensagens privadas.</li>
+<li>Conversas com colegas.</li>
+<li>Sites de avaliação.</li>
+<li>Conteúdo produzido por clientes.</li>
+<li>Respostas de mecanismos de inteligência artificial.</li>
+</ul>
+<p>Parte dessa atividade é visível.</p>
+<p>Parte deixa sinais incompletos.</p>
+<p>Parte não deixa sinal algum.</p>
+<p>É o que o mercado costuma chamar de dark social: os espaços em que informação, opinião e recomendação circulam sem serem observados integralmente pelas ferramentas tradicionais de atribuição.</p>
+<p>Dark social não significa que nada possa ser aprendido.</p>
+<p>Entrevistas, atribuição declarada, análise das conversas de vendas e pesquisa com clientes ajudam a reconstruir parte do caminho.</p>
+<p>Mas nenhuma plataforma mostrará a jornada inteira.</p>
+<figure class="brk" id="fig-educacao-distribuida">
+<div class="fig-in">
+<div class="zones">
+<div class="zone z1">
+<span class="zone-h">Visível</span>
+<span class="zone-s">Você sabe quem é e o que aconteceu</span>
+<span class="zone-l">Formulário · Comentário · Evento identificado · Resposta a uma newsletter</span>
+</div>
+<div class="zone z2">
+<span class="zone-h">Parcialmente visível</span>
+<span class="zone-s">Você vê o movimento, mas só parte da identidade</span>
+<span class="zone-l">Visitas de conta · Consumo recorrente · Compartilhamentos</span>
+</div>
+<div class="zone z3">
+<span class="zone-h">Invisível</span>
+<span class="zone-s">Acontece e não deixa sinal utilizável</span>
+<span class="zone-l">WhatsApp · Conversa com pares · Mensagem privada · Podcast não identificado · Recomendação</span>
+</div>
+</div>
+</div>
+<figcaption><b>A jornada não desaparece quando deixa de ser observável.</b> A empresa mede a camada visível e precisa aprender a raciocinar sobre as outras duas.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>A educação do comprador é dividida em três camadas.</p>
+<ul>
+<li><b>Visível:</b> formulário, comentário, evento identificado e resposta.</li>
+<li><b>Parcialmente visível:</b> visitas de conta, consumo recorrente e compartilhamentos.</li>
+<li><b>Invisível:</b> WhatsApp, conversa com pares, mensagem privada, podcast não identificado e recomendação.</li>
+</ul>
+<p>A camada visível costuma ser a menor das três e é a única que aparece integralmente nos relatórios.</p>
+</div>
+</details>
+</figure>
+<p>Isso muda o papel do conteúdo.</p>
+<p>Se o objetivo é criar demanda, o conteúdo precisa conseguir circular. Precisa ser encontrado, consumido, citado e compartilhado sem exigir que o comprador se identifique antes de receber valor.</p>
+<p>O formulário continua fazendo sentido quando existe uma troca real: uma inscrição, uma ferramenta, uma experiência personalizada ou um pedido de contato.</p>
+<p>O que deixa de fazer sentido é colocar uma barreira em todo conteúdo apenas porque a operação precisa produzir leads.</p>
+<blockquote class="pq"><p>O formulário não mede quem você educou. Mede quem aceitou se identificar.</p></blockquote>
+<p>E atenção: isso não elimina o papel de vendas.</p>
+<p>O próprio Gartner aponta que compradores valorizam experiências digitais, mas que a combinação entre conteúdo digital e interação humana pode produzir decisões de maior qualidade.<sup class="fn"><a href="#ref-2">[2]</a></sup></p>
+<p>O vendedor não desaparece.</p>
+<p>Ele entra em outro momento e com outra função: ajudar a interpretar, reduzir risco, construir consenso e avançar uma decisão que começou antes dele.</p>
+<h3 id="conteudo-generico">3. O conteúdo genérico perdeu valor</h3>
+<p>Durante muito tempo, publicar conteúdo era um diferencial por si só.</p>
+<p>Poucas empresas B2B tinham capacidade de produzir com consistência. Poucas dominavam SEO. Poucas transformavam o conhecimento interno em material acessível ao mercado.</p>
+<p>Quando o modelo se popularizou, conteúdo virou operação de volume.</p>
+<p>Surgiram calendários industriais, metas de publicação e milhares de textos construídos para ocupar uma palavra-chave, mesmo quando não havia uma ideia nova por trás.</p>
+<p>A inteligência artificial generativa reduziu drasticamente o custo de produzir esse tipo de informação.</p>
+<p>Hoje, qualquer empresa consegue gerar dezenas de explicações corretas, organizadas e aparentemente completas sobre quase qualquer assunto.</p>
+<p>Além disso, o comprador pode receber uma síntese diretamente em um mecanismo de inteligência artificial, sem necessariamente visitar cada página utilizada para construir a resposta.</p>
+<p>Isso reduz a importância do conteúdo?</p>
+<p>Não.</p>
+<p>Aumenta a exigência.</p>
+<p>Quando informação básica é abundante, o que permanece escasso?</p>
+<ul>
+<li>Experiência real.</li>
+<li>Ponto de vista.</li>
+<li>Evidência própria.</li>
+<li>Síntese original.</li>
+<li>Capacidade de explicar uma mudança antes de ela virar consenso.</li>
+<li>Coragem para afirmar algo que possa ser discutido e testado.</li>
+</ul>
+<p>A própria orientação do Google para experiências generativas recomenda conteúdo não comoditizado, construído a partir de experiência e perspectiva próprias.<sup class="fn"><a href="#ref-4" id="fnr-4">[4]</a></sup></p>
+<blockquote class="pq"><p>A inteligência artificial não matou o conteúdo. Matou a vantagem de publicar conteúdo sem ideia.</p></blockquote>
+<h3 id="canais-continuam">Então Google, blog, e-mail e MQL não servem mais?</h3>
+<p class="answer">Servem.</p>
+<p>Google não morreu.</p>
+<p>Blog não morreu.</p>
+<p>E-mail não morreu.</p>
+<p>Formulário não morreu.</p>
+<p>Lead scoring não morreu.</p>
+<p>MQL não morreu.</p>
+<p>O funil de receita também não morreu.</p>
+<p>Todos continuam úteis em contextos específicos.</p>
+<p>Google e blog continuam fundamentais para capturar pesquisas existentes.</p>
+<p>Formulários continuam úteis quando existe intenção de contato ou uma troca que justifique a identificação.</p>
+<p>E-mail continua sendo um canal importante de continuidade.</p>
+<p>Lead scoring continua podendo ajudar a priorizar comportamentos.</p>
+<p>MQL continua podendo funcionar como uma classificação operacional.</p>
+<p>O que morreu foi a ideia de que esse conjunto consegue, sozinho, representar toda a geração de demanda.</p>
+<p>Ele mostra quem chegou aos canais que a empresa controla.</p>
+<p>Não mostra necessariamente quem ouviu, aprendeu, compartilhou, recomendou, comparou ou construiu preferência em outros ambientes.</p>
+<p>Se o marketing só enxerga quem preencheu formulário, ele enxerga apenas a parte do mercado que aceitou ser vista.</p>
+<p>O restante não deixou de existir.</p>
+<p>Apenas não entrou no relatório.</p>
 </section>
-
 <section class="part wrap" id="metodo" aria-labelledby="h-metodo">
-  <div class="partmark"><span class="n">Parte quatro</span><h2 id="h-metodo">O que é o Novo Inbound B2B?</h2></div>
-  <p class="answer">Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas. Ele organiza a penetração de mercado em um ciclo contínuo de cinco etapas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.</p>
-  <p>O método mantém a premissa original do inbound, que é participar da educação do comprador, mas atualiza o mecanismo para uma realidade em que:</p>
-  <ul>
-    <li>A compra é coletiva.</li>
-    <li>A educação acontece em canais distribuídos.</li>
-    <li>Parte da jornada é invisível.</li>
-    <li>Conteúdo genérico é abundante.</li>
-    <li>Sinais aparecem antes do pedido de contato.</li>
-    <li>Marketing e vendas precisam aprender com o mesmo mercado.</li>
-  </ul>
-  <p>O ciclo não elimina o funil de receita.</p>
-  <p>Ele opera antes, durante e ao redor dele.</p>
-  <p>O funil mostra oportunidades que já foram reconhecidas pela empresa.</p>
-  <p>O ciclo ajuda a compreender como o mercado aprende, presta atenção, constrói preferência, manifesta interesse e entra em conversa.</p>
-  <p>Existe uma sequência inicial de implantação. Uma empresa precisa começar posicionando antes de tentar distribuir, medir sinais ou abrir conversas.</p>
-  <p>Depois da primeira volta, as etapas passam a se alimentar continuamente.</p>
-  <p>É por isso que chamamos de ciclo.</p>
-
-  <figure class="brk" id="fig-comparacao">
-    <div class="fig-in">
-      <div class="cmp3">
-        <div class="cmp3-c">
-          <span class="cmp3-k">Modelo 01</span>
-          <p class="cmp3-h">Funil de marketing</p>
-          <dl class="cmp3-d">
-            <dt>Unidade central</dt><dd>Contato</dd>
-            <dt>Movimento</dt><dd>Linear</dd>
-            <dt>Entrada dominante</dt><dd>Aquisição</dd>
-            <dt>Saída</dt><dd>Conversão</dd>
-            <dt>Limitação</dt><dd>Representa mal jornadas coletivas e distribuídas</dd>
-          </dl>
-        </div>
-        <div class="cmp3-c">
-          <span class="cmp3-k">Modelo 02</span>
-          <p class="cmp3-h">Flywheel</p>
-          <dl class="cmp3-d">
-            <dt>Unidade central</dt><dd>Cliente</dd>
-            <dt>Movimento</dt><dd>Circular</dd>
-            <dt>Etapas comuns</dt><dd>Atrair, engajar e encantar</dd>
-            <dt>Força principal</dt><dd>Crescimento por experiência e momentum</dd>
-            <dt>Limitação para esta discussão</dt><dd>Não detalha observabilidade, força dos sinais e início de conversas em compras coletivas</dd>
-          </dl>
-        </div>
-        <div class="cmp3-c cmp3-on">
-          <span class="cmp3-k">Modelo 03</span>
-          <p class="cmp3-h">Novo Inbound B2B</p>
-          <dl class="cmp3-d">
-            <dt>Unidade central</dt><dd>Mercado, contas e comitês de compra</dd>
-            <dt>Movimento</dt><dd>Ciclo de aprendizado</dd>
-            <dt>Etapas</dt><dd>Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar</dd>
-            <dt>Força principal</dt><dd>Conecta educação distribuída, sinais, conversas e receita</dd>
-          </dl>
-        </div>
-      </div>
-      <p class="cmp3-n">O flywheel não está errado. Ele responde a uma pergunta diferente.</p>
-    </div>
-    <figcaption><b>O funil administra progressão.</b> O flywheel organiza momentum do cliente. O Novo Inbound B2B organiza como o mercado aprende, sinaliza e entra em conversa.</figcaption>
-    <details class="fig-eq">
-      <summary>Descrição em texto do diagrama</summary>
-      <div class="bd">
-        <p>Comparação em três colunas. O funil de marketing tem o contato como unidade central, movimento linear, entrada por aquisição e saída por conversão, e representa mal jornadas coletivas. O flywheel tem o cliente como unidade central, movimento circular, etapas de atrair, engajar e encantar, e cresce por experiência e momentum, mas não detalha observabilidade nem força de sinal. O Novo Inbound B2B tem mercado, contas e comitês como unidade central, movimento de ciclo de aprendizado, cinco etapas nomeadas, e conecta educação distribuída, sinais, conversas e receita.</p>
-      </div>
-    </details>
-  </figure>
+<div class="partmark"><span class="n">Parte quatro</span><h2 id="h-metodo">O que é o Novo Inbound B2B?</h2></div>
+<p class="answer">Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas. Ele organiza a penetração de mercado em um ciclo contínuo de cinco etapas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.</p>
+<p>O método mantém a premissa original do inbound, que é participar da educação do comprador, mas atualiza o mecanismo para uma realidade em que:</p>
+<ul>
+<li>A compra é coletiva.</li>
+<li>A educação acontece em canais distribuídos.</li>
+<li>Parte da jornada é invisível.</li>
+<li>Conteúdo genérico é abundante.</li>
+<li>Sinais aparecem antes do pedido de contato.</li>
+<li>Marketing e vendas precisam aprender com o mesmo mercado.</li>
+</ul>
+<p>O ciclo não elimina o funil de receita.</p>
+<p>Ele opera antes, durante e ao redor dele.</p>
+<p>O funil mostra oportunidades que já foram reconhecidas pela empresa.</p>
+<p>O ciclo ajuda a compreender como o mercado aprende, presta atenção, constrói preferência, manifesta interesse e entra em conversa.</p>
+<p>Existe uma sequência inicial de implantação. Uma empresa precisa começar posicionando antes de tentar distribuir, medir sinais ou abrir conversas.</p>
+<p>Depois da primeira volta, as etapas passam a se alimentar continuamente.</p>
+<p>É por isso que chamamos de ciclo.</p>
+<figure class="brk" id="fig-comparacao">
+<div class="fig-in">
+<div class="cmp3">
+<div class="cmp3-c">
+<span class="cmp3-k">Modelo 01</span>
+<p class="cmp3-h">Funil de marketing</p>
+<dl class="cmp3-d">
+<dt>Unidade central</dt><dd>Contato</dd>
+<dt>Movimento</dt><dd>Linear</dd>
+<dt>Entrada dominante</dt><dd>Aquisição</dd>
+<dt>Saída</dt><dd>Conversão</dd>
+<dt>Limitação</dt><dd>Representa mal jornadas coletivas e distribuídas</dd>
+</dl>
+</div>
+<div class="cmp3-c">
+<span class="cmp3-k">Modelo 02</span>
+<p class="cmp3-h">Flywheel</p>
+<dl class="cmp3-d">
+<dt>Unidade central</dt><dd>Cliente</dd>
+<dt>Movimento</dt><dd>Circular</dd>
+<dt>Etapas comuns</dt><dd>Atrair, engajar e encantar</dd>
+<dt>Força principal</dt><dd>Crescimento por experiência e momentum</dd>
+<dt>Limitação para esta discussão</dt><dd>Não detalha observabilidade, força dos sinais e início de conversas em compras coletivas</dd>
+</dl>
+</div>
+<div class="cmp3-c cmp3-on">
+<span class="cmp3-k">Modelo 03</span>
+<p class="cmp3-h">Novo Inbound B2B</p>
+<dl class="cmp3-d">
+<dt>Unidade central</dt><dd>Mercado, contas e comitês de compra</dd>
+<dt>Movimento</dt><dd>Ciclo de aprendizado</dd>
+<dt>Etapas</dt><dd>Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar</dd>
+<dt>Força principal</dt><dd>Conecta educação distribuída, sinais, conversas e receita</dd>
+</dl>
+</div>
+</div>
+<p class="cmp3-n">O flywheel não está errado. Ele responde a uma pergunta diferente.</p>
+</div>
+<figcaption><b>O funil administra progressão.</b> O flywheel organiza momentum do cliente. O Novo Inbound B2B organiza como o mercado aprende, sinaliza e entra em conversa.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>Comparação em três colunas. O funil de marketing tem o contato como unidade central, movimento linear, entrada por aquisição e saída por conversão, e representa mal jornadas coletivas. O flywheel tem o cliente como unidade central, movimento circular, etapas de atrair, engajar e encantar, e cresce por experiência e momentum, mas não detalha observabilidade nem força de sinal. O Novo Inbound B2B tem mercado, contas e comitês como unidade central, movimento de ciclo de aprendizado, cinco etapas nomeadas, e conecta educação distribuída, sinais, conversas e receita.</p>
+</div>
+</details>
+</figure>
 </section>
+<section class="part wrap" id="ciclo" aria-labelledby="h-ciclo">
+<div class="partmark"><span class="n">Parte cinco</span><h2 id="h-ciclo">Como funciona o ciclo do Novo Inbound B2B?</h2></div>
+<p class="answer">O ciclo tem cinco etapas que se alimentam continuamente. Posicionar define a associação que a empresa quer ocupar. Garantir Impacto leva essa associação ao mercado. Detectar Sinais organiza a reação. Iniciar Conversas transforma contexto em conversa. Otimizar devolve o aprendizado para a volta seguinte.</p>
+<figure class="brk" id="fig-ciclo">
+<div class="fig-in">
+<div class="ringbox">
+<svg viewBox="0 0 420 420" role="img" aria-labelledby="ringt" preserveAspectRatio="xMidYMid meet"><title id="ringt">Ciclo contínuo do Novo Inbound B2B com cinco etapas ao redor da penetração de mercado.</title><g class="segg on" data-i="0"><path class="segp" d="M 125.04 86.38 A 150 150 0 0 1 294.96 86.38 L 268.91 124.29 A 104 104 0 0 0 151.09 124.29 Z" fill="#FDD9BC"/><path id="arc0" d="M 145.04 99.71 A 128 128 0 0 1 274.96 99.71" fill="none"/><text class="segt" font-size="11.5" font-weight="600" letter-spacing="0.55" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif"><textPath href="#arc0" startOffset="50%" text-anchor="middle">POSICIONAR</textPath></text></g><g class="segg" data-i="1"><path class="segp" d="M 301.31 91.00 A 150 150 0 0 1 353.82 252.60 L 309.72 239.54 A 104 104 0 0 0 273.31 127.49 Z" fill="#F9C0B4"/><path id="arc1" d="M 294.82 114.13 A 128 128 0 0 1 334.97 237.70" fill="none"/><text class="segt" font-size="11.5" font-weight="600" letter-spacing="0.55" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif"><textPath href="#arc1" startOffset="50%" text-anchor="middle">GARANTIR IMPACTO</textPath></text></g><g class="segg" data-i="2"><path class="segp" d="M 351.40 260.07 A 150 150 0 0 1 213.93 359.95 L 212.72 313.96 A 104 104 0 0 0 308.03 244.72 Z" fill="#F2A9B9"/><path id="arc2" d="M 223.04 345.37 A 136 136 0 0 0 334.72 264.23" fill="none"/><text class="segt" font-size="11.5" font-weight="600" letter-spacing="0.55" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif"><textPath href="#arc2" startOffset="50%" text-anchor="middle">DETECTAR SINAIS</textPath></text></g><g class="segg" data-i="3"><path class="segp" d="M 206.07 359.95 A 150 150 0 0 1 68.60 260.07 L 111.97 244.72 A 104 104 0 0 0 207.28 313.96 Z" fill="#DE93B6"/><path id="arc3" d="M 85.28 264.23 A 136 136 0 0 0 196.96 345.37" fill="none"/><text class="segt" font-size="11.5" font-weight="600" letter-spacing="0.55" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif"><textPath href="#arc3" startOffset="50%" text-anchor="middle">INICIAR CONVERSAS</textPath></text></g><g class="segg" data-i="4"><path class="segp" d="M 66.18 252.60 A 150 150 0 0 1 118.69 91.00 L 146.69 127.49 A 104 104 0 0 0 110.28 239.54 Z" fill="#C57FAE"/><path id="arc4" d="M 85.03 237.70 A 128 128 0 0 1 125.18 114.13" fill="none"/><text class="segt" font-size="11.5" font-weight="600" letter-spacing="0.55" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif"><textPath href="#arc4" startOffset="50%" text-anchor="middle">OTIMIZAR</textPath></text></g><path d="M 129.25 58.13 A 172 172 0 0 1 380.33 186.06" fill="none" stroke="#690c3f" stroke-width="1.8"/><g transform="translate(380.33,186.06) rotate(82)"><path d="M 0 -7 L 9 0 L 0 7 Z" fill="#690c3f"/></g><circle cx="210" cy="210" r="102" fill="#FFFFFF"/><text x="210" y="204" text-anchor="middle" font-size="21" font-weight="700" fill="#171310" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif">Penetração</text><text x="210" y="230" text-anchor="middle" font-size="21" font-weight="700" fill="#171310" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif">de mercado</text><text x="210" y="258" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="1.4" fill="#8f877a" font-family="Host Grotesk, ui-sans-serif, system-ui, sans-serif">CICLO CONTÍNUO</text></svg>
+<ul class="ring-orb" role="list">
+<li>Mercado</li><li>Contas</li><li>Comitês</li><li>Receita</li>
+</ul>
+</div>
+</div>
+<figcaption><b>Cada volta do ciclo usa o aprendizado da anterior</b> para melhorar posicionamento, impacto, sinais e conversas. No centro, a penetração de mercado. Ao redor, mercado, contas, comitês e receita.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>Um anel dividido em cinco segmentos iguais, com uma seta de rotação por fora indicando movimento contínuo. Os segmentos, em ordem, são Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar. No centro do anel está escrito Penetração de mercado. Ao redor do anel aparecem os quatro contextos que o ciclo atravessa: mercado, contas, comitês e receita.</p>
+<p>Durante a leitura das cinco etapas, o segmento correspondente é destacado. O destaque é um apoio de leitura e não é necessário para entender o diagrama.</p>
+</div>
+</details>
+</figure>
+<div class="etapa" id="etapa-posicionar" data-i="0">
+<span class="et-n">Etapa 1</span>
+<h3>Posicionar</h3>
+<p>Posicionamento é a associação que uma empresa deseja ocupar na mente do mercado e consegue sustentar na prática.</p>
+<p>No Novo Inbound B2B, essa associação nasce do encontro entre quatro elementos:</p>
+<ol>
+<li>O mercado que a empresa escolheu.</li>
+<li>A situação que faz esse mercado comprar.</li>
+<li>O nível de maturidade do comprador.</li>
+<li>Um diferencial que a empresa consegue provar.</li>
+</ol>
+<p>Não basta escolher uma frase bonita.</p>
+<p>Posicionamento exige decidir para quem a empresa é especialmente relevante, qual problema ajuda a interpretar, contra quais alternativas compete e por que merece ser lembrada.</p>
+<p>Um problema frequente do velho inbound foi ensinar profissionais a trabalhar dentro de uma régua de nutrição antes de ensiná-los a pensar o mercado.</p>
+<p>Com isso, muitas empresas começaram a produzir conteúdo antes de responder perguntas básicas:</p>
+<ul>
+<li>Quem precisa lembrar de nós?</li>
+<li>Em qual situação precisamos ser lembrados?</li>
+<li>O mercado reconhece o problema?</li>
+<li>Ele entende a categoria?</li>
+<li>Já está comparando fornecedores?</li>
+<li>Qual diferença conseguimos demonstrar?</li>
+<li>Que posição não queremos ocupar?</li>
+</ul>
+<p>Sem essas respostas, conteúdo vira movimento sem direção.</p>
+<div class="et-meta">
+<p><b>Pergunta da etapa:</b> qual associação queremos conquistar no mercado?</p>
+<p><b>Entregável principal:</b> uma tese de posicionamento transformada em narrativa, mensagens, provas e situações de compra.</p>
+</div>
+</div>
+<div class="etapa" id="etapa-garantir-impacto" data-i="1">
+<span class="et-n">Etapa 2</span>
+<h3>Garantir Impacto</h3>
+<p>Posicionamento que ninguém encontra não produz efeito.</p>
+<p>Garantir Impacto significa fazer a narrativa chegar ao mercado certo, com frequência e consistência suficientes para construir memória, compreensão e preferência.</p>
+<p>Não é simplesmente publicar três vezes por semana.</p>
+<p>Também não é estar em todos os canais.</p>
+<p>É entender onde o mercado se educa e construir presença nos ambientes que realmente influenciam sua percepção.</p>
+<p>A escolha pode incluir:</p>
+<ul>
+<li>Conteúdo de especialistas no LinkedIn.</li>
+<li>Podcast.</li>
+<li>Newsletter.</li>
+<li>Vídeo.</li>
+<li>Comunidades.</li>
+<li>Eventos.</li>
+<li>Relações públicas.</li>
+<li>Mídia paga.</li>
+<li>Conteúdo de clientes.</li>
+<li>Google e SEO.</li>
+<li>Parcerias.</li>
+<li>Experiências interativas.</li>
+<li>Presença de executivos e especialistas da empresa.</li>
+</ul>
+<p>A tática depende do mercado, da complexidade da compra, da maturidade do problema e dos recursos disponíveis.</p>
+<p>A regra 95/5, popularizada pelo LinkedIn B2B Institute a partir do trabalho do professor John Dawes, ajuda a explicar por que essa presença precisa acontecer antes da intenção comercial. Em muitas categorias B2B, até 95% dos compradores potenciais podem estar fora do mercado em um determinado momento. Eles são compradores futuros.<sup class="fn"><a href="#ref-5" id="fnr-5">[5]</a></sup></p>
+<p>O trabalho do marketing não é forçar todos a comprar agora.</p>
+<p>É fazer a empresa ser lembrada quando a situação de compra aparecer.</p>
+<div class="et-meta">
+<p><b>Pergunta da etapa:</b> estamos chegando às pessoas certas antes de elas precisarem comprar?</p>
+<p><b>Entregável principal:</b> um sistema de distribuição capaz de transformar posicionamento em presença real no mercado.</p>
+</div>
+</div>
+<div class="etapa" id="etapa-detectar-sinais" data-i="2">
+<span class="et-n">Etapa 3</span>
+<h3>Detectar Sinais</h3>
+<p>Quando o posicionamento começa a circular, o mercado reage.</p>
+<p>Algumas reações serão anônimas. Outras permitirão identificar uma conta ou uma pessoa. Algumas demonstrarão atenção. Outras sugerirão consideração. Poucas representarão intenção comercial explícita.</p>
+<p>Detectar Sinais significa organizar essas manifestações sem confundir visibilidade com propensão de compra.</p>
+<p>Um play de podcast é um sinal de consumo, mas não revela necessariamente quem ouviu.</p>
+<p>Uma reação no LinkedIn identifica uma pessoa, mas não significa que ela esteja comprando.</p>
+<p>Uma visita recorrente de uma conta a páginas de produto pode indicar consideração, mas ainda precisa de contexto.</p>
+<p>Um pedido de demonstração representa intenção comercial explícita.</p>
+<p>Todos são sinais.</p>
+<p>Eles apenas não dizem a mesma coisa.</p>
+<div class="et-meta">
+<p><b>Pergunta da etapa:</b> quem está prestando atenção, em que contexto e com qual intensidade?</p>
+<p><b>Entregável principal:</b> um mapa de sinais que permita priorizar contas, pessoas e momentos sem transformar qualquer interação em desculpa para uma abordagem comercial.</p>
+</div>
+</div>
+<div class="etapa" id="etapa-iniciar-conversas" data-i="3">
+<span class="et-n">Etapa 4</span>
+<h3>Iniciar Conversas</h3>
+<p>Sinal não é autorização automática para vender.</p>
+<p>É contexto para decidir se uma conversa faz sentido, qual conversa deve ser iniciada e por quem.</p>
+<p>Um pedido de demonstração pede resposta comercial rápida.</p>
+<p>Uma dúvida técnica pode pedir ajuda de um especialista.</p>
+<p>Um comentário recorrente pode abrir uma conversa sobre o tema discutido.</p>
+<p>Uma conta que demonstra vários sinais de consideração pode justificar pesquisa e uma abordagem contextualizada.</p>
+<p>Uma curtida isolada normalmente não justifica nada.</p>
+<p>A conversa pode começar por inbound, quando a pessoa solicita contato, ou por outbound, quando a empresa identifica um contexto legítimo para se aproximar.</p>
+<p>A diferença para o cold outbound tradicional não está apenas no canal.</p>
+<p>Está no motivo da conversa.</p>
+<p>A abordagem deixa de partir exclusivamente de uma lista estática e passa a considerar mercado, conta, pessoa, sinal, momento e hipótese de relevância.</p>
+<blockquote class="pq"><p>Quem curtiu um post não pediu uma reunião. Mas talvez tenha mostrado sobre o que vale conversar.</p></blockquote>
+<div class="et-meta">
+<p><b>Pergunta da etapa:</b> qual conversa este sinal justifica, se justificar alguma?</p>
+<p><b>Entregável principal:</b> critérios e playbooks que transformem contexto em conversas úteis, sem converter atenção em perseguição.</p>
+</div>
+</div>
+<div class="etapa" id="etapa-otimizar" data-i="4">
+<span class="et-n">Etapa 5</span>
+<h3>Otimizar</h3>
+<p>O ciclo fecha aprendendo.</p>
+<p>Quais teses de posicionamento ressoaram?</p>
+<p>Quais canais alcançaram o mercado certo?</p>
+<p>Quais conteúdos geraram atenção nas contas desejadas?</p>
+<p>Quais sinais antecederam conversas relevantes?</p>
+<p>Quais conversas viraram oportunidades?</p>
+<p>Quais oportunidades viraram receita?</p>
+<p>Quais padrões apareceram nas perdas?</p>
+<p>Qual parte da jornada continuou invisível até ser revelada pelo cliente?</p>
+<p>O objetivo não é atribuir cada venda a uma peça de conteúdo.</p>
+<p>É aprender o suficiente para aumentar a qualidade da próxima volta.</p>
+<p>Parte do aprendizado será quantitativa.</p>
+<p>Parte virá de entrevistas, reuniões comerciais, análises de oportunidades e conversas com clientes.</p>
+<p>Estratégia não é apenas o que a empresa planeja fazer.</p>
+<p>É o que ela aprende quando o mercado responde.</p>
+<div class="et-meta">
+<p><b>Pergunta da etapa:</b> o que o mercado nos ensinou e o que faremos diferente na próxima volta?</p>
+<p><b>Entregável principal:</b> um sistema de aprendizado que conecta mercado, marketing, vendas e receita.</p>
+</div>
+</div>
+</section>
+<section class="part wrap" id="sinais" aria-labelledby="h-sinais">
+<div class="partmark"><span class="n">Parte seis</span><h2 id="h-sinais">Como os sinais devem ser lidos?</h2></div>
+<p class="answer">A leitura de sinais precisa responder a duas perguntas diferentes:</p>
+<ol>
+<li>Quanto sabemos sobre quem produziu o sinal?</li>
+<li>O que o comportamento sugere sobre a relação dessa pessoa ou conta com o problema?</li>
+</ol>
+<p>Misturar essas perguntas cria um dos erros mais perigosos da geração de demanda atual.</p>
+<p>Identificar alguém não significa descobrir sua intenção.</p>
+<h3 id="observabilidade">Primeira dimensão: observabilidade</h3>
+<div class="tbl-wrap">
+<table>
+<caption>Observabilidade do sinal</caption>
+<thead><tr><th scope="col">Nível</th><th scope="col">O que sabemos</th><th scope="col">Exemplos</th></tr></thead>
+<tbody>
+<tr><th scope="row">Anônimo</th><td data-l="O que sabemos">Sabemos que algo aconteceu, mas não sabemos com segurança quem foi.</td><td data-l="Exemplos">Impressão, visualização, play de podcast, visita não identificada e alcance de mídia.</td></tr>
+<tr><th scope="row">Conta identificada</th><td data-l="O que sabemos">Associamos o comportamento a uma empresa, geralmente com algum grau de probabilidade.</td><td data-l="Exemplos">Visitas recorrentes, consumo de várias páginas e engajamento agregado de pessoas da organização.</td></tr>
+<tr><th scope="row">Pessoa identificada</th><td data-l="O que sabemos">Sabemos quem realizou a ação.</td><td data-l="Exemplos">Comentário, reação, participação em evento, resposta a uma newsletter e preenchimento de cadastro.</td></tr>
+</tbody>
+</table>
+</div>
+<p>A identidade permite contextualização.</p>
+<p>Ela não determina, sozinha, a força do sinal.</p>
+<h3 id="forca-do-sinal">Segunda dimensão: força do sinal</h3>
+<div class="tbl-wrap">
+<table>
+<caption>Força do sinal</caption>
+<thead><tr><th scope="col">Força</th><th scope="col">O que o comportamento sugere</th><th scope="col">Exemplos</th></tr></thead>
+<tbody>
+<tr><th scope="row">Atenção</th><td data-l="O que sugere">A pessoa ou conta entrou em contato com a mensagem.</td><td data-l="Exemplos">Visualização, reação, play, impressão recorrente, visita superficial e inscrição em newsletter.</td></tr>
+<tr><th scope="row">Consideração</th><td data-l="O que sugere">Existe exploração mais ativa do problema, da categoria ou das alternativas.</td><td data-l="Exemplos">Consumo recorrente, pergunta específica, webinar, visita a casos, comparação de abordagens e envolvimento de várias pessoas da conta.</td></tr>
+<tr><th scope="row">Intenção comercial</th><td data-l="O que sugere">Existe interesse explícito em avaliar uma solução ou conversar sobre uma necessidade.</td><td data-l="Exemplos">Pedido de demonstração, contato comercial, solicitação de proposta e pergunta sobre preço ou implementação.</td></tr>
+</tbody>
+</table>
+</div>
+<p>A leitura correta cruza as duas dimensões.</p>
+<p>Um comentário pode ser um sinal identificado de atenção.</p>
+<p>Uma sequência de visitas de uma conta pode sugerir consideração com identidade parcial.</p>
+<p>Um pedido de demonstração é um sinal declarado de intenção comercial.</p>
+<figure class="brk" id="fig-matriz">
+<div class="fig-in">
+<div class="mtx">
+<span class="mtx-ax mtx-ay">Força do sinal</span>
+<div class="mtx-g">
+<span class="mtx-hd"></span>
+<span class="mtx-hd">Anônimo</span>
+<span class="mtx-hd">Conta identificada</span>
+<span class="mtx-hd">Pessoa identificada</span>
+<span class="mtx-rw">Intenção comercial</span>
+<span class="mtx-cell mtx-empty" data-o="Anônimo">Praticamente não ocorre</span>
+<span class="mtx-cell mtx-l3" data-o="Conta identificada">Solicitação de proposta</span>
+<span class="mtx-cell mtx-l3" data-o="Pessoa identificada">Pedido de demonstração</span>
+<span class="mtx-rw">Consideração</span>
+<span class="mtx-cell mtx-l2" data-o="Anônimo">Play de podcast</span>
+<span class="mtx-cell mtx-l2" data-o="Conta identificada">Consumo recorrente</span>
+<span class="mtx-cell mtx-l2" data-o="Pessoa identificada">Comentário e webinar</span>
+<span class="mtx-rw">Atenção</span>
+<span class="mtx-cell mtx-l1" data-o="Anônimo">Impressão</span>
+<span class="mtx-cell mtx-l1" data-o="Conta identificada">Visita de conta</span>
+<span class="mtx-cell mtx-l1" data-o="Pessoa identificada">Reação</span>
+</div>
+<span class="mtx-ax mtx-axx">Observabilidade</span>
+</div>
+</div>
+<figcaption><b>Saber quem é a pessoa não significa saber se ela quer comprar.</b> Identidade e intenção são dimensões diferentes e precisam ser lidas juntas.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>Matriz de três por três. O eixo horizontal é a observabilidade, com os níveis anônimo, conta identificada e pessoa identificada. O eixo vertical é a força do sinal, com os níveis atenção, consideração e intenção comercial.</p>
+<ul>
+<li><b>Atenção:</b> impressão quando anônimo, visita de conta quando a conta é identificada, reação quando a pessoa é identificada.</li>
+<li><b>Consideração:</b> play de podcast quando anônimo, consumo recorrente quando a conta é identificada, comentário e participação em webinar quando a pessoa é identificada.</li>
+<li><b>Intenção comercial:</b> praticamente não ocorre de forma anônima, aparece como solicitação de proposta no nível de conta e como pedido de demonstração no nível de pessoa.</li>
+</ul>
+<p>O quadrante de intenção anônima fica vazio de propósito. Intenção comercial quase sempre chega acompanhada de identidade, porque exige que alguém peça alguma coisa.</p>
+</div>
+</details>
+</figure>
+<p><b>Um sinal não vale apenas pelo que aconteceu. Vale também pela identidade, intensidade, recorrência e contexto.</b></p>
+<h3 id="medir">Como medir o Novo Inbound B2B?</h3>
+<p class="answer">Nenhuma métrica isolada explica geração de demanda. O modelo precisa combinar indicadores de posicionamento, distribuição, sinais, conversas e receita.</p>
+<div class="tbl-wrap">
+<table>
+<caption>Modelo de medição por etapa</caption>
+<thead><tr><th scope="col">Etapa</th><th scope="col">Pergunta de medição</th><th scope="col">Exemplos de indicadores</th></tr></thead>
+<tbody>
+<tr><th scope="row">Posicionar</th><td data-l="Pergunta de medição">O mercado entende e lembra da associação desejada?</td><td data-l="Indicadores">Pesquisa qualitativa, lembrança, busca de marca, menções espontâneas e motivos de ganho e perda.</td></tr>
+<tr><th scope="row">Garantir Impacto</th><td data-l="Pergunta de medição">Estamos chegando ao ICP com frequência e consistência?</td><td data-l="Indicadores">Alcance qualificado, impressões, frequência, plays, visualizações, compartilhamentos e tráfego direto.</td></tr>
+<tr><th scope="row">Detectar Sinais</th><td data-l="Pergunta de medição">Quem está prestando atenção e quais comportamentos se repetem?</td><td data-l="Indicadores">Pessoas do ICP, contas identificadas, recorrência, profundidade e envolvimento de vários participantes.</td></tr>
+<tr><th scope="row">Iniciar Conversas</th><td data-l="Pergunta de medição">Quais sinais justificaram conversas e produziram avanço real?</td><td data-l="Indicadores">Respostas, conversas, reuniões aceitas, oportunidades, rejeições e tempo entre sinal e contato.</td></tr>
+<tr><th scope="row">Otimizar</th><td data-l="Pergunta de medição">O que chegou ao pipeline, à receita e ao aprendizado?</td><td data-l="Indicadores">Pipeline, receita, taxa de ganho, velocidade, expansão, origem declarada e padrões qualitativos.</td></tr>
+</tbody>
+</table>
+</div>
+<p>A atribuição continua útil.</p>
+<p>Ela só não deveria ser confundida com a totalidade da causalidade.</p>
+<p>Uma venda pode ter sido influenciada por meses de exposição, uma conversa privada, uma indicação e um conteúdo que ninguém conseguiu atribuir.</p>
+<p>O fato de a empresa não conseguir observar tudo não elimina sua responsabilidade de medir o que é observável.</p>
+<p>Também não autoriza fingir que apenas o observável produziu resultado.</p>
+<figure class="brk" id="fig-mercado-receita">
+<div class="fig-in">
+<ol class="flow" role="list">
+<li><span class="flow-n">01</span><span class="flow-t">Posicionamento</span><span class="flow-d">gera presença</span></li>
+<li><span class="flow-n">02</span><span class="flow-t">Presença</span><span class="flow-d">gera atenção</span></li>
+<li><span class="flow-n">03</span><span class="flow-t">Atenção</span><span class="flow-d">produz sinais</span></li>
+<li><span class="flow-n">04</span><span class="flow-t">Sinais</span><span class="flow-d">alguns justificam conversas</span></li>
+<li><span class="flow-n">05</span><span class="flow-t">Conversas</span><span class="flow-d">algumas viram pipeline</span></li>
+<li><span class="flow-n">06</span><span class="flow-t">Pipeline</span><span class="flow-d">parte vira receita</span></li>
+</ol>
+<p class="flow-back">O aprendizado volta ao posicionamento e recomeça o ciclo.</p>
+<p class="flow-note">As setas indicam influência, não causalidade determinística.</p>
+</div>
+<figcaption><b>Nem todo impacto pode ser atribuído.</b> Todo aprendizado pode melhorar a próxima volta.</figcaption>
+<details class="fig-eq">
+<summary>Descrição em texto do diagrama</summary>
+<div class="bd">
+<p>Fluxo de influência em seis passos. O posicionamento gera presença. A presença gera atenção. A atenção produz sinais. Alguns sinais justificam conversas. Algumas conversas viram pipeline. Parte do pipeline vira receita. Uma seta de retorno leva o aprendizado de volta ao posicionamento. As ligações representam influência, e não causalidade determinística: nenhuma etapa converte integralmente na seguinte.</p>
+</div>
+</details>
+</figure>
+</section>
+<section class="part wrap" id="escopo" aria-labelledby="h-escopo">
+<div class="partmark"><span class="n">Parte sete</span><h2 id="h-escopo">O que o Novo Inbound B2B é, o que não é e por onde começar</h2></div>
+<h3 id="o-que-e">O que o Novo Inbound B2B é?</h3>
+<p>O Novo Inbound B2B é:</p>
+<ul>
+<li>Um método para organizar geração de demanda em vendas complexas.</li>
+<li>Uma forma de conectar criação e captura de demanda.</li>
+<li>Um sistema para combinar posicionamento, distribuição, sinais, conversas e aprendizado.</li>
+<li>Uma leitura da compra B2B como movimento coletivo.</li>
+<li>Uma maneira de aproximar marketing e vendas ao redor do mercado, não apenas do lead.</li>
+<li>Um ciclo operacional que convive com o funil de receita.</li>
+</ul>
+<h3 id="o-que-nao-e">O que o Novo Inbound B2B não é?</h3>
+<p>O Novo Inbound B2B não é:</p>
+<ul>
+<li>Uma declaração de que todo inbound deixou de funcionar.</li>
+<li>Uma desculpa para abandonar Google, blog ou e-mail.</li>
+<li>Um novo nome para fazer outbound em quem curtiu um post.</li>
+<li>Uma promessa de que tudo poderá ser atribuído.</li>
+<li>Uma ferramenta de automação.</li>
+<li>Um painel de intent data.</li>
+<li>Uma forma de transformar todo comprador futuro em comprador atual.</li>
+<li>Uma metodologia universal para qualquer empresa.</li>
+</ul>
+<p>Ele foi pensado principalmente para empresas B2B em que a venda envolve educação, várias pessoas, risco percebido e tempo de decisão.</p>
+<p>Quanto mais simples, individual e imediata for a compra, menor a necessidade de operar todo o ciclo.</p>
+<h3 id="por-onde-comecar">Por onde começar?</h3>
+<p>Uma empresa não precisa implementar tudo de uma vez.</p>
+<p>Pode começar respondendo cinco perguntas:</p>
+<ol>
+<li>Qual mercado queremos penetrar?</li>
+<li>Qual associação queremos conquistar nesse mercado?</li>
+<li>Onde essas pessoas realmente se educam?</li>
+<li>Quais sinais conseguimos observar hoje?</li>
+<li>Como esses sinais chegam a marketing, vendas e receita?</li>
+</ol>
+<p>Essas respostas costumam revelar onde o ciclo está travando.</p>
+<p>Algumas empresas têm presença, mas não têm posicionamento.</p>
+<p>Outras têm posicionamento, mas não alcançam o mercado.</p>
+<p>Algumas geram atenção, mas não conseguem identificar nenhum movimento.</p>
+<p>Outras detectam sinais, mas transformam tudo em abordagem comercial.</p>
+<p>Muitas iniciam conversas, mas não fecham o ciclo com aprendizado.</p>
+<p>O objetivo não é construir a operação mais complexa.</p>
+<p>É enxergar o mercado com clareza suficiente para tomar decisões melhores.</p>
+</section>
+<section class="part wrap" id="faq" aria-labelledby="h-faq">
+<div class="partmark"><span class="n">Dúvidas</span><h2 id="h-faq">Perguntas frequentes</h2></div>
+<noscript><style>.qa-bd[hidden]{display:block!important}.qa-ic{display:none}.qa-btn{cursor:default}</style></noscript>
+<div class="faq">
+<div class="qa" id="faq-o-que-e-novo-inbound-b2b">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="true" aria-controls="a-o-que-e-novo-inbound-b2b" id="q-o-que-e-novo-inbound-b2b"><span>O que é o Novo Inbound B2B?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-o-que-e-novo-inbound-b2b" role="region" aria-labelledby="q-o-que-e-novo-inbound-b2b">
+<p>Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas. Ele organiza a penetração de mercado em cinco etapas contínuas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.</p>
+<p>O método mantém a premissa do inbound, que é educar o comprador para construir demanda, mas atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível.<button class="perma" type="button" data-anchor="faq-o-que-e-novo-inbound-b2b" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-inbound-morreu">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-inbound-morreu" id="q-inbound-morreu"><span>O inbound marketing morreu?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-inbound-morreu" role="region" aria-labelledby="q-inbound-morreu" hidden>
+<p>Não.</p>
+<p>Educar compradores, ser encontrado e construir relacionamento antes da venda continuam sendo práticas fundamentais.</p>
+<p>O que perdeu aderência foi tratar Google, blog, formulário, e-mail, lead scoring e MQL como um mecanismo suficiente para representar toda a geração de demanda B2B.<button class="perma" type="button" data-anchor="faq-inbound-morreu" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-funil-morreu">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-funil-morreu" id="q-funil-morreu"><span>O funil de marketing morreu?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-funil-morreu" role="region" aria-labelledby="q-funil-morreu" hidden>
+<p>Como representação linear da jornada do comprador, sim.</p>
+<p>Como instrumento de gestão, não.</p>
+<p>O funil continua útil para visualizar oportunidades, conversão, pipeline e previsão de receita. Ele se torna insuficiente quando é usado como descrição literal do comportamento do comprador ou como único sistema operacional de marketing e vendas.<button class="perma" type="button" data-anchor="faq-funil-morreu" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-mql-morreu">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-mql-morreu" id="q-mql-morreu"><span>O MQL morreu?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-mql-morreu" role="region" aria-labelledby="q-mql-morreu" hidden>
+<p>Não necessariamente.</p>
+<p>O MQL pode continuar sendo uma classificação operacional. O problema é tratá-lo como prova de intenção comercial ou como única evidência de que o mercado está prestando atenção.</p>
+<p>Um MQL baseado em download, score ou perfil não equivale automaticamente a um comprador que deseja falar com vendas.<button class="perma" type="button" data-anchor="faq-mql-morreu" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-abandonar-google-blog-email">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-abandonar-google-blog-email" id="q-abandonar-google-blog-email"><span>Preciso abandonar Google, blog e e-mail?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-abandonar-google-blog-email" role="region" aria-labelledby="q-abandonar-google-blog-email" hidden>
+<p>Não.</p>
+<p>Esses canais continuam úteis para capturar pesquisas existentes, aprofundar a educação e manter relacionamento.</p>
+<p>O que muda é o papel que ocupam. Eles deixam de ser tratados como o único centro da jornada e passam a integrar um sistema mais amplo de distribuição, sinais e conversas.<button class="perma" type="button" data-anchor="faq-abandonar-google-blog-email" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-conteudo-aberto">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-conteudo-aberto" id="q-conteudo-aberto"><span>Todo conteúdo deve ser aberto?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-conteudo-aberto" role="region" aria-labelledby="q-conteudo-aberto" hidden>
+<p>Conteúdo criado para circular e educar tende a ganhar força quando é aberto.</p>
+<p>Formulários fazem sentido quando existe uma troca que justifique a identificação, como uma ferramenta personalizada, inscrição, experiência exclusiva ou pedido de contato.</p>
+<p>A decisão deve partir do papel do conteúdo, não da necessidade interna de gerar leads.<button class="perma" type="button" data-anchor="faq-conteudo-aberto" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-sinal-visivel-intencao">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-sinal-visivel-intencao" id="q-sinal-visivel-intencao"><span>Um sinal visível indica intenção de compra?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-sinal-visivel-intencao" role="region" aria-labelledby="q-sinal-visivel-intencao" hidden>
+<p>Não.</p>
+<p>Uma reação, comentário ou visita identificada pode demonstrar atenção ou consideração. Não prova intenção comercial.</p>
+<p>A força do sinal depende do comportamento, da recorrência, do contexto, do fit e da combinação com outros sinais.<button class="perma" type="button" data-anchor="faq-sinal-visivel-intencao" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-evitar-spam">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-evitar-spam" id="q-evitar-spam"><span>Como impedir que a detecção de sinais vire spam?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-evitar-spam" role="region" aria-labelledby="q-evitar-spam" hidden>
+<p>Criando critérios claros para iniciar conversas.</p>
+<p>Nem todo sinal pede abordagem. A conversa deve ter uma hipótese legítima de relevância, respeitar o contexto da interação e começar pelo assunto que produziu o sinal, não por uma tentativa imediata de agendar reunião.<button class="perma" type="button" data-anchor="faq-evitar-spam" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-abm">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-abm" id="q-abm"><span>Novo Inbound B2B é a mesma coisa que ABM?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-abm" role="region" aria-labelledby="q-abm" hidden>
+<p>Não.</p>
+<p>Dentro do Novo Inbound B2B, ABM é uma escolha de foco, coordenação e personalização para um conjunto definido de contas.</p>
+<p>O ciclo é mais amplo. Ele organiza como a empresa se posiciona, distribui sua mensagem, detecta sinais, inicia conversas e aprende, com ou sem uma estratégia formal de ABM.<button class="perma" type="button" data-anchor="faq-abm" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-demand-generation">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-demand-generation" id="q-demand-generation"><span>Isso não é apenas demand generation com outro nome?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-demand-generation" role="region" aria-labelledby="q-demand-generation" hidden>
+<p>O Novo Inbound B2B pertence ao campo de geração de demanda.</p>
+<p>Sua proposta específica é integrar posicionamento, distribuição, observabilidade, força dos sinais, conversas contextualizadas e otimização em um único ciclo operacional.</p>
+<p>O valor não está em inventar cada componente separadamente. Está em organizá-los de acordo com a forma como uma compra B2B complexa acontece hoje.<button class="perma" type="button" data-anchor="faq-demand-generation" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-medir-dark-social">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-medir-dark-social" id="q-medir-dark-social"><span>Como medir dark social?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-medir-dark-social" role="region" aria-labelledby="q-medir-dark-social" hidden>
+<p>Não é possível observá-lo integralmente.</p>
+<p>A empresa pode reduzir a zona de desconhecimento usando atribuição declarada, entrevistas, análise das conversas comerciais, pesquisa com clientes, busca de marca e padrões de tráfego direto.</p>
+<p>O objetivo não é iluminar tudo. É aprender o suficiente para tomar decisões melhores.<button class="perma" type="button" data-anchor="faq-medir-dark-social" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-tempo-de-resultado">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-tempo-de-resultado" id="q-tempo-de-resultado"><span>Em quanto tempo o método produz resultado?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-tempo-de-resultado" role="region" aria-labelledby="q-tempo-de-resultado" hidden>
+<p>Depende do ponto de partida, da duração do ciclo de venda, da força do posicionamento, do alcance existente e da capacidade de iniciar conversas.</p>
+<p>Alguns efeitos, como clareza de mensagem e melhoria da abordagem comercial, podem aparecer rapidamente.</p>
+<p>Construção de memória, preferência e penetração de mercado exige consistência e tempo.<button class="perma" type="button" data-anchor="faq-tempo-de-resultado" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+<div class="qa" id="faq-nao-indicado">
+<h3 class="qa-h"><button class="qa-btn" type="button" aria-expanded="false" aria-controls="a-nao-indicado" id="q-nao-indicado"><span>Para quem o método não é indicado?</span><span class="qa-ic" aria-hidden="true"></span></button></h3>
+<div class="qa-bd" id="a-nao-indicado" role="region" aria-labelledby="q-nao-indicado" hidden>
+<p>O método tende a ser menos necessário em compras simples, imediatas, individuais e altamente transacionais.</p>
+<p>Ele ganha relevância conforme aumentam o risco, o ticket, o número de participantes, a necessidade de educação e a duração da decisão.<button class="perma" type="button" data-anchor="faq-nao-indicado" aria-label="Copiar link">#</button></p>
+</div>
+</div>
+</div>
+</section>
+<section class="part wrap" id="glossario" aria-labelledby="h-glossario">
+<div class="partmark"><span class="n">Referência</span><h2 id="h-glossario">Glossário</h2></div>
+<div class="gloss">
+<dl id="g-criacao-de-demanda"><dt>Criação de demanda<button class="perma" type="button" data-anchor="g-criacao-de-demanda" aria-label="Copiar link">#</button></dt><dd>Educar compradores atuais e futuros para aumentar o reconhecimento do problema, a compreensão da categoria e a consideração pela empresa.</dd></dl>
+<dl id="g-captura-de-demanda"><dt>Captura de demanda<button class="perma" type="button" data-anchor="g-captura-de-demanda" aria-label="Copiar link">#</button></dt><dd>Receber, identificar e converter compradores que já estão procurando uma solução ou manifestaram intenção comercial.</dd></dl>
+<dl id="g-penetracao-de-mercado"><dt>Penetração de mercado<button class="perma" type="button" data-anchor="g-penetracao-de-mercado" aria-label="Copiar link">#</button></dt><dd>Aumentar presença, preferência e receita no mercado que a empresa escolheu disputar, por meio da aquisição de contas e da expansão de valor dentro delas.</dd></dl>
+<dl id="g-comprador-futuro"><dt>Comprador futuro<button class="perma" type="button" data-anchor="g-comprador-futuro" aria-label="Copiar link">#</button></dt><dd>Pessoa ou conta que possui fit com a solução, mas não está em momento de compra.</dd></dl>
+<dl id="g-comprador-em-mercado"><dt>Comprador em mercado<button class="perma" type="button" data-anchor="g-comprador-em-mercado" aria-label="Copiar link">#</button></dt><dd>Pessoa ou conta que está avaliando ativamente um problema, uma categoria ou fornecedores.</dd></dl>
+<dl id="g-comite-de-compra"><dt>Comitê de compra<button class="perma" type="button" data-anchor="g-comite-de-compra" aria-label="Copiar link">#</button></dt><dd>Grupo de pessoas que influencia, avalia, aprova, utiliza ou pode bloquear uma decisão B2B.</dd></dl>
+<dl id="g-mql"><dt>MQL<button class="perma" type="button" data-anchor="g-mql" aria-label="Copiar link">#</button></dt><dd>Classificação utilizada por marketing para indicar que um contato atende a critérios definidos de perfil ou comportamento. Não representa necessariamente intenção comercial.</dd></dl>
+<dl id="g-maturidade-de-mercado"><dt>Maturidade de mercado<button class="perma" type="button" data-anchor="g-maturidade-de-mercado" aria-label="Copiar link">#</button></dt><dd>No Novo Inbound B2B, é uma lente para entender o quanto o mercado reconhece o problema, compreende a categoria e diferencia produtos ou fornecedores.</dd></dl>
+<dl id="g-sinal-de-atencao"><dt>Sinal de atenção<button class="perma" type="button" data-anchor="g-sinal-de-atencao" aria-label="Copiar link">#</button></dt><dd>Comportamento que indica exposição ou consumo, sem necessariamente sugerir avaliação ativa de compra.</dd></dl>
+<dl id="g-sinal-de-consideracao"><dt>Sinal de consideração<button class="perma" type="button" data-anchor="g-sinal-de-consideracao" aria-label="Copiar link">#</button></dt><dd>Comportamento que sugere exploração mais profunda do problema, da categoria ou das alternativas.</dd></dl>
+<dl id="g-sinal-de-intencao-comercial"><dt>Sinal de intenção comercial<button class="perma" type="button" data-anchor="g-sinal-de-intencao-comercial" aria-label="Copiar link">#</button></dt><dd>Manifestação explícita de interesse em avaliar uma solução, falar com a empresa, receber proposta ou compreender condições de compra.</dd></dl>
+<dl id="g-dark-social"><dt>Dark social<button class="perma" type="button" data-anchor="g-dark-social" aria-label="Copiar link">#</button></dt><dd>Conjunto de ambientes em que informação e recomendação circulam sem observação integral pelas ferramentas tradicionais de atribuição.</dd></dl>
+<dl id="g-abm"><dt>ABM<button class="perma" type="button" data-anchor="g-abm" aria-label="Copiar link">#</button></dt><dd>Estratégia de foco, coordenação e personalização de marketing e vendas para contas ou grupos de contas selecionados.</dd></dl>
+</div>
+</section>
+</article>
+<section class="tools" id="ferramentas" aria-labelledby="h-ferramentas">
+<div class="wrap">
+<div class="partmark" style="padding-bottom:6px"><span class="n">Para aplicar</span><h2 id="h-ferramentas">Ferramentas</h2></div>
+<p style="max-width:38em">Duas ferramentas abertas, sem cadastro e sem envio de dados. Tudo roda no seu navegador.</p>
+</div>
+<div class="wrap">
+<div class="tool" id="ferramenta-maturidade">
+<span class="lbl">Ferramenta 1</span>
+<h3>Em qual nível de maturidade o seu mercado está?</h3>
+<p class="intro">No Novo Inbound B2B, usamos três níveis para orientar mensagem, conteúdo, canal e prova.</p>
+<div class="lvls">
+<div class="lvl"><span class="lvl-k">Problema</span><p>O mercado sente o efeito, mas ainda não reconhece claramente o problema ou sua consequência. A comunicação precisa ajudar o comprador a interpretar o que está acontecendo.</p></div>
+<div class="lvl"><span class="lvl-k">Categoria</span><p>O mercado reconhece o problema e começa a avaliar formas de resolvê-lo. A comunicação precisa explicar a categoria, comparar alternativas e mostrar por que os caminhos atuais são insuficientes.</p></div>
+<div class="lvl"><span class="lvl-k">Produto</span><p>O mercado reconhece o problema e entende a categoria. A disputa acontece entre fornecedores. A comunicação precisa demonstrar diferença, prova, segurança e adequação.</p></div>
+</div>
+<form id="f1" novalidate>
+<p class="intro" style="margin:0 0 14px">Responda às quatro perguntas.</p>
+<div class="bar" aria-hidden="true"><i id="f1bar"></i></div>
+<p class="bar-t" id="f1prog" role="status">0 de 4 respondidas</p>
+<fieldset>
+<legend>1. Quando você descreve o problema que sua empresa resolve, o ICP normalmente:</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="q1" value="A"><span><span class="k">A.</span> Reconhece o incômodo, mas não sabe dar nome a ele nem o conecta a uma consequência empresarial.</span></label>
+<label class="opt"><input type="radio" name="q1" value="B"><span><span class="k">B.</span> Entende o problema e pergunta como aquilo pode ser resolvido.</span></label>
+<label class="opt"><input type="radio" name="q1" value="C"><span><span class="k">C.</span> Já conhece o problema e pergunta por que deveria escolher sua empresa.</span></label>
+</div>
+</fieldset>
+<fieldset>
+<legend>2. Quando você menciona a categoria da solução, o ICP normalmente:</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="q2" value="A"><span><span class="k">A.</span> Não sabe que existe uma categoria específica para resolver aquilo.</span></label>
+<label class="opt"><input type="radio" name="q2" value="B"><span><span class="k">B.</span> Já ouviu falar, mas continua usando planilha, processo manual ou solução adjacente.</span></label>
+<label class="opt"><input type="radio" name="q2" value="C"><span><span class="k">C.</span> Já utiliza a categoria e compara fornecedores.</span></label>
+</div>
+</fieldset>
+<fieldset>
+<legend>3. Qual objeção aparece com mais frequência?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="q3" value="A"><span><span class="k">A.</span> “Não é prioridade” ou “conseguimos conviver com isso”.</span></label>
+<label class="opt"><input type="radio" name="q3" value="B"><span><span class="k">B.</span> “Podemos resolver internamente” ou “a solução atual já faz algo parecido”.</span></label>
+<label class="opt"><input type="radio" name="q3" value="C"><span><span class="k">C.</span> “Também estamos avaliando outros fornecedores”.</span></label>
+</div>
+</fieldset>
+<fieldset>
+<legend>4. Quem chega até a empresa normalmente:</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="q4" value="A"><span><span class="k">A.</span> Chega por indicação genérica e ainda não sabe exatamente o que pedir.</span></label>
+<label class="opt"><input type="radio" name="q4" value="B"><span><span class="k">B.</span> Chega querendo entender como esse tipo de solução funciona.</span></label>
+<label class="opt"><input type="radio" name="q4" value="C"><span><span class="k">C.</span> Chega com escopo, critérios e alternativas em avaliação.</span></label>
+</div>
+</fieldset>
+<div class="btns">
+<button class="btn" type="button" id="f1go" disabled>Ver resultado</button>
+<button class="btn ghost" type="button" id="f1re" hidden>Refazer</button>
+</div>
+</form>
+<div id="f1res" role="status" aria-live="polite"></div>
+<p class="intro" style="margin:22px 0 0">Predominância de A indica maturidade de problema. Predominância de B indica maturidade de categoria. Predominância de C indica maturidade de produto. Resultados mistos são normais. Podem revelar diferenças entre segmentos, participantes do comitê ou situações de compra.</p>
+<p class="intro" style="margin:12px 0 0">Esta é uma ferramenta de orientação, não um diagnóstico fechado. Uma leitura confiável exige entrevistas com clientes, análise de concorrência e observação das conversas comerciais.</p>
+</div>
+<div class="tool" id="ferramenta-sinais">
+<span class="lbl">Ferramenta 2</span>
+<h3>O que suas táticas permitem enxergar?</h3>
+<p class="intro">Selecione as táticas utilizadas atualmente e analise cada uma em duas dimensões:</p>
+<ol class="intro" style="padding-left:22px">
+<li>Observabilidade: anônimo, conta identificada ou pessoa identificada.</li>
+<li>Força possível do sinal: atenção, consideração ou intenção comercial.</li>
+</ol>
+<p class="intro">Táticas que podem ser analisadas:</p>
+<form id="f2" novalidate>
+<div class="taticas" id="f2list">
+<label class="opt"><input type="checkbox" name="t" value="podcast"><span>Podcast próprio</span></label>
+<label class="opt"><input type="checkbox" name="t" value="tl"><span>Conteúdo de especialistas no LinkedIn</span></label>
+<label class="opt"><input type="checkbox" name="t" value="news"><span>Newsletter</span></label>
+<label class="opt"><input type="checkbox" name="t" value="pagina"><span>Página da empresa no LinkedIn</span></label>
+<label class="opt"><input type="checkbox" name="t" value="paga"><span>Mídia paga</span></label>
+<label class="opt"><input type="checkbox" name="t" value="yt"><span>Vídeo no YouTube</span></label>
+<label class="opt"><input type="checkbox" name="t" value="magnet"><span>Lead magnet</span></label>
+<label class="opt"><input type="checkbox" name="t" value="webinar"><span>Webinar</span></label>
+<label class="opt"><input type="checkbox" name="t" value="visit"><span>Identificação de empresas visitantes</span></label>
+<label class="opt"><input type="checkbox" name="t" value="evento"><span>Evento presencial</span></label>
+<label class="opt"><input type="checkbox" name="t" value="comunidade"><span>Comunidade</span></label>
+<label class="opt"><input type="checkbox" name="t" value="form"><span>Formulário comercial</span></label>
+<label class="opt"><input type="checkbox" name="t" value="demo"><span>Pedido de demonstração</span></label>
+</div>
+<div class="btns">
+<button class="btn" type="button" id="f2go" disabled>Ver o que você enxerga</button>
+<button class="btn ghost" type="button" id="f2re" hidden>Limpar seleção</button>
+</div>
+</form>
+<div id="f2res" role="status" aria-live="polite"></div>
+<p class="intro" style="margin:22px 0 0">A ferramenta não determina se uma tática é boa ou ruim.</p>
+<p class="intro" style="margin:8px 0 0">Ela mostra o que cada tática permite observar e quais conclusões não podem ser tiradas a partir de seus números.</p>
+<p class="intro" style="margin:8px 0 0">As proporções devem ser tratadas como ilustração da lógica, não como benchmark universal.</p>
+<p class="intro" style="margin:8px 0 0">O resultado é uma orientação, não um diagnóstico fechado. As categorias usadas são qualitativas de propósito: predominantemente anônimo, conta parcialmente identificável, pessoa identificável, atenção, consideração e intenção comercial.</p>
+</div>
+</div>
+</section>
+<div class="wrap">
+<section class="cite" id="citar" aria-labelledby="h-citar">
+<span class="lbl">Conteúdo aberto</span>
+<h2 id="h-citar">Pode citar, copiar e usar</h2>
+<p>Este manifesto é aberto de propósito.</p>
+<p>Não tem formulário, paywall ou pedido de e-mail.</p>
+<p>Se ele ajudar você a explicar alguma coisa para seu time, cliente ou conselho, use.</p>
+<p>O único pedido é atribuição com link.</p>
+<p>A forma canônica é:</p>
+<p class="ref-can" id="refcan">LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/</p>
+<div class="btns">
+<button class="btn" type="button" id="cpref">Copiar referência</button>
+<button class="btn ghost" type="button" id="cplink" data-url="https://novoinbound.com.br/">Copiar link do manifesto</button>
+<a class="btn ghost" href="/manifesto.md" style="text-decoration:none;border-bottom-width:1px">Abrir versão Markdown</a>
+</div>
+<p style="margin-top:20px">Cada conceito importante possui um link permanente, e existe uma versão em Markdown para uso em documentos internos, ferramentas de inteligência artificial e wikis.</p>
+</section>
+<section class="end" id="encerramento" aria-labelledby="h-fim">
+<div class="partmark"><span class="n">Encerramento</span><h2 id="h-fim">O mercado continuará se movendo sem pedir permissão ao seu CRM</h2></div>
+<p>Enquanto você lê este manifesto, alguém do seu mercado pode estar descobrindo um problema.</p>
+<p>Outra pessoa pode estar ouvindo uma conversa sobre a categoria.</p>
+<p>Uma conta pode estar pesquisando o nome da sua empresa.</p>
+<p>Um diretor pode estar perguntando em um grupo privado se alguém conhece você.</p>
+<p>Um comprador pode estar comparando fornecedores em uma ferramenta de inteligência artificial.</p>
+<p>Nada disso precisa aparecer no seu funil para estar acontecendo.</p>
+<p>O trabalho do marketing é construir presença antes da oportunidade, reconhecer movimento quando ele aparece e ajudar vendas a entrar na conversa com contexto.</p>
+<p>O trabalho de vendas é transformar contexto em compreensão, segurança e decisão.</p>
+<p>O trabalho da operação é aprender com o que acontece e devolver esse aprendizado ao mercado.</p>
+<p>Foi a forma de comprar que mudou.</p>
+<p>Agora, a forma de fazer marketing e vender precisa mudar junto.</p>
+<p class="answer">O funil de marketing morreu. O inbound marketing não. O que entra no lugar é um ciclo.</p>
+<div class="cta">
+<a class="c1" href="https://b2binsiders.com.br/formacao-e-mentoria/"><span class="r">Principal</span><span><span class="t">Formação em Geração de Demanda B2B</span><span class="d">Se você quiser aprender a implementar esse ciclo, o caminho principal é a Formação em Geração de Demanda B2B.</span></span></a>
+<a class="c2" href="https://calendly.com/david-b2binsiders/30min"><span class="r">Secundário</span><span><span class="t">Marcar uma conversa de 30 minutos</span><span class="d">Se quiser analisar primeiro onde sua operação está travando, você pode marcar uma conversa de 30 minutos.</span></span></a>
+<a class="c3" href="https://www.linkedin.com/company/b2b-insiders/"><span class="r">Terciário</span><span><span class="t">Acompanhar a B2B Insiders no LinkedIn</span><span class="d">Se quiser acompanhar o desenvolvimento do método, siga a B2B Insiders no LinkedIn.</span></span></a>
+</div>
+</section>
+<section class="refs" id="referencias" aria-labelledby="h-refs">
+<h2 id="h-refs">Referências</h2>
+<ol>
+<li id="ref-1">HubSpot. <a href="https://www.hubspot.com/our-story">Our Story</a>. História oficial da origem da HubSpot e do inbound marketing. HubSpot. <a href="https://www.hubspot.com/company/management/brian-halligan">Brian Halligan</a>, perfil oficial do cofundador. HubSpot. <a href="https://www.hubspot.com/company-news/author/dharmesh-shah">Dharmesh Shah</a>, perfil oficial do cofundador e referência ao OnStartups.</li>
+<li id="ref-2">Gartner. <a href="https://www.gartner.com/en/sales/insights/b2b-buying-journey">B2B Buying: How Top CSOs and CMOs Optimize the Journey</a>. Pesquisa e orientação sobre a natureza não linear da compra B2B.</li>
+<li id="ref-3">Gartner. <a href="https://www.gartner.com/en/sales/trends/sales-and-marketing-alignment">Build Sales and Marketing Alignment to Exceed Revenue Goals</a>. Pesquisa sobre grupos de compra, tarefas e comunicação assíncrona.</li>
+<li id="ref-4">Google Search Central. <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Guide to Optimizing for Generative AI Features</a>. Orientação sobre conteúdo original, útil e não comoditizado.</li>
+<li id="ref-5">Dawes, John. <a href="https://marketingscience.info/news-and-insights/advertising-effectiveness-and-the-95-5-rule-most-b2b-buyers-are-not-in-the-market-right-now">Advertising Effectiveness and the 95/5 Rule</a>. Ehrenberg-Bass Institute for Marketing Science, 2021.</li>
+</ol>
+</section>
+</div>
+</main>
+<footer>
+<div class="wrap in">
+<span>Uma metodologia da <a href="https://www.linkedin.com/company/b2b-insiders/">B2B Insiders</a>, por <a href="https://www.linkedin.com/in/dacarjb/">David Costa Lima</a>.</span>
+<span><a href="/manifesto.md">Versão em Markdown</a> · <a href="/en/" hreflang="en" lang="en">English</a></span>
+</div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/nib.js?v=2"></script>
+</body>
+</html>
