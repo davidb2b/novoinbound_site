@@ -118,7 +118,7 @@
    },
    "isAccessibleForFree": true,
    "datePublished": "2026-07-25",
-   "dateModified": "2026-07-26",
+   "dateModified": "2026-07-31",
    "wordCount": 5600,
    "timeRequired": "PT25M",
    "usageInfo": "https://novoinbound.com.br/en/#como-citar",
@@ -387,7 +387,7 @@
     "@id": "https://novoinbound.com.br/en/#article"
    },
    "datePublished": "2026-07-25",
-   "dateModified": "2026-07-26",
+   "dateModified": "2026-07-31",
    "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -526,6 +526,35 @@ h3{font-size:25px;margin:52px 0 16px;font-variation-settings:"opsz" 30}
 .band p{font-size:15.5px;line-height:1.6;margin:0 0 10px}
 .band ul{margin:0;padding-left:17px;font-size:14.5px;color:var(--tinta-2)}
 .band li{margin-bottom:4px}
+
+/* comparison */
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.cmp-h{font-family:var(--serif);font-size:28px;line-height:1.2;font-weight:600;color:var(--tinta);margin:0 0 8px;font-variation-settings:"opsz" 34}
+.cmp-sub{font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--tinta-2);margin:0 0 22px;max-width:62ch}
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--filete);background:var(--paper)}
+table.cmp{width:100%;min-width:640px;border-collapse:collapse;font-family:var(--sans);font-size:15.5px;line-height:1.55}
+.cmp th,.cmp td{padding:13px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--filete)}
+.cmp thead th{font-family:var(--label);font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);background:var(--paper-2);border-bottom:2px solid var(--tinta)}
+.cmp thead th:last-child{color:var(--vinho)}
+.cmp tbody th{font-weight:600;color:var(--tinta);width:18%}
+.cmp tbody td{color:var(--tinta-2)}
+.cmp tbody td:last-child{color:var(--tinta);background:#FDF7F0}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
+@media(max-width:640px){
+.cmp-wrap{overflow-x:visible;border:0;background:transparent}
+table.cmp{min-width:0;border:0}
+.cmp thead{display:none}
+.cmp tbody,.cmp tbody tr,.cmp tbody th,.cmp tbody td{display:block;width:auto}
+.cmp tbody tr{border:1px solid var(--filete);background:var(--paper);margin-bottom:14px}
+.cmp tbody th{border-bottom:1px solid var(--filete);background:var(--paper-2);font-size:16.5px;padding:11px 14px}
+.cmp tbody td{border-bottom:1px solid var(--filete);padding:11px 14px 13px;font-size:15.5px}
+.cmp tbody td:before{content:attr(data-l);display:block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin-bottom:5px}
+.cmp tbody td:last-child{border-bottom:0}
+.cmp tbody td:last-child:before{color:var(--vinho)}
+.cmp tbody tr:last-child th{border-bottom:1px solid var(--filete)}
+.cmp tbody tr:last-child td:last-child{border-bottom:0}
+}
+.cmp-note{font-family:var(--sans);font-size:15.5px;line-height:1.62;color:var(--tinta-2);margin:18px 0 0;max-width:62ch}
 
 /* ---------- prancha (figura) ---------- */
 .plate{margin:64px 0;border-top:1px solid var(--filete);border-bottom:1px solid var(--filete);padding:36px 0 32px}
@@ -781,7 +810,7 @@ footer .sig a{color:var(--vinho);font-weight:600;border-bottom-color:var(--filet
       <div class="bl-txt">
         <p class="bl-lead">By <a href="https://www.linkedin.com/in/dacarjb/" rel="author me"><b>David Costa Lima</b></a>, cofounder of <a href="https://b2binsiders.com.br">B2B Insiders</a>.</p>
         <p class="bl-note">New Inbound B2B is a method he created together with B2B Insiders, built out of demand generation operations inside Brazilian B2B companies.</p>
-        <p class="bl-meta"><span>25 minute read</span><span>No form</span><span>Published <time datetime="2026-07-25">July 25, 2026</time></span></p>
+        <p class="bl-meta"><span>25 minute read</span><span>No form</span><span>Published <time datetime="2026-07-25">July 25, 2026</time></span><span>Updated <time datetime="2026-07-31">July 31, 2026</time></span></p>
       </div>
     </div>
 
@@ -957,6 +986,37 @@ footer .sig a{color:var(--vinho);font-weight:600;border-bottom-color:var(--filet
           <p>Nobody gets it right the first time, and nobody should, because the strategy is about the audience. That is why we call it a continuous cycle and not a funnel: each turn changes the way the next turn gets run.</p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wide">
+      <span class="lbl">Comparison</span>
+      <h3 class="cmp-h">Traditional inbound funnel vs. New Inbound B2B</h3>
+      <p class="cmp-sub">What changes, point by point, between the mechanism designed in 2006 and the cycle that replaces it.</p>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <caption class="vh">Comparison between the traditional inbound funnel and the New Inbound B2B method</caption>
+          <thead>
+            <tr><th scope="col">Dimension</th><th scope="col">Traditional inbound funnel</th><th scope="col">New Inbound B2B</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Shape</th><td data-l="Traditional funnel">Linear, with top, middle and bottom</td><td data-l="New Inbound B2B">Continuous five-stage cycle, with no beginning and no end</td></tr>
+            <tr><th scope="row">Premise</th><td data-l="Traditional funnel">Educate the buyer to create demand</td><td data-l="New Inbound B2B">The same. The premise never broke</td></tr>
+            <tr><th scope="row">Mechanism</th><td data-l="Traditional funnel">Blog, SEO, form, email nurturing and MQL</td><td data-l="New Inbound B2B">Position, Ensure Impact, Detect Signals, Start Conversations, Optimize</td></tr>
+            <tr><th scope="row">Where education happens</th><td data-l="Traditional funnel">On the company website</td><td data-l="New Inbound B2B">Decentralized: feed, podcast, community, event, video</td></tr>
+            <tr><th scope="row">Unit of work</th><td data-l="Traditional funnel">The lead</td><td data-l="New Inbound B2B">The signal</td></tr>
+            <tr><th scope="row">Signal you can read</th><td data-l="Traditional funnel">Form filled and email opened</td><td data-l="New Inbound B2B">Three layers of signal: invisible, visible and intent</td></tr>
+            <tr><th scope="row">Starting point</th><td data-l="Traditional funnel">Keyword and search volume</td><td data-l="New Inbound B2B">ICP and market maturity: problem, category or product</td></tr>
+            <tr><th scope="row">Role of the form</th><td data-l="Traditional funnel">Mandatory entry point</td><td data-l="New Inbound B2B">One high-intent signal among many, not the only door</td></tr>
+            <tr><th scope="row">Relationship to outbound</th><td data-l="Traditional funnel">Separate channel, measured by another yardstick</td><td data-l="New Inbound B2B">Same stage: Start Conversations uses inbound and outbound signal</td></tr>
+            <tr><th scope="row">Core metric</th><td data-l="Traditional funnel">MQL volume</td><td data-l="New Inbound B2B">Signal from the right ICP that turns into conversation and pipeline</td></tr>
+            <tr><th scope="row">How it improves</th><td data-l="Traditional funnel">By optimizing conversion at each step</td><td data-l="New Inbound B2B">Each turn of the cycle rewrites the next turn</td></tr>
+            <tr><th scope="row">Year of origin</th><td data-l="Traditional funnel">2006, with the launch of inbound marketing</td><td data-l="New Inbound B2B">2026, formulated by David Costa Lima and B2B Insiders</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cmp-note">New Inbound B2B does not replace the premise of inbound. It replaces the mechanism, which is the set of steps that, in 2006, was the only technically possible way to execute that premise.</p>
     </div>
   </div>
 </section>
