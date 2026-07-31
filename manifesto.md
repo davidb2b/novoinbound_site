@@ -4,7 +4,7 @@ author: David Costa Lima
 organization: B2B Insiders
 canonical: https://novoinbound.com.br/
 published: 2026-07-25
-modified: 2026-07-25
+modified: 2026-07-31
 language: pt-BR
 license: Conteúdo aberto. Pode ser citado e reproduzido com atribuição e link para https://novoinbound.com.br/
 citation: "LIMA, David Costa. Novo Inbound B2B: o manifesto. B2B Insiders, 25 jul. 2026. Disponível em: https://novoinbound.com.br/"
@@ -153,6 +153,25 @@ Essa é exatamente a parte que conecta a criação de demanda, que aconteceu lá
 O ciclo se fecha aprendendo. Quais sinais viraram conversa? Quais conversas viraram pipeline? Qual conteúdo gerou mais engajamento do ICP certo? Qual tese de posicionamento ressoou de verdade?
 
 Ninguém acerta de primeira, e nem deveria, porque a estratégia é sobre a audiência. É por isso que a gente chama de ciclo contínuo e não de funil: cada volta muda a forma como a volta seguinte vai ser rodada.
+
+### Funil de inbound tradicional × Novo Inbound B2B
+
+| Dimensão | Funil de inbound tradicional | Novo Inbound B2B |
+| --- | --- | --- |
+| Formato | Linear, com topo, meio e fundo | Ciclo contínuo de cinco etapas, sem começo nem fim |
+| Premissa | Educar o comprador para criar demanda | A mesma. A premissa nunca quebrou |
+| Mecanismo | Blog, SEO, formulário, nutrição por e-mail e MQL | Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas, Otimizar |
+| Onde a educação acontece | No site da empresa | Descentralizada: feed, podcast, comunidade, evento, vídeo |
+| Unidade de trabalho | O lead | O sinal |
+| Sinal que se lê | Formulário preenchido e e-mail aberto | Três camadas de sinal: invisível, visível e de intenção |
+| Ponto de partida | Palavra-chave e volume de busca | ICP e maturidade de mercado: problema, categoria ou produto |
+| Papel do formulário | Porta de entrada obrigatória | Um sinal de alta intenção entre vários, não a única porta |
+| Relação com o outbound | Canal separado, com outra régua | Mesma etapa: Iniciar Conversas usa sinal de inbound e de outbound |
+| Métrica central | Volume de MQL | Sinal do ICP certo que vira conversa e vira pipeline |
+| Como melhora | Otimizando a conversão de cada etapa | Cada volta do ciclo reescreve a volta seguinte |
+| Ano de origem | 2006, com o lançamento do inbound marketing | 2026, formulado por David Costa Lima e pela B2B Insiders |
+
+O Novo Inbound B2B não substitui a premissa do inbound. Substitui o mecanismo, que é o conjunto de passos que, em 2006, era a única forma tecnicamente possível de executar aquela premissa.
 
 ## As três camadas de sinal
 
