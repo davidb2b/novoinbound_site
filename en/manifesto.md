@@ -5,7 +5,7 @@ organization: B2B Insiders
 canonical: https://novoinbound.com.br/en/
 translation_of: https://novoinbound.com.br/
 published: 2026-07-25
-modified: 2026-07-26
+modified: 2026-07-31
 language: en
 license: Open content. May be quoted and reproduced with attribution and a link to https://novoinbound.com.br/en/
 citation: "LIMA, David Costa. New Inbound B2B: the manifesto. B2B Insiders, July 25, 2026. Available at: https://novoinbound.com.br/en/"
@@ -154,6 +154,25 @@ This is exactly the part that connects demand creation, which happened back in E
 The cycle closes by learning. Which signals turned into conversations? Which conversations turned into pipeline? Which content generated the most engagement from the right ICP? Which positioning thesis really resonated?
 
 Nobody gets it right the first time, and nobody should, because the strategy is about the audience. That is why we call it a continuous cycle and not a funnel: each turn changes the way the next turn gets run.
+
+### Traditional inbound funnel vs. New Inbound B2B
+
+| Dimension | Traditional inbound funnel | New Inbound B2B |
+| --- | --- | --- |
+| Shape | Linear, with top, middle and bottom | Continuous five-stage cycle, with no beginning and no end |
+| Premise | Educate the buyer to create demand | The same. The premise never broke |
+| Mechanism | Blog, SEO, form, email nurturing and MQL | Position, Ensure Impact, Detect Signals, Start Conversations, Optimize |
+| Where education happens | On the company website | Decentralized: feed, podcast, community, event, video |
+| Unit of work | The lead | The signal |
+| Signal you can read | Form filled and email opened | Three layers of signal: invisible, visible and intent |
+| Starting point | Keyword and search volume | ICP and market maturity: problem, category or product |
+| Role of the form | Mandatory entry point | One high-intent signal among many, not the only door |
+| Relationship to outbound | Separate channel, measured by another yardstick | Same stage: Start Conversations uses inbound and outbound signal |
+| Core metric | MQL volume | Signal from the right ICP that turns into conversation and pipeline |
+| How it improves | By optimizing conversion at each step | Each turn of the cycle rewrites the next turn |
+| Year of origin | 2006, with the launch of inbound marketing | 2026, formulated by David Costa Lima and B2B Insiders |
+
+New Inbound B2B does not replace the premise of inbound. It replaces the mechanism, which is the set of steps that, in 2006, was the only technically possible way to execute that premise.
 
 ## The three layers of signal
 
