@@ -1,0 +1,274 @@
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var reduz = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- toast ---------- */
+var toastEl=$("#toast"), toastT;
+function toast(msg){
+  if(!toastEl) return;
+  toastEl.textContent=msg; toastEl.classList.add("on");
+  clearTimeout(toastT); toastT=setTimeout(function(){toastEl.classList.remove("on")},2200);
+}
+function copiar(txt,msg){
+  var ok=function(){toast(msg||"Copiado")};
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(ok).catch(function(){fallback(txt,ok)});
+  } else fallback(txt,ok);
+}
+function fallback(txt,ok){
+  try{
+    var t=document.createElement("textarea");
+    t.value=txt; t.setAttribute("readonly",""); t.style.position="absolute"; t.style.left="-9999px";
+    document.body.appendChild(t); t.select(); document.execCommand("copy"); document.body.removeChild(t); ok();
+  }catch(e){ toast("Não foi possível copiar"); }
+}
+
+/* ---------- links permanentes ---------- */
+$$(".perma").forEach(function(b){
+  b.addEventListener("click",function(){
+    var a=b.getAttribute("data-anchor");
+    copiar(location.origin+location.pathname+"#"+a,"Link copiado");
+    if(history.replaceState) history.replaceState(null,"","#"+a);
+  });
+});
+
+/* ---------- compartilhar ---------- */
+var sh=$("#share");
+if(sh) sh.addEventListener("click",function(){
+  var url=sh.getAttribute("data-url")||location.href;
+  var dados={title:document.title,text:"O funil de marketing morreu. O inbound marketing não.",url:url};
+  if(navigator.share){ navigator.share(dados).catch(function(){}); }
+  else copiar(url,"Link copiado");
+});
+var cpr=$("#cpref");
+if(cpr) cpr.addEventListener("click",function(){
+  var el=$("#refcan"); if(el) copiar(el.textContent.trim(),"Referência copiada");
+});
+var cpl=$("#cplink");
+if(cpl) cpl.addEventListener("click",function(){
+  copiar(cpl.getAttribute("data-url")||location.href,"Link copiado");
+});
+
+/* ---------- progresso e tempo restante ---------- */
+var TOTAL=28, prog=$("#prog"), tbtime=$("#tbtime"), fim=$("#ferramentas");
+function medir(){
+  var h=document.documentElement;
+  var alvo = fim ? Math.max(1, fim.offsetTop - h.clientHeight*0.5) : Math.max(1,h.scrollHeight-h.clientHeight);
+  var p=(window.pageYOffset||h.scrollTop)/alvo;
+  if(p<0)p=0; if(p>1)p=1;
+  if(prog) prog.style.width=(p*100).toFixed(2)+"%";
+  if(tbtime){
+    var t = p<0.02 ? TOTAL+" min de leitura"
+          : (p>=1 ? "leitura concluída" : "faltam "+Math.max(1,Math.round(TOTAL*(1-p)))+" min");
+    if(tbtime.textContent!==t) tbtime.textContent=t;
+  }
+}
+
+/* ---------- sumário ativo ---------- */
+var secoes=["funil","inbound","compra","metodo","ciclo","sinais","faq","glossario","ferramentas"];
+var links=$$("#tocside a");
+function tocAtivo(){
+  if(!links.length) return;
+  var linha=window.innerHeight*0.35, cur=-1;
+  secoes.forEach(function(id,i){
+    var el=document.getElementById(id);
+    if(el && el.getBoundingClientRect().top<=linha) cur=i;
+  });
+  links.forEach(function(a,i){
+    if(i===cur) a.setAttribute("aria-current","true"); else a.removeAttribute("aria-current");
+  });
+}
+
+/* ---------- ciclo acompanha a leitura ---------- */
+var grupos=$$(".segg"), etapas=$$(".etapa"), atual=-1;
+function ringSync(){
+  if(!grupos.length||!etapas.length) return;
+  var linha=window.innerHeight*0.42, cur=0;
+  etapas.forEach(function(el,i){ if(el.getBoundingClientRect().top<=linha) cur=i; });
+  if(cur===atual) return;
+  atual=cur;
+  grupos.forEach(function(g,j){ g.setAttribute("class", j===cur ? "segg on" : "segg"); });
+}
+
+var tick=false;
+function onScroll(){
+  if(tick) return; tick=true;
+  window.requestAnimationFrame(function(){ medir(); tocAtivo(); ringSync(); tick=false; });
+}
+window.addEventListener("scroll",onScroll,{passive:true});
+window.addEventListener("resize",onScroll,{passive:true});
+medir(); tocAtivo(); ringSync();
+
+/* ---------- FAQ ---------- */
+var mobile = window.matchMedia && window.matchMedia("(max-width: 900px)").matches;
+function abrir(btn,estado){
+  var alvo=document.getElementById(btn.getAttribute("aria-controls"));
+  if(!alvo) return;
+  btn.setAttribute("aria-expanded", estado?"true":"false");
+  if(estado) alvo.removeAttribute("hidden"); else alvo.setAttribute("hidden","");
+}
+$$(".qa-btn").forEach(function(btn,i){
+  if(mobile) abrir(btn,false);
+  btn.addEventListener("click",function(){
+    abrir(btn, btn.getAttribute("aria-expanded")!=="true");
+  });
+});
+function abrirPorHash(){
+  var h=location.hash.replace("#","");
+  if(!h) return;
+  var alvo=document.getElementById(h);
+  if(!alvo) return;
+  var btn = alvo.classList && alvo.classList.contains("qa") ? $(".qa-btn",alvo) : null;
+  if(!btn){
+    var pai=alvo.closest ? alvo.closest(".qa") : null;
+    if(pai) btn=$(".qa-btn",pai);
+  }
+  if(btn){ abrir(btn,true); setTimeout(function(){alvo.scrollIntoView({behavior: reduz?"auto":"smooth", block:"start"})},60); }
+}
+window.addEventListener("hashchange",abrirPorHash);
+abrirPorHash();
+
+/* ---------- ferramenta 1: maturidade ---------- */
+var f1=$("#f1");
+if(f1){
+  var f1bar=$("#f1bar"), f1prog=$("#f1prog"), f1go=$("#f1go"), f1re=$("#f1re"), f1res=$("#f1res");
+  var NIVEIS={
+    A:{ nome:"Maturidade de problema",
+        txt:"O seu mercado sente o efeito, mas ainda não reconhece claramente o problema nem a consequência dele. A comunicação precisa ajudar o comprador a interpretar o que está acontecendo antes de falar em solução.",
+        msg:["Nomear o problema e a consequência dele no negócio, não o produto.","Falar da situação que o comprador vive, com as palavras que ele usa.","Evitar vocabulário de categoria que o mercado ainda não domina."],
+        con:["Conteúdo que explica o mecanismo do problema.","Dados e observações de mercado que dão nome ao que ele sente.","Presença em canais amplos, onde a educação começa: podcast, vídeo, conteúdo de especialistas."],
+        pro:["Histórias de empresas que viviam a mesma situação.","Números do custo de conviver com o problema.","Diagnóstico que ajuda o comprador a se enxergar."] },
+    B:{ nome:"Maturidade de categoria",
+        txt:"O seu mercado reconhece o problema e começa a avaliar formas de resolvê-lo. A comunicação precisa explicar a categoria, comparar alternativas e mostrar por que os caminhos atuais são insuficientes.",
+        msg:["Explicar o que a categoria resolve e o que ela não resolve.","Comparar com a alternativa real: planilha, processo manual ou solução adjacente.","Mostrar o limite do caminho que ele usa hoje."],
+        con:["Comparativos e conteúdo definicional.","Critérios de avaliação que o comprador pode usar sozinho.","Materiais que ajudam a construir consenso interno."],
+        pro:["Casos com o antes e o depois da adoção da categoria.","Demonstrações do que muda na operação.","Referências de pares do mesmo segmento."] },
+    C:{ nome:"Maturidade de produto",
+        txt:"O seu mercado reconhece o problema e entende a categoria. A disputa acontece entre fornecedores. A comunicação precisa demonstrar diferença, prova, segurança e adequação.",
+        msg:["Afirmar o diferencial que você consegue provar, e só ele.","Responder objeções de risco, implementação e adequação.","Deixar claro para quem você não é a melhor escolha."],
+        con:["Comparativos diretos com alternativas do mercado.","Conteúdo de implementação, integração e suporte.","Materiais que sustentam a decisão dentro do comitê."],
+        pro:["Casos com números verificáveis.","Provas de segurança, integração e continuidade.","Clientes dispostos a falar com o comprador."] },
+    M:{ nome:"Resultado misto",
+        txt:"As respostas não convergem para um único nível. Isso é normal e costuma revelar diferenças entre segmentos, entre participantes do comitê ou entre situações de compra.",
+        msg:["Separar a mensagem por segmento ou por papel dentro do comitê.","Não tentar falar com todos os níveis na mesma peça.","Escolher um nível como principal e tratar os outros como camadas de apoio."],
+        con:["Mapear em qual nível está cada segmento antes de decidir o calendário.","Manter conteúdo de problema para criar demanda e conteúdo de produto para captura.","Rodar entrevistas para descobrir onde está a diferença."],
+        pro:["Entrevistas com clientes recentes.","Análise das objeções por segmento.","Revisão dos motivos de ganho e de perda."] }
+  };
+  var respostas={};
+  function f1estado(){
+    var n=Object.keys(respostas).length;
+    if(f1bar) f1bar.style.width=(n/4*100)+"%";
+    if(f1prog) f1prog.textContent=n+" de 4 respondidas";
+    if(f1go) f1go.disabled = n<4;
+  }
+  $$("input[type=radio]",f1).forEach(function(inp){
+    inp.addEventListener("change",function(){
+      respostas[inp.name]=inp.value;
+      $$("input[name="+inp.name+"]",f1).forEach(function(o){
+        var lab=o.closest("label"); if(lab) lab.classList.toggle("on",o.checked);
+      });
+      f1estado();
+    });
+  });
+  f1estado();
+  if(f1go) f1go.addEventListener("click",function(){
+    var c={A:0,B:0,C:0};
+    ["q1","q2","q3","q4"].forEach(function(k){ if(respostas[k]) c[respostas[k]]++; });
+    var max=Math.max(c.A,c.B,c.C);
+    var vencedores=["A","B","C"].filter(function(k){return c[k]===max});
+    var chave = (max>=3 || (max===2 && vencedores.length===1)) ? vencedores[0] : "M";
+    if(vencedores.length>1) chave="M";
+    var n=NIVEIS[chave];
+    f1res.innerHTML =
+      '<div class="res"><span class="lbl">Resultado</span><h4>'+n.nome+'</h4>'+
+      '<p>'+n.txt+'</p>'+
+      '<p style="font-size:14px;color:#8f877a">Contagem: '+c.A+" em A, "+c.B+" em B, "+c.C+' em C.</p>'+
+      '<h5>Mensagem</h5><ul><li>'+n.msg.join("</li><li>")+'</li></ul>'+
+      '<h5>Conteúdo</h5><ul><li>'+n.con.join("</li><li>")+'</li></ul>'+
+      '<h5>Prova</h5><ul><li>'+n.pro.join("</li><li>")+'</li></ul>'+
+      '<p style="font-size:14.5px">Use isto como orientação. Uma leitura confiável exige entrevistas com clientes, análise de concorrência e observação das conversas comerciais.</p></div>';
+    if(f1re) f1re.hidden=false;
+    f1res.scrollIntoView({behavior: reduz?"auto":"smooth", block:"nearest"});
+  });
+  if(f1re) f1re.addEventListener("click",function(){
+    respostas={}; f1.reset();
+    $$("label.opt",f1).forEach(function(l){l.classList.remove("on")});
+    f1res.innerHTML=""; f1re.hidden=true; f1estado();
+    f1.scrollIntoView({behavior: reduz?"auto":"smooth", block:"start"});
+  });
+}
+
+/* ---------- ferramenta 2: mapa de taticas e sinais ---------- */
+var f2=$("#f2");
+if(f2){
+  var OBS={an:"Predominantemente anônimo", ct:"Conta parcialmente identificável", ps:"Pessoa identificável"};
+  var FOR={at:"Atenção", co:"Consideração", ic:"Intenção comercial"};
+  var TATICAS=[
+    {id:"podcast", n:"Podcast próprio", o:["an"], f:["at","co"], lim:"Plays não revelam quem ouviu. É das táticas com maior poder de educação e menor observabilidade."},
+    {id:"tl", n:"Conteúdo de especialistas no LinkedIn", o:["ps"], f:["at","co"], lim:"Reação e comentário trazem nome, cargo e empresa. Identidade não é intenção."},
+    {id:"news", n:"Newsletter", o:["ps"], f:["at","co"], lim:"A inscrição identifica a pessoa. Leitura recorrente sugere consideração, não pedido de contato."},
+    {id:"pagina", n:"Página da empresa no LinkedIn", o:["an","ps"], f:["at"], lim:"Impressão é anônima. Seguidor é identificado. Os dois números não medem a mesma coisa."},
+    {id:"paga", n:"Mídia paga", o:["an","ct"], f:["at"], lim:"Serve para alcance e frequência. Clique não é sinal de consideração."},
+    {id:"yt", n:"Vídeo no YouTube", o:["an"], f:["at","co"], lim:"Retenção sugere profundidade, mas a identidade quase nunca vem junto."},
+    {id:"magnet", n:"Lead magnet", o:["ps"], f:["at","co"], lim:"Identifica quem aceitou trocar dado por material. Não prova avaliação de compra."},
+    {id:"webinar", n:"Webinar", o:["ps"], f:["co"], lim:"Presença e permanência sugerem consideração. Inscrição sozinha sugere menos."},
+    {id:"visit", n:"Identificação de empresas visitantes", o:["ct"], f:["at","co"], lim:"A associação com a empresa é probabilística e não diz quem dentro dela navegou."},
+    {id:"evento", n:"Evento presencial", o:["ps"], f:["co"], lim:"Alto contexto e baixo volume. A conversa vale mais que a lista de presença."},
+    {id:"comunidade", n:"Comunidade", o:["ps"], f:["at","co"], lim:"Sinal rico e lento. Ler como relacionamento, não como pipeline."},
+    {id:"form", n:"Formulário comercial", o:["ps"], f:["ic"], lim:"Intenção declarada. Mede quem levantou a mão, não quem você educou."},
+    {id:"demo", n:"Pedido de demonstração", o:["ps"], f:["ic"], lim:"O sinal mais explícito que existe. Também o mais raro."}
+  ];
+  var f2go=$("#f2go"), f2re=$("#f2re"), f2res=$("#f2res");
+  function sel(){ return $$("input[name=t]:checked",f2).map(function(i){return i.value}); }
+  function f2estado(){
+    $$("input[name=t]",f2).forEach(function(i){
+      var l=i.closest("label"); if(l) l.classList.toggle("on",i.checked);
+    });
+    if(f2go) f2go.disabled = sel().length===0;
+  }
+  f2.addEventListener("change",f2estado);
+  f2estado();
+  if(f2go) f2go.addEventListener("click",function(){
+    var ids=sel();
+    var escolhidas=TATICAS.filter(function(t){return ids.indexOf(t.id)>-1});
+    var temO={an:false,ct:false,ps:false}, temF={at:false,co:false,ic:false};
+    escolhidas.forEach(function(t){
+      t.o.forEach(function(k){temO[k]=true}); t.f.forEach(function(k){temF[k]=true});
+    });
+    var cegos=[];
+    if(!temF.ic) cegos.push("Nenhuma tática selecionada produz intenção comercial explícita. A operação depende de alguém decidir sozinho pedir contato.");
+    if(!temF.at) cegos.push("Nenhuma tática de alcance amplo. Sem atenção no topo, a criação de demanda fica limitada aos que já conhecem a empresa.");
+    if(!temF.co) cegos.push("Nada no conjunto atual mostra consideração. Você enxerga quem viu e quem pediu, mas não quem está avaliando.");
+    if(!temO.an) cegos.push("Todas as táticas exigem identidade. Você não está lendo a parte do mercado que se educa sem se identificar, que costuma ser a maior.");
+    if(!temO.ct) cegos.push("Nenhuma tática associa comportamento a uma empresa sem cadastro. A leitura por conta fica incompleta.");
+    if(!temO.ps) cegos.push("Nenhuma tática identifica pessoas. Fica difícil ligar sinal a um participante do comitê de compra.");
+    if(temF.ic && !temF.at && !temF.co) cegos.push("O conjunto só enxerga quem já levantou a mão. Isso é captura de demanda, não criação.");
+    if(!cegos.length) cegos.push("O conjunto cobre as três camadas de observabilidade e as três forças de sinal. O trabalho passa a ser de leitura, não de cobertura.");
+
+    var linhas = escolhidas.map(function(t){
+      return '<li><p class="nm">'+t.n+'</p>'+
+        t.o.map(function(k){return '<span class="tag o">'+OBS[k]+'</span>'}).join("")+
+        t.f.map(function(k){return '<span class="tag f">'+FOR[k]+'</span>'}).join("")+
+        '<p class="lim">'+t.lim+'</p></li>';
+    }).join("");
+
+    f2res.innerHTML =
+      '<div class="res"><span class="lbl">O que você enxerga</span>'+
+      '<h4>'+escolhidas.length+(escolhidas.length===1?" tática selecionada":" táticas selecionadas")+'</h4>'+
+      '<ul class="rowlist" style="padding-left:0">'+linhas+'</ul>'+
+      '<h5>Pontos cegos do conjunto atual</h5><ul class="cegos"><li>'+cegos.join("</li><li>")+'</li></ul>'+
+      '<p style="font-size:14.5px">A ferramenta não diz se uma tática é boa ou ruim. Ela mostra o que cada uma permite observar e quais conclusões não podem ser tiradas a partir dos números dela.</p></div>';
+    if(f2re) f2re.hidden=false;
+    f2res.scrollIntoView({behavior: reduz?"auto":"smooth", block:"nearest"});
+  });
+  if(f2re) f2re.addEventListener("click",function(){
+    f2.reset(); f2estado(); f2res.innerHTML=""; f2re.hidden=true;
+  });
+}
+
+/* ---------- sumario mobile abre por padrao em telas medias ---------- */
+var tm=$("#tocmob");
+if(tm && window.innerWidth>=760) tm.open=true;
+})();
