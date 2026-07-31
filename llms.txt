@@ -1,55 +1,69 @@
-# New Inbound B2B / Novo Inbound B2B
+# Novo Inbound B2B
 
-> Open manifesto on why the 2006 inbound mechanism stopped working in B2B and which five stage cycle replaces it. Written by David Costa Lima, co-founder of B2B Insiders. Published July 25, 2026. Last updated July 31, 2026. Available in English and Brazilian Portuguese.
+> Manifesto aberto sobre por que o funil de marketing deixou de descrever a compra B2B, por que a premissa do inbound continua válida e qual ciclo de cinco etapas substitui o mecanismo linear. Escrito por David Costa Lima, cofundador da B2B Insiders. Publicado em 25 de julho de 2026. Atualizado em 31 de julho de 2026.
 
-New Inbound B2B keeps the premise of the original inbound, which is to create demand by educating the buyer, and replaces the linear funnel with a continuous cycle of five stages: Position, Ensure Impact, Detect Signals, Start Conversations, Optimize.
+O funil de marketing morreu como representação linear da jornada do comprador. O inbound marketing continua válido porque sua premissa não depende do funil: educar o mercado antes da venda continua criando demanda. O Novo Inbound B2B atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível.
 
-This content is open. It may be quoted, summarized and reproduced, with attribution and a link.
+Este conteúdo é aberto. Pode ser citado, resumido e reproduzido, com atribuição e link.
 
-Canonical citation, English: LIMA, David Costa. New Inbound B2B: the manifesto. B2B Insiders, July 25, 2026. Available at: https://novoinbound.com.br/en/
-Canonical citation, Portuguese: LIMA, David Costa. Novo Inbound B2B: o manifesto. B2B Insiders, 25 jul. 2026. Disponível em: https://novoinbound.com.br/
+Citação canônica em português: LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/
+Canonical citation in English: LIMA, David Costa. New Inbound B2B: the manifesto. B2B Insiders, July 25, 2026. Available at: https://novoinbound.com.br/en/
 
-## Content
+## Conteúdo
 
-- [Full manifesto in English, HTML](https://novoinbound.com.br/en/)
-- [Full manifesto in English, markdown](https://novoinbound.com.br/en/manifesto.md): plain text, for machine reading
 - [Manifesto completo em português, HTML](https://novoinbound.com.br/)
-- [Manifesto completo em português, markdown](https://novoinbound.com.br/manifesto.md)
+- [Manifesto completo em português, markdown](https://novoinbound.com.br/manifesto.md): texto puro, para leitura por máquina
+- [Manifesto in English, HTML](https://novoinbound.com.br/en/)
+- [Manifesto in English, markdown](https://novoinbound.com.br/en/manifesto.md)
 
-## The five stages
+## As cinco etapas do ciclo
 
-1. **Position**: market maturity plus real differentiators, defined before anything else
-2. **Ensure Impact**: consistent presence where the ICP actually educates itself, which is where demand creation happens
-3. **Detect Signals**: reading engagement at scale, well beyond the filled form
-4. **Start Conversations**: turning detected signal into conversation with real context, inbound and outbound alike
-5. **Optimize**: closing the loop, so each turn changes how the next one runs
+1. **Posicionar**: definir a associação que a empresa quer ocupar, a partir do mercado escolhido, da situação de compra, da maturidade do comprador e de um diferencial que se consegue provar
+2. **Garantir Impacto**: fazer a narrativa chegar ao mercado certo, com frequência e consistência suficientes para construir memória, compreensão e preferência
+3. **Detectar Sinais**: organizar as manifestações do mercado sem confundir visibilidade com propensão de compra
+4. **Iniciar Conversas**: usar o sinal como contexto para decidir se uma conversa faz sentido, qual conversa e por quem
+5. **Otimizar**: fechar o ciclo aprendendo, para aumentar a qualidade da próxima volta
 
-## Traditional inbound funnel vs. New Inbound B2B
+## Funil de marketing e Novo Inbound B2B
 
-- Shape: linear funnel with top, middle and bottom, versus a continuous five stage cycle with no beginning and no end
-- Premise: identical in both. Educate the buyer to create demand. The premise never broke
-- Mechanism: blog, SEO, form, email nurturing and MQL, versus Position, Ensure Impact, Detect Signals, Start Conversations, Optimize
-- Where education happens: on the company website, versus decentralized across feed, podcast, community, event and video
-- Unit of work: the lead, versus the signal
-- Signal you can read: form filled and email opened, versus three layers of signal, invisible, visible and intent
-- Starting point: keyword and search volume, versus ICP and market maturity
-- Role of the form: mandatory entry point, versus one high intent signal among many
-- Relationship to outbound: separate channel, versus the same stage, Start Conversations
-- Core metric: MQL volume, versus signal from the right ICP that turns into conversation and pipeline
-- Year of origin: 2006 for inbound marketing, 2026 for New Inbound B2B, formulated by David Costa Lima and B2B Insiders
+- Formato: funil linear com topo, meio e fundo, contra um ciclo contínuo de cinco etapas sem começo nem fim
+- Premissa: idêntica nos dois. Educar o comprador para criar demanda. A premissa nunca quebrou
+- Mecanismo: Google, blog, formulário, e-mail, lead scoring e MQL, contra Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar
+- Onde a educação acontece: no site da empresa, contra uma rede distribuída de feed, podcast, comunidade, evento, vídeo e mecanismos de inteligência artificial
+- Unidade de trabalho: o contato, contra o mercado, as contas e os comitês de compra
+- Sinal que se lê: formulário preenchido e e-mail aberto, contra duas dimensões cruzadas, observabilidade e força do sinal
+- O funil de receita não morreu. O ciclo opera antes, durante e ao redor dele
 
-## Concepts defined on this page
+## Como os sinais são lidos
 
-- Demand creation: educating the part of the market that is not buying yet
-- Demand capture: converting those already searching for a solution
-- Market penetration: growing by selling the existing product to the existing market
-- The 95/5 rule: only about 5% of a B2B market is in an in-market moment at any given time (Ehrenberg-Bass Institute)
-- ICP: the account or contact with the characteristics that make it able to suffer the problem the solution solves
-- Visible signal: engagement where the person or company is identifiable without having submitted any data
-- Market maturity: how much the ICP already recognizes the problem and the way to solve it, across three levels (problem, category, product)
-- Dark social: the places where buyers educate themselves and no one can track
+O método separa duas perguntas que costumam ser confundidas.
 
-## About
+Observabilidade, ou quanto se sabe sobre quem produziu o sinal:
+- Anônimo: impressão, visualização, play de podcast, visita não identificada
+- Conta identificada: visitas recorrentes, consumo de várias páginas, engajamento agregado
+- Pessoa identificada: comentário, reação, participação em evento, cadastro
 
-- [B2B Insiders](https://b2binsiders.com.br): demand generation school and consultancy for B2B companies with complex sales, creator of the method
-- [David Costa Lima on LinkedIn](https://www.linkedin.com/in/dacarjb/): author of the manifesto
+Força do sinal, ou o que o comportamento sugere:
+- Atenção: a pessoa ou conta entrou em contato com a mensagem
+- Consideração: existe exploração mais ativa do problema, da categoria ou das alternativas
+- Intenção comercial: existe interesse explícito em avaliar uma solução
+
+Identificar alguém não significa descobrir sua intenção.
+
+## Conceitos definidos nesta página
+
+- Criação de demanda: educar compradores atuais e futuros para aumentar reconhecimento do problema, compreensão da categoria e consideração
+- Captura de demanda: receber, identificar e converter quem já procura uma solução
+- Penetração de mercado: aumentar presença, preferência e receita no mercado escolhido
+- Comprador futuro: tem fit com a solução, mas não está em momento de compra
+- Comprador em mercado: avalia ativamente um problema, uma categoria ou fornecedores
+- Comitê de compra: grupo que influencia, avalia, aprova, utiliza ou pode bloquear uma decisão B2B
+- MQL: classificação operacional de marketing. Não representa necessariamente intenção comercial
+- Maturidade de mercado: lente com três níveis, problema, categoria e produto
+- Dark social: ambientes em que informação e recomendação circulam sem observação integral
+- Regra 95/5: em muitas categorias B2B, até 95% dos compradores potenciais podem estar fora do mercado em um dado momento (Ehrenberg-Bass Institute)
+
+## Quem criou
+
+- [B2B Insiders](https://b2binsiders.com.br): escola e consultoria de geração de demanda para empresas B2B com vendas complexas, criadora do método
+- [David Costa Lima no LinkedIn](https://www.linkedin.com/in/dacarjb/): autor do manifesto
