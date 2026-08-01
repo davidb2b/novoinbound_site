@@ -1,69 +1,55 @@
 # Novo Inbound B2B
 
-> Manifesto aberto sobre por que o funil de marketing deixou de descrever a compra B2B, por que a premissa do inbound continua válida e qual ciclo de cinco etapas substitui o mecanismo linear. Escrito por David Costa Lima, cofundador da B2B Insiders. Publicado em 25 de julho de 2026. Atualizado em 31 de julho de 2026.
+> O que é, afinal, o Novo Inbound? Texto aberto de David Costa Lima, cofundador da B2B Insiders, sobre como o inbound nasceu, por que o mecanismo dele parou de funcionar e qual é a lógica que entra no lugar. Publicado em 11 de abril de 2026. Atualizado em 31 de julho de 2026.
 
-O funil de marketing morreu como representação linear da jornada do comprador. O inbound marketing continua válido porque sua premissa não depende do funil: educar o mercado antes da venda continua criando demanda. O Novo Inbound B2B atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível.
+O inbound, como ideia de participar da educação do comprador para criar demanda, continua válido. Mas o mecanismo do velho inbound para fazer isso, não. O Novo Inbound B2B é a lógica que entra no lugar, com 5 etapas em ciclo contínuo e não em funil linear.
 
 Este conteúdo é aberto. Pode ser citado, resumido e reproduzido, com atribuição e link.
 
-Citação canônica em português: LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/
-Canonical citation in English: LIMA, David Costa. New Inbound B2B: the manifesto. B2B Insiders, July 25, 2026. Available at: https://novoinbound.com.br/en/
+Citação canônica: LIMA, David Costa. O que é, afinal, o Novo Inbound? B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/
 
 ## Conteúdo
 
-- [Manifesto completo em português, HTML](https://novoinbound.com.br/)
-- [Manifesto completo em português, markdown](https://novoinbound.com.br/manifesto.md): texto puro, para leitura por máquina
-- [Manifesto in English, HTML](https://novoinbound.com.br/en/)
-- [Manifesto in English, markdown](https://novoinbound.com.br/en/manifesto.md)
+- [Texto completo em HTML](https://novoinbound.com.br/)
+- [Texto completo em markdown](https://novoinbound.com.br/manifesto.md): para leitura por máquina
 
-## As cinco etapas do ciclo
+## O papel do marketing
 
-1. **Posicionar**: definir a associação que a empresa quer ocupar, a partir do mercado escolhido, da situação de compra, da maturidade do comprador e de um diferencial que se consegue provar
-2. **Garantir Impacto**: fazer a narrativa chegar ao mercado certo, com frequência e consistência suficientes para construir memória, compreensão e preferência
-3. **Detectar Sinais**: organizar as manifestações do mercado sem confundir visibilidade com propensão de compra
-4. **Iniciar Conversas**: usar o sinal como contexto para decidir se uma conversa faz sentido, qual conversa e por quem
-5. **Otimizar**: fechar o ciclo aprendendo, para aumentar a qualidade da próxima volta
+Marketing vem de market, que é mercado. O papel do marketing é fazer a empresa penetrar o mercado-alvo. No B2B isso acontece via aquisição de novas contas e, eventualmente, via expansão dentro dessas contas.
 
-## Funil de marketing e Novo Inbound B2B
+## Por que o velho inbound perdeu aderência
 
-- Formato: funil linear com topo, meio e fundo, contra um ciclo contínuo de cinco etapas sem começo nem fim
-- Premissa: idêntica nos dois. Educar o comprador para criar demanda. A premissa nunca quebrou
-- Mecanismo: Google, blog, formulário, e-mail, lead scoring e MQL, contra Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar
-- Onde a educação acontece: no site da empresa, contra uma rede distribuída de feed, podcast, comunidade, evento, vídeo e mecanismos de inteligência artificial
-- Unidade de trabalho: o contato, contra o mercado, as contas e os comitês de compra
-- Sinal que se lê: formulário preenchido e e-mail aberto, contra duas dimensões cruzadas, observabilidade e força do sinal
-- O funil de receita não morreu. O ciclo opera antes, durante e ao redor dele
+Três verdades:
 
-## Como os sinais são lidos
+1. Não-linearidade da jornada. Em vendas complexas pode haver de 6 a 8 pessoas no processo (Gartner), cada uma entrando por um canal diferente e em um momento diferente.
+2. Descentralização da educação. O comprador não depende mais do Google. Ele se educa no LinkedIn, em podcast, em comunidades fechadas, em grupos de WhatsApp e em conversa com pares. Isso é dark social.
+3. Comoditização do conteúdo. O modelo de esteira industrial de conteúdo perdeu valor, e a IA generativa acelerou isso.
 
-O método separa duas perguntas que costumam ser confundidas.
+## As 5 etapas do Novo Inbound B2B
 
-Observabilidade, ou quanto se sabe sobre quem produziu o sinal:
-- Anônimo: impressão, visualização, play de podcast, visita não identificada
-- Conta identificada: visitas recorrentes, consumo de várias páginas, engajamento agregado
-- Pessoa identificada: comentário, reação, participação em evento, cadastro
+1. **Posicionar**: saber pra quem você fala, qual a maturidade de mercado dele e quais são os seus diferenciais. Posicionamento é maturidade de mercado mais diferenciais.
+2. **Garantir Impacto**: fazer a mensagem chegar ao ICP de forma consistente, ocupando espaço no dark social dele. É aqui que a criação de demanda acontece.
+3. **Detectar Sinais**: ler em escala os sinais que o mercado deixa, muito além do formulário preenchido.
+4. **Iniciar Conversas**: transformar sinal em conversa, por inbound ou por outbound com contexto. É a ponte entre criação e captura de demanda.
+5. **Otimizar**: fechar o ciclo aprendendo. Cada volta ensina como girar melhor na próxima.
 
-Força do sinal, ou o que o comportamento sugere:
-- Atenção: a pessoa ou conta entrou em contato com a mensagem
-- Consideração: existe exploração mais ativa do problema, da categoria ou das alternativas
-- Intenção comercial: existe interesse explícito em avaliar uma solução
+## Maturidade de mercado, em três níveis
 
-Identificar alguém não significa descobrir sua intenção.
+- **Problema**: o ICP sente a dor, mas não sabe o nome dela nem que existe uma categoria de solução.
+- **Categoria**: já entendeu o problema e avalia a forma de solucionar.
+- **Produto**: já sabe do problema e entende a categoria. A disputa é entre fornecedores.
 
-## Conceitos definidos nesta página
+## As três camadas de métrica
 
-- Criação de demanda: educar compradores atuais e futuros para aumentar reconhecimento do problema, compreensão da categoria e consideração
-- Captura de demanda: receber, identificar e converter quem já procura uma solução
-- Penetração de mercado: aumentar presença, preferência e receita no mercado escolhido
-- Comprador futuro: tem fit com a solução, mas não está em momento de compra
-- Comprador em mercado: avalia ativamente um problema, uma categoria ou fornecedores
-- Comitê de compra: grupo que influencia, avalia, aprova, utiliza ou pode bloquear uma decisão B2B
-- MQL: classificação operacional de marketing. Não representa necessariamente intenção comercial
-- Maturidade de mercado: lente com três níveis, problema, categoria e produto
-- Dark social: ambientes em que informação e recomendação circulam sem observação integral
-- Regra 95/5: em muitas categorias B2B, até 95% dos compradores potenciais podem estar fora do mercado em um dado momento (Ehrenberg-Bass Institute)
+A separação vem de uma pergunta: o que eu sei sobre quem gerou esse sinal?
+
+- **Invisíveis**: plays de podcast, views de YouTube, impressões de post e de mídia paga. Você mede o sinal e não sabe o nome de ninguém. É onde a criação de demanda acontece na prática.
+- **Visíveis**: curtida, comentário, compartilhamento, visitor tracking e reação em post de thought leader. O comportamento diz o nome da pessoa.
+- **De intenção**: a pessoa entregou o contato de forma espontânea. Baixa quando foi em troca de algo, alta quando ela quer falar com você.
+
+Não existe métrica de intenção ser melhor que métrica invisível. Elas medem coisas diferentes, em momentos diferentes e em táticas diferentes. As métricas são consequência das táticas escolhidas no Garantir Impacto.
 
 ## Quem criou
 
-- [B2B Insiders](https://b2binsiders.com.br): escola e consultoria de geração de demanda para empresas B2B com vendas complexas, criadora do método
-- [David Costa Lima no LinkedIn](https://www.linkedin.com/in/dacarjb/): autor do manifesto
+- [B2B Insiders](https://b2binsiders.com.br): criadora da metodologia
+- [David Costa Lima no LinkedIn](https://www.linkedin.com/in/dacarjb/): autor
