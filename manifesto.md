@@ -1,1036 +1,497 @@
 ---
-title: "O funil de marketing morreu. O inbound marketing não."
-description: "A forma de comprar no B2B mudou. Entenda por que o mecanismo linear perdeu aderência e conheça o ciclo do Novo Inbound B2B."
+title: "O que é, afinal, o Novo Inbound?"
+description: "Como o inbound nasceu, por que o mecanismo dele parou de funcionar e qual é a lógica que entra no lugar."
 author: "David Costa Lima"
 organization: "B2B Insiders"
 canonical: "https://novoinbound.com.br/"
-published: "2026-07-25"
+published: "2026-04-11"
 modified: "2026-07-31"
 language: "pt-BR"
 license: "Conteúdo aberto. Pode ser citado e reproduzido com atribuição e link para https://novoinbound.com.br/"
-citation: "LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/"
+citation: "LIMA, David Costa. O que é, afinal, o Novo Inbound? B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/"
 ---
 
-# O funil de marketing morreu. O inbound marketing não.
+# O que é, afinal, o Novo Inbound?
 
-A forma como as empresas B2B compram mudou, e marketing e vendas precisam mudar junto. Entenda por que o mecanismo linear perdeu aderência e conheça o ciclo do Novo Inbound B2B.
+Hoje eu quero falar sobre uma coisa que eu venho batendo na tecla há, pelo menos, uns 3 anos, mas que ainda gera muita dúvida, que é o Novo Inbound.
 
-Por David Costa Lima, cofundador da B2B Insiders.
+E antes de começar, já aviso logo que a ideia deste texto não é quebrar o funil, não é combater quem ainda trabalha com inbound do jeito antigo e nem é pra ser uma aula de história…
 
-O Novo Inbound B2B é um método de geração de demanda criado pela B2B Insiders a partir de operações em empresas brasileiras com vendas complexas.
+Mas sim, eu vou ter que voltar um pouco no tempo pra te explicar como o inbound nasceu e por que ele parou de funcionar do jeito que funcionava.
 
-Publicado em 25 de julho de 2026. Atualizado em 31 de julho de 2026.
+Entretanto, o meu objetivo com este texto é te dar autonomia para você fazer o seu marketing gerar mais resultado hoje.
 
-Conteúdo aberto. Sem formulário. Leitura de aproximadamente 28 minutos.
+É isso, a ideia aqui é você terminar essa leitura entendendo o que tá travando a sua geração de pipeline. E, a partir desse entendimento, ter um caminho para destravar.
 
-## O que significa dizer que o funil de marketing morreu?
+Porque autonomia estratégica, no marketing B2B, só existe quando você entende de onde a coisa veio, o que mudou e por quê.
 
-Vamos começar pela provocação.
+Sem isso, você vira refém da próxima moda, do próximo guru ou da próxima "nova fórmula" que aparecer na sua frente no LinkedIn.
 
-O funil de marketing morreu.
+Então bora!
 
-Não estou dizendo que a empresa deve apagar os estágios do CRM. Também não estou dizendo que pipeline, conversão e forecast deixaram de importar.
+## Cara, primeiro você tem que entender o papel do marketing
 
-Estou falando de outra coisa.
+Antes de falar de inbound, de HubSpot, de qualquer coisa, é importante voltar na pergunta que sustenta tudo.
 
-Morreu a ideia de que o comprador percorre uma sequência previsível de conscientização, consideração e decisão, uma etapa de cada vez, até finalmente chegar a vendas.
+### Qual é o papel do marketing?
 
-Esse modelo é simples de desenhar. Também é confortável de administrar. Cada canal ocupa uma parte, cada métrica representa um avanço e cada contato parece estar a caminho de algum lugar.
+E aqui vale uma coisa curiosa, mas importante, a palavra "marketing" vem do inglês "market", que é mercado.
 
-Só que a compra B2B real não se comporta assim.
+Ou seja, marketing é, literalmente, a disciplina de pensar o mercado. De entender o mercado-alvo, de agir sobre o mercado-alvo.
 
-Ela acontece com várias pessoas. Começa em momentos diferentes. Passa por canais que a empresa não controla. Avança, recua, para, recomeça e muda de direção quando uma nova pessoa entra na decisão.
+Então, traduzindo pro seu dia a dia, o papel do marketing é fazer a sua empresa (ou o seu projeto) penetrar o mercado-alvo.
 
-O funil de receita continua útil para mostrar o que já virou oportunidade.
+No B2B isso acontece via aquisição de novas contas. E, eventualmente, trabalhando a expansão dentro dessas contas para potencializar o máximo de receita possível.
 
-O funil de marketing deixou de ser suficiente para explicar tudo o que fez aquela oportunidade existir.
+É isso, esse é o papel do marketing!
 
-Essa distinção é importante porque evita uma discussão falsa.
+E, convenhamos, é isso que todo mundo quer, né? Então o recorte da conversa hoje é esse...
 
-O problema não é usar um funil para administrar pipeline.
+### Como é que o marketing faz uma empresa penetrar um mercado-alvo?
 
-O problema é usar esse funil como se ele fosse um mapa fiel do comportamento do comprador.
+Com essa pergunta em mente, agora faz sentido a gente voltar e entender onde o inbound entrou nessa história.
 
-Não é.
+## Onde o inbound entrou (e como ele surgiu de verdade)
 
-## Se o funil morreu, por que o inbound não morreu?
+A história do inbound é mais interessante do que parece, e vale a pena contar direito.
 
-Porque inbound e funil não são a mesma coisa.
+Lá pelo início dos anos 2000, tinham dois caras no MIT, um chamado Brian Halligan e outro chamado Dharmesh Shah.
 
-A premissa central do inbound continua válida: participar da educação do comprador cria demanda e aumenta a chance de uma empresa ser considerada quando o momento de compra chega.
+O Brian vinha do mundo da venda.
 
-Isso não ficou menos importante.
+Ele era o cara do pipeline, do outreach e da prospecção. A vida inteira dele foi ajudando empresas de tecnologia a bater meta, e ele sabia como ninguém como o jogo de outbound funcionava: cold call, lista, discagem e reunião marcada.
 
-Ficou mais.
+Só que, nessa mesma época, ele estava percebendo que cada vez mais estava difícil fazer prospecção fria funcionar (já viu esse filme? rs).
 
-Quanto maior o risco da decisão, mais o comprador precisa entender o problema, comparar caminhos, reduzir incerteza e construir consenso antes de escolher.
+Ao mesmo tempo, no mesmo MIT, o Dharmesh mantinha um blog sobre startup chamado OnStartups.
 
-O que perdeu aderência foi o mecanismo que o mercado aprendeu a usar para colocar essa premissa em prática:
+E o negócio é que esse blog tinha uma audiência absurda, de graça e sem ele precisar caçar ninguém.
 
-1. A pessoa pesquisa no Google.
-2. Encontra um post no blog.
-3. Preenche um formulário.
-4. Entra em uma sequência de e-mails.
-5. Acumula pontos no lead scoring.
-6. Vira MQL.
-7. É enviada para vendas.
+As pessoas chegavam nele sozinhas, pesquisando no Google sobre como construir uma startup, e ficavam lendo, comentando e voltando.
 
-Essa sequência foi uma resposta brilhante ao comportamento e à tecnologia de outra época.
+Quando o Brian olhou pra isso, ele teve o insight que virou o inbound.
 
-O problema é continuar tratando essa resposta como se ela fosse universal.
+Ele pensou, em resumo:
 
-Hoje, o comprador aprende em muito mais lugares. A decisão envolve mais pessoas. Parte importante da jornada é invisível. O conteúdo genérico se tornou abundante. A inteligência artificial passou a responder antes mesmo de o comprador visitar um site.
+> Cara, enquanto eu estou aqui gastando energia pra interromper pessoas que não querem ser interrompidas, o Dharmesh tem uma audiência gigante vindo espontaneamente porque ele publica conteúdo útil.
+> Ou seja, as pessoas estão aprendendo sozinhas sobre o assunto que a gente quer vender.
+> Por que não jogar esse jogo, em vez de tentar interromper?"
 
-A premissa continua.
+E aqui vem um ponto que quase todo mundo esquece, e eu preciso que você grave isso.
 
-O mecanismo precisa mudar.
+### A premissa original do inbound era criação de demanda.
 
-É daí que nasce o Novo Inbound B2B.
+Deixa eu explicar com calma, porque isso é importante.
 
-## Qual é o papel do marketing nessa história?
+O que o Brian e o Dharmesh perceberam é que o comprador já estava se educando sozinho.
 
-No Novo Inbound B2B, tratamos o principal mandato do marketing como aumentar a penetração da empresa no mercado que ela escolheu disputar.
+Ele já estava indo no Google pra entender o problema dele. Ou seja, a demanda já estava sendo criada no mercado, via conteúdo.
 
-Penetrar um mercado significa tornar a empresa conhecida, compreendida, considerada e escolhida pelas contas que ela tem condições reais de atender.
+A sacada deles não foi "inventar" a criação de demanda.
 
-Depois da entrada, significa continuar construindo valor, preferência e espaço dentro dessas contas.
+Foi entender que estava acontecendo e estruturar um jeito de participar da criação de demanda de forma organizada, usando as ferramentas digitais que estavam surgindo naquele momento (Google, blog, forms, emails, etc).
 
-Isso não reduz toda a disciplina de marketing a uma função. Produto, preço, marca, experiência, distribuição e retenção continuam fazendo parte do trabalho.
+Então eles olharam para a forma como as pessoas estavam se educando em 2006 e decidiram:
 
-A ideia é estabelecer uma pergunta comum para orientar a operação:
+"Beleza, vamos otimizar isso".
 
-**O que estamos fazendo está aumentando nossa presença e nossa preferência no mercado que escolhemos?**
+Daí nasceu o HubSpot. E o inbound virou, na prática, um método para industrializar o processo de educação de mercado.
 
-Repara como essa pergunta muda a conversa.
+### E onde é que o lead entra nessa história?
 
-Um conteúdo pode gerar tráfego sem aumentar consideração.
+Presta atenção aqui, porque esse é outro ponto que o mercado inteiro distorceu depois.
 
-Uma campanha pode gerar leads sem alcançar as contas certas.
+O formulário e o email não foram pensados como "máquina de gerar lead para mandar para vendas o quanto antes"...
 
-Um evento pode lotar sem mudar a percepção do mercado.
+Eles foram pensados como um canal de nutrição exclusivo, que permitia duas coisas ao mesmo tempo.
 
-Um relatório pode mostrar crescimento em todas as métricas e, mesmo assim, vendas continuar conversando com as mesmas poucas empresas de sempre.
+- Do lado do comprador, ele ganhava um canal direto com a empresa para continuar aprendendo sobre o problema dele no próprio ritmo, recebendo material relevante por email.
+- Do lado do marqueteiro, ele ganhava mensuração. Conseguia observar quantos emails o cara abria, quais páginas ele visitava, em quais links ele clicava, etc. Isso virou lead scoring.
 
-Se a tática funciona dentro do canal, mas não aumenta a presença da empresa no mercado, o que exatamente ela está entregando?
+Ou seja, o lead era o meio, não o fim. O fim era educar o comprador até o ponto em que ele estivesse maduro o bastante para conversar com vendas.
 
-Esse é o ponto.
+E deu muito certo, né?
 
-**Marketing não deveria trabalhar para alimentar um painel. Deveria trabalhar para mover um mercado.**
+Essa lógica sustentou boa parte do marketing B2B dos últimos 15 anos e a própria HubSpot cresceu de dois caras num MIT para uma empresa listada em bolsa.
 
-Foi justamente uma mudança no comportamento desse mercado que deu origem ao inbound.
+Só que aconteceu uma coisa no caminho.
 
-## Por que o inbound funcionou tão bem?
+Com o tempo, o mercado foi desgastando essa lógica…
 
-Porque ele conectou uma ideia antiga a um comportamento novo.
+Foi priorizando cada vez mais a parte "gerar lead" e cada vez menos a parte "educar o lead".
 
-No início dos anos 2000, a internet estava mudando a relação entre empresas e compradores.
+As metas foram ficando mais pesadas em cima de volume de MQL, os relatórios foram virando painéis de MQLs somente e vendas foi começando a cobrar "lead" e o marketing foi respondendo entregando formulário preenchido no ritmo que conseguia.
 
-Brian Halligan vinha de uma trajetória ligada a vendas e gestão de empresas de tecnologia. Dharmesh Shah escrevia sobre startups no OnStartups e construía uma audiência ao redor de conteúdo útil.
+Até chegar no ponto que a gente vive hoje, onde só o lead importa, com a nutrição acontecendo depois do touch de vendas como um fluxo automatizado, genérico e sem muita eficácia.
 
-Os dois se conheceram como estudantes no MIT e perceberam uma mudança importante: as pessoas estavam usando a internet para pesquisar, aprender e formar opinião antes de falar com uma empresa.
+Ou seja, o que começou como criação de demanda bem feita virou uma corrida por geração de lead.
 
-Em vez de depender exclusivamente de propaganda e prospecção para interromper potenciais compradores, uma empresa poderia ser encontrada enquanto essas pessoas procuravam respostas.
+Entende o desvio?
 
-Em 2006, Halligan e Shah fundaram a HubSpot e deram a essa abordagem o nome de inbound marketing. A própria HubSpot apresenta sua origem como uma resposta à mudança na forma como as pessoas pesquisavam e compravam. Os compradores queriam informação útil, não apenas interrupção. [1]
+## Então por que o inbound do jeito antigo parou de funcionar?
 
-A inovação não foi inventar conteúdo.
+Por uma razão relativamente simples.
 
-Também não foi inventar a educação de mercado.
+A tecnologia sempre vai avançar, e o comportamento das pessoas muda mediante esse avanço.
 
-Empresas educam compradores desde muito antes da internet.
+Com isso, a forma de fazer marketing e vendas também tem que se adaptar a esse novo comportamento.
 
-A inovação foi perceber que o comportamento havia mudado e construir um mecanismo compatível com as tecnologias daquele momento.
+Sempre foi assim.
 
-O Google permitia que uma pessoa encontrasse uma resposta no instante em que procurava.
+Aliás, foi exatamente isso que o Brian e o Dharmesh fizeram lá atrás…
 
-O blog permitia que a empresa publicasse sem depender de mídia tradicional.
+Eles olharam pro estado da tecnologia naquele momento e entenderam que ela estava abrindo uma nova forma de participar da educação que o mercado já estava fazendo sozinho.
 
-O formulário transformava um visitante desconhecido em um contato identificável.
+Ou seja, eles não inventaram "educar pra vender", eles adaptaram "educar pra vender" à tecnologia e ao comportamento daquele momento.
 
-O e-mail criava continuidade.
+Agora, presta atenção, porque é aqui que tudo se conecta.
 
-O histórico de comportamento ajudava a estimar quando uma conversa comercial poderia fazer sentido.
+A gente tá vivendo, nesse momento, um novo salto de tecnologia e de comportamento.
 
-Lido dentro dessa lógica, o lead não era o objetivo final.
+Um novo momento, e esse novo momento tá mexendo de novo com as bases.
 
-Era a ponte entre uma pessoa que estava se educando e uma empresa que queria continuar participando dessa educação.
+Deixa eu explicar...
 
-O objetivo não era preencher o CRM.
+A premissa do inbound, como a gente viu, é criação de demanda via educação, certo?
 
-Era ganhar o direito de permanecer na jornada do comprador.
+O comprador se educa, e a empresa participa dessa educação publicando conteúdo útil nos lugares onde ele estuda, abrindo um canal de continuidade (no caso do modelo original, email) e acompanhando o engajamento para entender quando ele está maduro pra comprar.
 
-E funcionou.
+E que fique claro que essa premissa continua válida.
 
-A HubSpot transformou essa mudança de comportamento em uma categoria, um software e um movimento global. O conceito de inbound passou a orientar como uma geração inteira de profissionais pensava aquisição, conteúdo e relacionamento.
+Na verdade, ela sempre esteve, marketing de conteúdo é mais antigo que tudo isso, começou no século XIX, inclusive.
 
-O problema começou quando o mercado transformou a ponte em destino.
+Educação não vai morrer, pelo contrário, o comprador B2B precisa se educar cada vez mais, porque a tecnologia avança...
 
-## Onde o inbound desviou?
+E, com isso, os problemas e suas respectivas soluções também evoluem, deixando as decisões erradas cada vez mais caras, mais complexas e com mais gente envolvida.
 
-Em muitas operações, participar da educação do comprador virou gerar a maior quantidade possível de contatos.
+Resumindo, se você trabalha com marketing B2B, o seu objetivo principal é a penetração de mercado via educação (criação de demanda).
 
-O formulário deixou de ser uma ponte e virou uma linha de produção.
+Agora, o que muda, e muda MUITO, é a forma como essa educação acontece.
 
-O conteúdo deixou de ser avaliado pelo que ajudava o mercado a compreender e passou a ser avaliado pela quantidade de cadastros que produzia.
+E, sob essa ótica, toda a lógica do velho inbound de educação do HubSpot (Google + blog + email + formulário + lead scoring) perdeu aderência…
 
-O MQL deixou de ser um sinal entre vários e virou a unidade de entrega do marketing para vendas.
+Não porque a ideia estava errada, mas porque os canais onde o comprador se educa hoje são outros.
 
-A conta parecia simples:
+E isso ocasionou 3 verdades que você, enquanto marketing, não pode ignorar.
 
-Mais conteúdo deveria gerar mais tráfego.
+### 1. A primeira verdade é a não-linearidade da jornada, principalmente em B2B.
 
-Mais tráfego deveria gerar mais formulários.
+O velho inbound assumia um caminho mais ou menos previsível…
 
-Mais formulários deveriam gerar mais MQLs.
+O cara pesquisa no Google, cai no seu blog, se educa, preenche o formulário, entra no fluxo de nutrição, amadurece e fala com vendas quando o score bate.
 
-Mais MQLs deveriam gerar mais pipeline.
+Linha reta, um entrando de cada vez.
 
-Quando a última parte não acontecia, surgia a explicação conhecida: faltava alinhamento entre marketing e vendas.
+Só que a compra B2B nunca foi linha reta, e hoje menos ainda.
 
-Às vezes faltava mesmo.
+No B2B, principalmente em vendas complexas onde você trabalha em nível de conta, pode ter de 6 a 8 pessoas que participam do processo (dado do Gartner), cada uma entrando na jornada em um momento diferente e por um canal diferente.
 
-Mas, em muitas empresas, o problema começava antes.
+Na prática, alguém entra por um post no LinkedIn, outro por um podcast, outro porque ouviu o nome da sua empresa num grupo de WhatsApp e o outro porque um par que ele respeita comentou sobre você.
 
-O sistema estava tratando a entrega de um contato como evidência de demanda.
+Ou seja, não tem mais UM ponto de entrada para capturar e nutrir, tem vários pontos, todos eles acontecendo em paralelo, em momentos diferentes da jornada de cada pessoa do comitê.
 
-Só que entregar um e-mail não significa estar avaliando uma compra.
+E o mecanismo linear simplesmente não sabe representar isso.
 
-Baixar um material não significa ter orçamento.
+### 2. A segunda verdade é a descentralização da educação.
 
-Participar de um webinar não significa querer falar com vendas.
+Essa é, na minha leitura, a mudança mais estrutural de todas.
 
-Atingir um score não transforma automaticamente curiosidade em prioridade empresarial.
+O comprador B2B não depende mais do Google. Querendo ou não, o Google era onde a educação morava no velho inbound, hoje não é mais.
 
-**O MQL virou a unidade de produção de um marketing pressionado a provar volume, mesmo quando não conseguia provar demanda.**
+Como dito acima, hoje o comprador B2B se educa no LinkedIn, em podcast, em comunidades fechadas, em grupos de WhatsApp, em newsletters no LinkedIn (oi, rs), em conversa com pares, etc.
 
-Isso não aconteceu porque formulário, automação ou lead scoring fossem ruins.
+E mais, dados apontam que três quartos dessa educação acontece antes dele falar com qualquer vendedor.
 
-Essas ferramentas cumpriam uma função importante e continuam úteis.
+Isso é o tal dark social na prática. Invisível, distribuído e impossível de mensurar ou de capturar em formulário.
 
-O desvio foi transformar as ferramentas disponíveis em uma teoria universal sobre como o comprador se comporta.
+E aqui tem uma consequência prática que muita gente ainda não digeriu, o seu conteúdo precisa cada vez mais ser ungated (aberto, sem fricção).
 
-Enquanto o relatório mostrava uma sequência organizada, a compra real ficava cada vez menos organizada.
+Exatamente como este manifesto que você está lendo, porque o objetivo hoje é ser encontrado, consumido e compartilhado nesses espaços.
 
-## O que mudou na forma de comprar?
+### 3. A terceira verdade é a comoditização do conteúdo.
 
-Três mudanças fizeram o mecanismo antigo perder aderência:
+Quando o velho inbound começou a funcionar, o conteúdo era diferencial.
 
-1. A compra B2B se tornou visivelmente coletiva.
-2. A educação do comprador se descentralizou.
-3. O conteúdo genérico perdeu valor.
+E, lá no início, pouca empresa B2B fazia blog, poucas investiam em SEO e poucas tinham um time dedicado.
 
-Vamos olhar para cada uma.
+Aí o modelo pegou e o mercado percebeu. Com isso, toda empresa começou a fazer conteúdo em esteira no estilo industrial.
 
-### 1. A compra B2B se tornou visivelmente coletiva
+Criaram-se negócios inteiros para escalar isso.
 
-A compra B2B provavelmente nunca foi tão linear quanto os diagramas sugeriam.
+Quem lembra da Rock Content aqui no Brasil? Empresa gigante, que o core era justamente entregar volume de conteúdo para alimentar a engrenagem do inbound.
 
-A diferença é que hoje conseguimos enxergar melhor sua complexidade.
+E a Rock não era exceção, tinha dezenas de operações rodando nessa lógica.
 
-Em uma compra simples, uma única pessoa pode reconhecer o problema, comparar opções e decidir.
+Isso foi comoditizando o jogo aos poucos…
 
-Em uma venda complexa, o número de participantes aumenta, os critérios entram em conflito e o risco precisa ser aceito por diferentes áreas.
+Para pra pensar quantos artigos genéricos, repetidos, sem opinião e escritos só para ranquear no Google você leu nos últimos 10 anos? Provavelmente centenas.
 
-Uma pessoa quer resolver o problema operacional.
+E agora, com IA generativa, é o tiro de misericórdia.
 
-Outra controla o orçamento.
+Qualquer um gera 50 artigos por dia, o Google tá afogado em texto sem alma, e a própria lógica de "pesquisa no Google > clique > site" tá sendo canibalizada pelo modelo de a resposta vir direto no chat das LLMs.
 
-Outra avalia o risco técnico.
+Então é isso, quando a gente junta estas 3 verdades, a gente chega na conclusão de que o inbound, como ideia de participar da educação do comprador para criar demanda, continua válido…
 
-Outra teme a implementação.
+Mas o MECANISMO do velho inbound pra fazer isso, não!
 
-Outra pode interromper tudo sem jamais aparecer em uma reunião comercial.
+E por isso, se você quer continuar penetrando o mercado (que, lembrando, é o nosso objetivo. Penetração de mercado = vender mais = trazer conta nova = expandir base = receita), você precisa entender que a forma de operar o inbound mudou.
 
-Agora pensa comigo.
+## Então o que fazer? É aqui que entra o Novo Inbound
 
-Essas pessoas entram juntas na jornada?
+Olha, faz uns 2 ou 3 anos que a B2B Insiders começou a bater nessa tecla.
 
-Não.
+Quem acompanha a gente sabe que fomos os primeiros a falar sobre isso aqui no Brasil, antes mesmo de artigos lá de fora sobre a morte dos MQLs, etc.
 
-Uma encontra a empresa no LinkedIn. Outra pesquisa o nome no Google. Outra escuta um episódio de podcast. Outra pede a opinião de um par. Outra só conhece o fornecedor quando recebe internamente uma apresentação quase pronta.
+Nós também fomos os primeiros a falar sobre a "morte do funil" e sobre a necessidade de um novo inbound.
 
-Existem várias jornadas acontecendo ao mesmo tempo dentro da mesma conta.
+Na época, para você ter uma ideia, não tinha nem AI, mas a gente já estava percebendo que o velho inbound dava sinais de desgaste.
 
-Pesquisas do Gartner descrevem a compra B2B como um conjunto de tarefas que os compradores revisitam, e não como uma sequência linear. A organização também aponta grupos de compra formados por várias pessoas, que pesquisam e se comunicam em momentos diferentes. [2] [3]
+Tanto é que hoje virou conversa no feed de 8 em cada 10 heads de marketing B2B.
 
-Uma estratégia centrada apenas em contatos individuais enxerga fragmentos.
+E durante esses anos, a gente não somente quebrou o funil, a gente também começou a construir algo mais alinhado ao momento como as pessoas se educam e compram hoje em dia.
 
-Uma estratégia centrada no mercado e nas contas tenta compreender o movimento coletivo.
+Chamamos isso, claro, de Novo Inbound, que já estamos operando e gerando valor para clientes e alunos. Vou te apresentar a lógica dele abaixo.
 
-### 2. A educação do comprador se descentralizou
+A lógica do Novo Inbound tem 5 etapas que funcionam em um ciclo contínuo, não em um funil linear.
 
-Quando o inbound surgiu, Google, blog e e-mail formavam um sistema especialmente poderoso.
+São elas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.
 
-A empresa atraía uma pessoa, identificava seu interesse e continuava a conversa em canais que controlava.
+## As 5 etapas do Novo Inbound B2B
 
-Hoje, a educação circula por uma rede muito mais ampla.
+### 1. Posicionar
 
-O comprador aprende em:
+Uma das coisas que mais me incomodou no velho inbound é que você trabalhava para um funil, não para o seu mercado-alvo.
 
-* Posts de especialistas.
-* Newsletters.
-* Podcasts.
-* Vídeos.
-* Eventos.
-* Comunidades fechadas.
-* Grupos de WhatsApp.
-* Mensagens privadas.
-* Conversas com colegas.
-* Sites de avaliação.
-* Conteúdo produzido por clientes.
-* Respostas de mecanismos de inteligência artificial.
+O resultado disso é que toda uma geração de profissionais foi educada dentro da linha de nutrição de um martech e hoje não consegue pensar sobre posicionamento de verdade.
 
-Parte dessa atividade é visível.
+Por isso que, antes de qualquer coisa, você precisa saber pra quem você fala, qual é a maturidade de mercado dele e quais são os seus diferenciais em nível de solução.
 
-Parte deixa sinais incompletos.
+E tem método para isso, tá? Posicionamento é maturidade de mercado + diferenciais (tem conteúdos meus sobre isso no meu feed).
 
-Parte não deixa sinal algum.
+Deixa eu explicar de forma bem direta.
 
-É o que o mercado costuma chamar de dark social: os espaços em que informação, opinião e recomendação circulam sem serem observados integralmente pelas ferramentas tradicionais de atribuição.
+Maturidade de mercado é sobre como o seu ICP já soluciona o seu problema. E ela acontece em três níveis.
 
-Dark social não significa que nada possa ser aprendido.
+No nível mais baixo, ele ainda tá se conscientizando sobre o problema.
 
-Entrevistas, atribuição declarada, análise das conversas de vendas e pesquisa com clientes ajudam a reconstruir parte do caminho.
+Ou seja, ele sente uma dor, mas não sabe direito o nome dela ainda, não sabe que existe uma categoria inteira de solução pra aquilo, não conectou a dor com a consequência no negócio dele.
 
-Mas nenhuma plataforma mostrará a jornada inteira.
+Quer exemplo? Eu te educando aqui que você tem um problema com o velho inbound, rs.
 
-Isso muda o papel do conteúdo.
+No nível de categoria, ele já entendeu o problema e está avaliando a categoria de solução.
 
-Se o objetivo é criar demanda, o conteúdo precisa conseguir circular. Precisa ser encontrado, consumido, citado e compartilhado sem exigir que o comprador se identifique antes de receber valor.
+Aqui eu gosto de frisar algo importante: categoria é a forma de solucionar o problema. Se o mercado ainda não vê a sua categoria como a forma óbvia de solucionar o problema, você tem sim que educar em nível de categoria.
 
-O formulário continua fazendo sentido quando existe uma troca real: uma inscrição, uma ferramenta, uma experiência personalizada ou um pedido de contato.
+Exemplo: eu te mostrando que há uma nova forma de solucionar o problema do velho inbound. E chama-se Novo Inbound (em nível de categoria).
 
-O que deixa de fazer sentido é colocar uma barreira em todo conteúdo apenas porque a operação precisa produzir leads.
+No nível de produto, a sua audiência já sabe que tem o problema e todo mundo já entende que a sua categoria é a forma óbvia de solução.
 
-**O formulário não mede quem você educou. Mede quem aceitou se identificar.**
+Aí, nesse caso, você tem que trabalhar o porquê de você, enquanto empresa, ser a melhor opção dentro daquela categoria.
 
-E atenção: isso não elimina o papel de vendas.
+Exemplo: digamos que todo mundo já entenda que o Novo Inbound é uma realidade, meu papel aqui seria educar por que a forma de trabalho da B2B Insiders é a melhor. Mas o meu ICP (olá!) ainda não está em nível de produto, o mercado está em nível de problema > categoria. Entende?
 
-O próprio Gartner aponta que compradores valorizam experiências digitais, mas que a combinação entre conteúdo digital e interação humana pode produzir decisões de maior qualidade. [2]
+Portanto, saber em qual desses três níveis o seu mercado-alvo está muda TUDO.
 
-O vendedor não desaparece.
+Muda a mensagem, muda o conteúdo, muda o canal, muda o ritmo e pode até mudar a oferta (4 Ps, né?).
 
-Ele entra em outro momento e com outra função: ajudar a interpretar, reduzir risco, construir consenso e avançar uma decisão que começou antes dele.
+Agora, os diferenciais.
 
-### 3. O conteúdo genérico perdeu valor
+Diferencial é o que a sua solução faz que a do concorrente não faz.
 
-Durante muito tempo, publicar conteúdo era um diferencial por si só.
+Mas atenção, não é qualquer diferença, tem que ser uma diferença que impacte diretamente na solução do problema do ICP.
 
-Poucas empresas B2B tinham capacidade de produzir com consistência. Poucas dominavam SEO. Poucas transformavam o conhecimento interno em material acessível ao mercado.
+Porque o mercado tá cheio de empresa listando "diferencial" que só importa pra ela mesma.
 
-Quando o modelo se popularizou, conteúdo virou operação de volume.
+E sobre os diferenciais, o ideal é sempre escolher de 1 a 2 no máximo dentre 5 frentes, que são elas:
 
-Surgiram calendários industriais, metas de publicação e milhares de textos construídos para ocupar uma palavra-chave, mesmo quando não havia uma ideia nova por trás.
+- Custo
+- Produto
+- Entrega
+- Nicho
+- Autoridade
 
-A inteligência artificial generativa reduziu drasticamente o custo de produzir esse tipo de informação.
+Quando você junta os dois (maturidade do seu mercado + quais diferenciais reais te separam do concorrente), você tem posicionamento forte.
 
-Hoje, qualquer empresa consegue gerar dezenas de explicações corretas, organizadas e aparentemente completas sobre quase qualquer assunto.
+E posicionamento é papel do marketing.
 
-Além disso, o comprador pode receber uma síntese diretamente em um mecanismo de inteligência artificial, sem necessariamente visitar cada página utilizada para construir a resposta.
+Bom, agora vamos para o segundo ponto, que é a garantia de impacto.
 
-Isso reduz a importância do conteúdo?
+### 2. Garantir Impacto
 
-Não.
+O ponto é, um bom posicionamento só existe se o mercado te enxergar, né?
 
-Aumenta a exigência.
+Então o segundo passo é garantir que a sua mensagem, o seu conteúdo e a sua marca cheguem nos olhos e nos ouvidos do ICP de forma consistente.
 
-Quando informação básica é abundante, o que permanece escasso?
+E aqui não estou falando de "postar três vezes por semana no LinkedIn", rs.
 
-* Experiência real.
-* Ponto de vista.
-* Evidência própria.
-* Síntese original.
-* Capacidade de explicar uma mudança antes de ela virar consenso.
-* Coragem para afirmar algo que possa ser discutido e testado.
+Estou falando de entender o comportamento do seu ICP e escolher as melhores táticas...
 
-A própria orientação do Google para experiências generativas recomenda conteúdo não comoditizado, construído a partir de experiência e perspectiva próprias. [4]
+De entender o padrão de comportamento e ocupar espaço no dark social do seu comprador: no feed dele, no podcast que ele escuta, na comunidade que ele participa e no evento que ele vai participar.
 
-**A inteligência artificial não matou o conteúdo. Matou a vantagem de publicar conteúdo sem ideia.**
+É aqui que a criação de demanda acontece de verdade (awareness, consideração e confiança). E é daqui que sai a base que sustenta tudo o que vem depois.
 
-## Então Google, blog, e-mail e MQL não servem mais?
+### 3. Detectar Sinais
 
-Servem.
+Aqui é onde o Novo Inbound se diferencia bem do velho inbound.
 
-Google não morreu.
+No modelo antigo, o principal sinal que o marketing conseguia ler era "preencheu formulário e abriu email". E isso tinha lógica, porque, naquela época, era o que a tecnologia permitia ler de comportamento digital em escala.
 
-Blog não morreu.
+Hoje, sinal é muito mais coisa, porque a educação acontece em muito mais lugar.
 
-E-mail não morreu.
+Sinal é curtir um post, comentar, compartilhar, visitar sua página (via website visitor tracking), engajar com um thought leader do seu time, entrar numa comunidade que você monitora, responder uma enquete, assistir um webinar, etc.
 
-Formulário não morreu.
+E detectar esses sinais em escala, de forma organizada, é o que separa quem joga o jogo novo de quem ainda tá esperando o lead preencher formulário pra "saber que ele existe".
 
-Lead scoring não morreu.
+### 4. Iniciar Conversas
 
-MQL não morreu.
+Aí sim, com sinal detectado, você começa uma conversa.
 
-O funil de receita também não morreu.
+E aqui no iniciar conversas não é somente outbound não, é também inbound.
 
-Todos continuam úteis em contextos específicos.
+Um lead inbound, por exemplo, é um sinal de intenção alta, que inicia uma conversa.
 
-Google e blog continuam fundamentais para capturar pesquisas existentes.
+Mas os sinais também existem, obviamente, para iniciar conversas com contexto via outbound.
 
-Formulários continuam úteis quando existe intenção de contato ou uma troca que justifique a identificação.
+Essa é exatamente a parte que conecta criação de demanda (que aconteceu no passo 2, no garantir impacto) com captura de demanda (que acontece agora).
 
-E-mail continua sendo um canal importante de continuidade.
+No modelo de 2006, essa ponte era feita por um mecanismo só: o lead nutrido por email até "amadurecer". Hoje, como a educação não acontece mais principalmente por email, a ponte tem que ser construída em cima dos sinais reais que o ICP deixa pelo caminho.
 
-Lead scoring continua podendo ajudar a priorizar comportamentos.
+### 5. Otimizar
 
-MQL continua podendo funcionar como uma classificação operacional.
+Por fim, o ciclo se fecha aprendendo.
 
-O que morreu foi a ideia de que esse conjunto consegue, sozinho, representar toda a geração de demanda.
+Quais sinais viraram conversa? Quais conversas viraram pipeline? Qual conteúdo gerou mais engajamento do ICP certo? Qual tese de posicionamento ressoou de verdade?
 
-Ele mostra quem chegou aos canais que a empresa controla.
+Você não vai acertar de primeira, e nem deveria, sabe por quê?
 
-Não mostra necessariamente quem ouviu, aprendeu, compartilhou, recomendou, comparou ou construiu preferência em outros ambientes.
+Porque a estratégia é sobre a sua audiência. E sem os dados gerados é impossível saber o que funciona e o que não funciona.
 
-Se o marketing só enxerga quem preencheu formulário, ele enxerga apenas a parte do mercado que aceitou ser vista.
+Ou seja, otimizar não é para cumprir tabela, é parte fundamental do processo.
 
-O restante não deixou de existir.
+É por isso que a gente chama de ciclo contínuo e não de funil.
 
-Apenas não entrou no relatório.
+Porque não tem começo e fim, tem uma engrenagem girando. E cada volta te ensina alguma coisa sobre como girar melhor na próxima.
 
-## O que é o Novo Inbound B2B?
+## "Tá, David, mas e as métricas? Como eu meço tudo isso?"
 
-Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas.
+Tenho que admitir, nesses 3 anos em que a gente vem batendo no funil e na dependência dos MQLs, a pergunta que a gente mais ouve é sobre mensuração.
 
-Ele organiza a penetração de mercado em um ciclo contínuo de cinco etapas:
+E pô, eu super entendo! Se tem uma coisa que o velho inbound faz bem é passar essa (falsa) sensação de controle.
 
-1. Posicionar.
-2. Garantir Impacto.
-3. Detectar Sinais.
-4. Iniciar Conversas.
-5. Otimizar.
+Mas a verdade é que CTR, CPC, taxa de conversão de landing page, Leads e CPL sozinhos não dão mais conta.
 
-O método mantém a premissa original do inbound, que é participar da educação do comprador, mas atualiza o mecanismo para uma realidade em que:
+Eles foram desenhados pra um mundo de funil linear e pra ler sinal de um canal só. Aqui a gente tá lendo sinal de um monte de lugar diferente ao mesmo tempo.
 
-* A compra é coletiva.
-* A educação acontece em canais distribuídos.
-* Parte da jornada é invisível.
-* Conteúdo genérico é abundante.
-* Sinais aparecem antes do pedido de contato.
-* Marketing e vendas precisam aprender com o mesmo mercado.
+E aqui vai um ponto que eu quero que fique MUITO claro antes de eu entrar na parte prática.
 
-O ciclo não elimina o funil de receita.
+As suas métricas são consequência das táticas que você escolhe rodar lá no passo 2 (Garantir Impacto).
 
-Ele opera antes, durante e ao redor dele.
+Cada tática tem o conjunto de métricas que ela permite ler, e é por isso que não dá pra olhar "métrica" sem olhar "tática" junto.
 
-O funil mostra oportunidades que já foram reconhecidas pela empresa.
+Um podcast tem métricas diferentes de um post de thought leader no LinkedIn, que tem métricas diferentes de um lead magnet, que tem métricas diferentes de uma demo agendada.
 
-O ciclo ajuda a compreender como o mercado aprende, presta atenção, constrói preferência, manifesta interesse e entra em conversa.
+O que ajuda a organizar isso tudo é separar as métricas em três níveis. E eu faço essa separação baseado numa pergunta simples: o que eu sei sobre quem gerou esse sinal?
 
-Existe uma sequência inicial de implantação. Uma empresa precisa começar posicionando antes de tentar distribuir, medir sinais ou abrir conversas.
+Deixa eu explicar cada um.
 
-Depois da primeira volta, as etapas passam a se alimentar continuamente.
+### Métricas invisíveis
 
-É por isso que chamamos de ciclo.
+Métricas invisíveis são aquelas em que você consegue medir o sinal, mas não sabe quem é a pessoa nem que empresa ela representa.
 
-## Como funciona o ciclo do Novo Inbound B2B?
+Exemplos: plays de podcast, views de YouTube, impressões de post no LinkedIn, impressões de campanha de mídia paga, etc.
 
-### Etapa 1: Posicionar
+Você sabe que aquela coisa aconteceu, sabe quanto aconteceu. Mas não sabe o nome de ninguém.
 
-Posicionamento é a associação que uma empresa deseja ocupar na mente do mercado e consegue sustentar na prática.
+E aqui vai um ponto que muita gente subestima, a maior parte do processo de educação do comprador B2B acontece justamente em táticas que só geram métricas invisíveis.
 
-No Novo Inbound B2B, essa associação nasce do encontro entre quatro elementos:
+Podcast, vídeo no YouTube, post no feed do LinkedIn, lendo uma newsletter no LinkedIn (oi, quem é você aí do outro lado? rs). É no invisível que a criação de demanda acontece, na prática.
 
-1. O mercado que a empresa escolheu.
-2. A situação que faz esse mercado comprar.
-3. O nível de maturidade do comprador.
-4. Um diferencial que a empresa consegue provar.
+### Métricas visíveis
 
-Não basta escolher uma frase bonita.
+Métricas visíveis são aquelas em que você sabe quem é a pessoa ou a empresa, mesmo que ela não tenha te entregado o dado ativamente.
 
-Posicionamento exige decidir para quem a empresa é especialmente relevante, qual problema ajuda a interpretar, contra quais alternativas compete e por que merece ser lembrada.
+Exemplos: curtida em post no LinkedIn, comentário (no LinkedIn, no YouTube, no blog), compartilhamento, visitor tracking de empresa no seu site, reação em post de thought leader do seu time, etc.
 
-Um problema frequente do velho inbound foi ensinar profissionais a trabalhar dentro de uma régua de nutrição antes de ensiná-los a pensar o mercado.
+Ou seja, a pessoa não necessariamente preencheu formulário, não deu email, não levantou a mão, mas o comportamento dela te disse o nome dela.
 
-Com isso, muitas empresas começaram a produzir conteúdo antes de responder perguntas básicas:
+E presta atenção nisso: métrica visível no LinkedIn, especialmente, é um sinal fortíssimo...
 
-* Quem precisa lembrar de nós?
-* Em qual situação precisamos ser lembrados?
-* O mercado reconhece o problema?
-* Ele entende a categoria?
-* Já está comparando fornecedores?
-* Qual diferença conseguimos demonstrar?
-* Que posição não queremos ocupar?
+Porque ela vem com contexto de identidade, cargo, empresa e setor. É outro nível de leitura comparado com "play de podcast de uma pessoa que eu não sei quem é".
 
-Sem essas respostas, conteúdo vira movimento sem direção.
+### Métricas de intenção
 
-**Pergunta da etapa:** qual associação queremos conquistar no mercado?
+Métricas de intenção são aquelas em que a pessoa, de forma espontânea, te entregou o contato dela.
 
-**Entregável principal:** uma tese de posicionamento transformada em narrativa, mensagens, provas e situações de compra.
+E aqui dentro, tem duas subcamadas.
 
-### Etapa 2: Garantir Impacto
+Intenção baixa: a pessoa te deu o contato em troca de algo, mas não necessariamente pra conversar com você.
 
-Posicionamento que ninguém encontra não produz efeito.
+Ela baixou um material exclusivo, comentou num lead magnet pra receber um conteúdo, se inscreveu pra participar de um webinar, se inscreveu na sua newsletter.
 
-Garantir Impacto significa fazer a narrativa chegar ao mercado certo, com frequência e consistência suficientes para construir memória, compreensão e preferência.
+É intenção, mas a disposição real de comprar ainda tá baixa.
 
-Não é simplesmente publicar três vezes por semana.
+Intenção alta: aí sim, a pessoa quer falar com você.
 
-Também não é estar em todos os canais.
+Pedido de demo, pedido pra conversar com vendas, formulário de contato comercial. É mais próximo do MQL, mas com uma diferença importante, aqui a pessoa pediu, não foi o marketing que "graduou" ela num score.
 
-É entender onde o mercado se educa e construir presença nos ambientes que realmente influenciam sua percepção.
+### O erro clássico
 
-A escolha pode incluir:
+E aqui vai um erro clássico que eu quero te poupar:
 
-* Conteúdo de especialistas no LinkedIn.
-* Podcast.
-* Newsletter.
-* Vídeo.
-* Comunidades.
-* Eventos.
-* Relações públicas.
-* Mídia paga.
-* Conteúdo de clientes.
-* Google e SEO.
-* Parcerias.
-* Experiências interativas.
-* Presença de executivos e especialistas da empresa.
+Não existe isso de "métrica de intenção é melhor que métrica invisível".
 
-A tática depende do mercado, da complexidade da compra, da maturidade do problema e dos recursos disponíveis.
+Não é verdade, elas medem coisas diferentes, em momentos diferentes do processo e em táticas diferentes.
 
-A regra 95/5, popularizada pelo LinkedIn B2B Institute a partir do trabalho do professor John Dawes, ajuda a explicar por que essa presença precisa acontecer antes da intenção comercial. Em muitas categorias B2B, até 95% dos compradores potenciais podem estar fora do mercado em um determinado momento. Eles são compradores futuros. [5]
+Uma tática de podcast, por exemplo, vai gerar quase 100% de métrica invisível.
 
-O trabalho do marketing não é forçar todos a comprar agora.
+E isso não quer dizer que a tática não funciona. Na verdade, quer dizer que ela tá cumprindo o papel dela (educar, criar demanda no invisível) e que o sinal de intenção vai aparecer DEPOIS, em outra tática (provavelmente no visível ou no formulário de contato).
 
-É fazer a empresa ser lembrada quando a situação de compra aparecer.
+Por isso a regra é: você tem que olhar as três camadas de métricas de frente pras táticas que tá rodando. Sempre.
 
-**Pergunta da etapa:** estamos chegando às pessoas certas antes de elas precisarem comprar?
+E pra ficar ainda mais concreto, olha só esse exemplo aqui em tempo real:
 
-**Entregável principal:** um sistema de distribuição capaz de transformar posicionamento em presença real no mercado.
+A versão desta news que eu publiquei no LinkedIn, eu consigo medir algumas coisas invisíveis:
 
-### Etapa 3: Detectar Sinais
+- Quantas pessoas foram impactadas,
+- Quantas visualizações ela teve
+- Quantos salvamentos (que eu acompanho bastante, inclusive). Eu não sei quem salvou, mas sei que foi salvo.
 
-Quando o posicionamento começa a circular, o mercado reage.
+Agora, se você curtir ou comentar por lá (comenta, vai, rs), a partir desse momento a métrica vira visível, porque eu passo a saber exatamente quem você é, em que empresa você trabalha, qual é o seu cargo, etc.
 
-Algumas reações serão anônimas. Outras permitirão identificar uma conta ou uma pessoa. Algumas demonstrarão atenção. Outras sugerirão consideração. Poucas representarão intenção comercial explícita.
+E se, em algum momento depois, você clicar num convite lá no fim e se inscrever (sim, tem convite no final do texto, rs), aí você já me entregou uma métrica de intenção (baixa, nesse caso específico, porque ainda é educação).
 
-Detectar Sinais significa organizar essas manifestações sem confundir visibilidade com propensão de compra.
+Um sinal só, três camadas diferentes, dependendo da interação que você escolher ter comigo.
 
-Um play de podcast é um sinal de consumo, mas não revela necessariamente quem ouviu.
+Com isso, o próximo passo natural de quem quer operar isso de verdade é cruzar essas três camadas.
 
-Uma reação no LinkedIn identifica uma pessoa, mas não significa que ela esteja comprando.
+É olhar pras métricas invisíveis, visíveis e de intenção juntas e começar a ler a penetração de mercado como um sistema.
 
-Uma visita recorrente de uma conta a páginas de produto pode indicar consideração, mas ainda precisa de contexto.
+Porque é a partir daí que você começa a construir as suas métricas antecedentes de penetração de mercado.
 
-Um pedido de demonstração representa intenção comercial explícita.
+Mas olha, métrica antecedente e métrica resultante, meu amigo, é assunto pra outro texto, rs. Senão a gente não termina essa aqui hoje.
 
-Todos são sinais.
+## Para finalizar...
 
-Eles apenas não dizem a mesma coisa.
+Tudo que eu te expliquei aqui (a origem do inbound, o desvio que o mercado fez no caminho, as três mudanças de paradigma e os 5 passos do ciclo e a lógica das três camadas de métricas) é metodologia proprietária do B2B Insiders.
 
-**Pergunta da etapa:** quem está prestando atenção, em que contexto e com qual intensidade?
+É o que a gente chama de Novo Inbound B2B.
 
-**Entregável principal:** um mapa de sinais que permita priorizar contas, pessoas e momentos sem transformar qualquer interação em desculpa para uma abordagem comercial.
+E é o que a gente vem aplicando nos clientes que rodam a nossa operação de Geração de Demanda.
 
-### Etapa 4: Iniciar Conversas
+E olha, se este texto te deixou com mais perguntas do que respostas, isso é bom, viu?
 
-Sinal não é autorização automática para vender.
+Significa que você tá começando a enxergar o tamanho real do jogo.
 
-É contexto para decidir se uma conversa faz sentido, qual conversa deve ser iniciada e por quem.
+Mas antes de você sair concordando ou discordando (e você pode discordar, inclusive, faz parte), eu quero te convidar pra duas coisas.
 
-Um pedido de demonstração pede resposta comercial rápida.
+A primeira é conhecer a B2B Insiders, que é onde a gente aplica esse método todo dia, com cliente rodando operação de Geração de Demanda de verdade.
 
-Uma dúvida técnica pode pedir ajuda de um especialista.
+A segunda é a Formação em Geração de Demanda B2B, que é onde eu ensino o Novo Inbound passo a passo. Lá eu mostro não só o "o quê", mas o "como"...
 
-Um comentário recorrente pode abrir uma conversa sobre o tema discutido.
+Como posicionar, como construir presença sem depender de Google, como detectar sinais em escala, como iniciar conversa sem parecer cold outbound e como montar o painel de métricas invisíveis, visíveis e de intenção pra orientar o time no dia a dia.
 
-Uma conta que demonstra vários sinais de consideração pode justificar pesquisa e uma abordagem contextualizada.
+Se você quer autonomia pra decidir o seu próximo passo de marketing, sem ficar refém da próxima moda, e se você quer que o seu marketing volte a gerar resultado de verdade, é por ali que eu começaria.
 
-Uma curtida isolada normalmente não justifica nada.
+Até a próxima,
 
-A conversa pode começar por inbound, quando a pessoa solicita contato, ou por outbound, quando a empresa identifica um contexto legítimo para se aproximar.
-
-A diferença para o cold outbound tradicional não está apenas no canal.
-
-Está no motivo da conversa.
-
-A abordagem deixa de partir exclusivamente de uma lista estática e passa a considerar mercado, conta, pessoa, sinal, momento e hipótese de relevância.
-
-**Quem curtiu um post não pediu uma reunião. Mas talvez tenha mostrado sobre o que vale conversar.**
-
-**Pergunta da etapa:** qual conversa este sinal justifica, se justificar alguma?
-
-**Entregável principal:** critérios e playbooks que transformem contexto em conversas úteis, sem converter atenção em perseguição.
-
-### Etapa 5: Otimizar
-
-O ciclo fecha aprendendo.
-
-Quais teses de posicionamento ressoaram?
-
-Quais canais alcançaram o mercado certo?
-
-Quais conteúdos geraram atenção nas contas desejadas?
-
-Quais sinais antecederam conversas relevantes?
-
-Quais conversas viraram oportunidades?
-
-Quais oportunidades viraram receita?
-
-Quais padrões apareceram nas perdas?
-
-Qual parte da jornada continuou invisível até ser revelada pelo cliente?
-
-O objetivo não é atribuir cada venda a uma peça de conteúdo.
-
-É aprender o suficiente para aumentar a qualidade da próxima volta.
-
-Parte do aprendizado será quantitativa.
-
-Parte virá de entrevistas, reuniões comerciais, análises de oportunidades e conversas com clientes.
-
-Estratégia não é apenas o que a empresa planeja fazer.
-
-É o que ela aprende quando o mercado responde.
-
-**Pergunta da etapa:** o que o mercado nos ensinou e o que faremos diferente na próxima volta?
-
-**Entregável principal:** um sistema de aprendizado que conecta mercado, marketing, vendas e receita.
-
-## Como os sinais devem ser lidos?
-
-A leitura de sinais precisa responder a duas perguntas diferentes:
-
-1. Quanto sabemos sobre quem produziu o sinal?
-2. O que o comportamento sugere sobre a relação dessa pessoa ou conta com o problema?
-
-Misturar essas perguntas cria um dos erros mais perigosos da geração de demanda atual.
-
-Identificar alguém não significa descobrir sua intenção.
-
-### Primeira dimensão: observabilidade
-
-| Nível | O que sabemos | Exemplos |
-|---|---|---|
-| Anônimo | Sabemos que algo aconteceu, mas não sabemos com segurança quem foi. | Impressão, visualização, play de podcast, visita não identificada e alcance de mídia. |
-| Conta identificada | Associamos o comportamento a uma empresa, geralmente com algum grau de probabilidade. | Visitas recorrentes, consumo de várias páginas e engajamento agregado de pessoas da organização. |
-| Pessoa identificada | Sabemos quem realizou a ação. | Comentário, reação, participação em evento, resposta a uma newsletter e preenchimento de cadastro. |
-
-A identidade permite contextualização.
-
-Ela não determina, sozinha, a força do sinal.
-
-### Segunda dimensão: força do sinal
-
-| Força | O que o comportamento sugere | Exemplos |
-|---|---|---|
-| Atenção | A pessoa ou conta entrou em contato com a mensagem. | Visualização, reação, play, impressão recorrente, visita superficial e inscrição em newsletter. |
-| Consideração | Existe exploração mais ativa do problema, da categoria ou das alternativas. | Consumo recorrente, pergunta específica, webinar, visita a casos, comparação de abordagens e envolvimento de várias pessoas da conta. |
-| Intenção comercial | Existe interesse explícito em avaliar uma solução ou conversar sobre uma necessidade. | Pedido de demonstração, contato comercial, solicitação de proposta e pergunta sobre preço ou implementação. |
-
-A leitura correta cruza as duas dimensões.
-
-Um comentário pode ser um sinal identificado de atenção.
-
-Uma sequência de visitas de uma conta pode sugerir consideração com identidade parcial.
-
-Um pedido de demonstração é um sinal declarado de intenção comercial.
-
-**Um sinal não vale apenas pelo que aconteceu. Vale também pela identidade, intensidade, recorrência e contexto.**
-
-## Como medir o Novo Inbound B2B?
-
-Nenhuma métrica isolada explica geração de demanda.
-
-O modelo precisa combinar indicadores de posicionamento, distribuição, sinais, conversas e receita.
-
-| Etapa | Pergunta de medição | Exemplos de indicadores |
-|---|---|---|
-| Posicionar | O mercado entende e lembra da associação desejada? | Pesquisa qualitativa, lembrança, busca de marca, menções espontâneas e motivos de ganho e perda. |
-| Garantir Impacto | Estamos chegando ao ICP com frequência e consistência? | Alcance qualificado, impressões, frequência, plays, visualizações, compartilhamentos e tráfego direto. |
-| Detectar Sinais | Quem está prestando atenção e quais comportamentos se repetem? | Pessoas do ICP, contas identificadas, recorrência, profundidade e envolvimento de vários participantes. |
-| Iniciar Conversas | Quais sinais justificaram conversas e produziram avanço real? | Respostas, conversas, reuniões aceitas, oportunidades, rejeições e tempo entre sinal e contato. |
-| Otimizar | O que chegou ao pipeline, à receita e ao aprendizado? | Pipeline, receita, taxa de ganho, velocidade, expansão, origem declarada e padrões qualitativos. |
-
-A atribuição continua útil.
-
-Ela só não deveria ser confundida com a totalidade da causalidade.
-
-Uma venda pode ter sido influenciada por meses de exposição, uma conversa privada, uma indicação e um conteúdo que ninguém conseguiu atribuir.
-
-O fato de a empresa não conseguir observar tudo não elimina sua responsabilidade de medir o que é observável.
-
-Também não autoriza fingir que apenas o observável produziu resultado.
-
-## O que o Novo Inbound B2B é?
-
-O Novo Inbound B2B é:
-
-* Um método para organizar geração de demanda em vendas complexas.
-* Uma forma de conectar criação e captura de demanda.
-* Um sistema para combinar posicionamento, distribuição, sinais, conversas e aprendizado.
-* Uma leitura da compra B2B como movimento coletivo.
-* Uma maneira de aproximar marketing e vendas ao redor do mercado, não apenas do lead.
-* Um ciclo operacional que convive com o funil de receita.
-
-## O que o Novo Inbound B2B não é?
-
-O Novo Inbound B2B não é:
-
-* Uma declaração de que todo inbound deixou de funcionar.
-* Uma desculpa para abandonar Google, blog ou e-mail.
-* Um novo nome para fazer outbound em quem curtiu um post.
-* Uma promessa de que tudo poderá ser atribuído.
-* Uma ferramenta de automação.
-* Um painel de intent data.
-* Uma forma de transformar todo comprador futuro em comprador atual.
-* Uma metodologia universal para qualquer empresa.
-
-Ele foi pensado principalmente para empresas B2B em que a venda envolve educação, várias pessoas, risco percebido e tempo de decisão.
-
-Quanto mais simples, individual e imediata for a compra, menor a necessidade de operar todo o ciclo.
-
-## Por onde começar?
-
-Uma empresa não precisa implementar tudo de uma vez.
-
-Pode começar respondendo cinco perguntas:
-
-1. Qual mercado queremos penetrar?
-2. Qual associação queremos conquistar nesse mercado?
-3. Onde essas pessoas realmente se educam?
-4. Quais sinais conseguimos observar hoje?
-5. Como esses sinais chegam a marketing, vendas e receita?
-
-Essas respostas costumam revelar onde o ciclo está travando.
-
-Algumas empresas têm presença, mas não têm posicionamento.
-
-Outras têm posicionamento, mas não alcançam o mercado.
-
-Algumas geram atenção, mas não conseguem identificar nenhum movimento.
-
-Outras detectam sinais, mas transformam tudo em abordagem comercial.
-
-Muitas iniciam conversas, mas não fecham o ciclo com aprendizado.
-
-O objetivo não é construir a operação mais complexa.
-
-É enxergar o mercado com clareza suficiente para tomar decisões melhores.
-
-## Perguntas frequentes
-
-### O que é o Novo Inbound B2B?
-
-Novo Inbound B2B é um método de geração de demanda para empresas com vendas complexas. Ele organiza a penetração de mercado em cinco etapas contínuas: Posicionar, Garantir Impacto, Detectar Sinais, Iniciar Conversas e Otimizar.
-
-O método mantém a premissa do inbound, que é educar o comprador para construir demanda, mas atualiza o mecanismo para uma compra coletiva, distribuída e parcialmente invisível.
-
-### O inbound marketing morreu?
-
-Não.
-
-Educar compradores, ser encontrado e construir relacionamento antes da venda continuam sendo práticas fundamentais.
-
-O que perdeu aderência foi tratar Google, blog, formulário, e-mail, lead scoring e MQL como um mecanismo suficiente para representar toda a geração de demanda B2B.
-
-### O funil de marketing morreu?
-
-Como representação linear da jornada do comprador, sim.
-
-Como instrumento de gestão, não.
-
-O funil continua útil para visualizar oportunidades, conversão, pipeline e previsão de receita. Ele se torna insuficiente quando é usado como descrição literal do comportamento do comprador ou como único sistema operacional de marketing e vendas.
-
-### O MQL morreu?
-
-Não necessariamente.
-
-O MQL pode continuar sendo uma classificação operacional. O problema é tratá-lo como prova de intenção comercial ou como única evidência de que o mercado está prestando atenção.
-
-Um MQL baseado em download, score ou perfil não equivale automaticamente a um comprador que deseja falar com vendas.
-
-### Preciso abandonar Google, blog e e-mail?
-
-Não.
-
-Esses canais continuam úteis para capturar pesquisas existentes, aprofundar a educação e manter relacionamento.
-
-O que muda é o papel que ocupam. Eles deixam de ser tratados como o único centro da jornada e passam a integrar um sistema mais amplo de distribuição, sinais e conversas.
-
-### Todo conteúdo deve ser aberto?
-
-Conteúdo criado para circular e educar tende a ganhar força quando é aberto.
-
-Formulários fazem sentido quando existe uma troca que justifique a identificação, como uma ferramenta personalizada, inscrição, experiência exclusiva ou pedido de contato.
-
-A decisão deve partir do papel do conteúdo, não da necessidade interna de gerar leads.
-
-### Um sinal visível indica intenção de compra?
-
-Não.
-
-Uma reação, comentário ou visita identificada pode demonstrar atenção ou consideração. Não prova intenção comercial.
-
-A força do sinal depende do comportamento, da recorrência, do contexto, do fit e da combinação com outros sinais.
-
-### Como impedir que a detecção de sinais vire spam?
-
-Criando critérios claros para iniciar conversas.
-
-Nem todo sinal pede abordagem. A conversa deve ter uma hipótese legítima de relevância, respeitar o contexto da interação e começar pelo assunto que produziu o sinal, não por uma tentativa imediata de agendar reunião.
-
-### Novo Inbound B2B é a mesma coisa que ABM?
-
-Não.
-
-Dentro do Novo Inbound B2B, ABM é uma escolha de foco, coordenação e personalização para um conjunto definido de contas.
-
-O ciclo é mais amplo. Ele organiza como a empresa se posiciona, distribui sua mensagem, detecta sinais, inicia conversas e aprende, com ou sem uma estratégia formal de ABM.
-
-### Isso não é apenas demand generation com outro nome?
-
-O Novo Inbound B2B pertence ao campo de geração de demanda.
-
-Sua proposta específica é integrar posicionamento, distribuição, observabilidade, força dos sinais, conversas contextualizadas e otimização em um único ciclo operacional.
-
-O valor não está em inventar cada componente separadamente. Está em organizá-los de acordo com a forma como uma compra B2B complexa acontece hoje.
-
-### Como medir dark social?
-
-Não é possível observá-lo integralmente.
-
-A empresa pode reduzir a zona de desconhecimento usando atribuição declarada, entrevistas, análise das conversas comerciais, pesquisa com clientes, busca de marca e padrões de tráfego direto.
-
-O objetivo não é iluminar tudo. É aprender o suficiente para tomar decisões melhores.
-
-### Em quanto tempo o método produz resultado?
-
-Depende do ponto de partida, da duração do ciclo de venda, da força do posicionamento, do alcance existente e da capacidade de iniciar conversas.
-
-Alguns efeitos, como clareza de mensagem e melhoria da abordagem comercial, podem aparecer rapidamente.
-
-Construção de memória, preferência e penetração de mercado exige consistência e tempo.
-
-### Para quem o método não é indicado?
-
-O método tende a ser menos necessário em compras simples, imediatas, individuais e altamente transacionais.
-
-Ele ganha relevância conforme aumentam o risco, o ticket, o número de participantes, a necessidade de educação e a duração da decisão.
-
-## Glossário
-
-### Criação de demanda
-
-Educar compradores atuais e futuros para aumentar o reconhecimento do problema, a compreensão da categoria e a consideração pela empresa.
-
-### Captura de demanda
-
-Receber, identificar e converter compradores que já estão procurando uma solução ou manifestaram intenção comercial.
-
-### Penetração de mercado
-
-Aumentar presença, preferência e receita no mercado que a empresa escolheu disputar, por meio da aquisição de contas e da expansão de valor dentro delas.
-
-### Comprador futuro
-
-Pessoa ou conta que possui fit com a solução, mas não está em momento de compra.
-
-### Comprador em mercado
-
-Pessoa ou conta que está avaliando ativamente um problema, uma categoria ou fornecedores.
-
-### Comitê de compra
-
-Grupo de pessoas que influencia, avalia, aprova, utiliza ou pode bloquear uma decisão B2B.
-
-### MQL
-
-Classificação utilizada por marketing para indicar que um contato atende a critérios definidos de perfil ou comportamento. Não representa necessariamente intenção comercial.
-
-### Maturidade de mercado
-
-No Novo Inbound B2B, é uma lente para entender o quanto o mercado reconhece o problema, compreende a categoria e diferencia produtos ou fornecedores.
-
-### Sinal de atenção
-
-Comportamento que indica exposição ou consumo, sem necessariamente sugerir avaliação ativa de compra.
-
-### Sinal de consideração
-
-Comportamento que sugere exploração mais profunda do problema, da categoria ou das alternativas.
-
-### Sinal de intenção comercial
-
-Manifestação explícita de interesse em avaliar uma solução, falar com a empresa, receber proposta ou compreender condições de compra.
-
-### Dark social
-
-Conjunto de ambientes em que informação e recomendação circulam sem observação integral pelas ferramentas tradicionais de atribuição.
-
-### ABM
-
-Estratégia de foco, coordenação e personalização de marketing e vendas para contas ou grupos de contas selecionados.
-
-## Ferramenta 1: em qual nível de maturidade o seu mercado está?
-
-No Novo Inbound B2B, usamos três níveis para orientar mensagem, conteúdo, canal e prova.
-
-### Problema
-
-O mercado sente o efeito, mas ainda não reconhece claramente o problema ou sua consequência.
-
-A comunicação precisa ajudar o comprador a interpretar o que está acontecendo.
-
-### Categoria
-
-O mercado reconhece o problema e começa a avaliar formas de resolvê-lo.
-
-A comunicação precisa explicar a categoria, comparar alternativas e mostrar por que os caminhos atuais são insuficientes.
-
-### Produto
-
-O mercado reconhece o problema e entende a categoria. A disputa acontece entre fornecedores.
-
-A comunicação precisa demonstrar diferença, prova, segurança e adequação.
-
-Responda às quatro perguntas.
-
-### Pergunta 1
-
-Quando você descreve o problema que sua empresa resolve, o ICP normalmente:
-
-A. Reconhece o incômodo, mas não sabe dar nome a ele nem o conecta a uma consequência empresarial.
-
-B. Entende o problema e pergunta como aquilo pode ser resolvido.
-
-C. Já conhece o problema e pergunta por que deveria escolher sua empresa.
-
-### Pergunta 2
-
-Quando você menciona a categoria da solução, o ICP normalmente:
-
-A. Não sabe que existe uma categoria específica para resolver aquilo.
-
-B. Já ouviu falar, mas continua usando planilha, processo manual ou solução adjacente.
-
-C. Já utiliza a categoria e compara fornecedores.
-
-### Pergunta 3
-
-Qual objeção aparece com mais frequência?
-
-A. “Não é prioridade” ou “conseguimos conviver com isso”.
-
-B. “Podemos resolver internamente” ou “a solução atual já faz algo parecido”.
-
-C. “Também estamos avaliando outros fornecedores”.
-
-### Pergunta 4
-
-Quem chega até a empresa normalmente:
-
-A. Chega por indicação genérica e ainda não sabe exatamente o que pedir.
-
-B. Chega querendo entender como esse tipo de solução funciona.
-
-C. Chega com escopo, critérios e alternativas em avaliação.
-
-Predominância de A indica maturidade de problema.
-
-Predominância de B indica maturidade de categoria.
-
-Predominância de C indica maturidade de produto.
-
-Resultados mistos são normais. Podem revelar diferenças entre segmentos, participantes do comitê ou situações de compra.
-
-Esta é uma ferramenta de orientação, não um diagnóstico fechado. Uma leitura confiável exige entrevistas com clientes, análise de concorrência e observação das conversas comerciais.
-
-## Ferramenta 2: o que suas táticas permitem enxergar?
-
-Selecione as táticas utilizadas atualmente e analise cada uma em duas dimensões:
-
-1. Observabilidade: anônimo, conta identificada ou pessoa identificada.
-2. Força possível do sinal: atenção, consideração ou intenção comercial.
-
-Táticas que podem ser analisadas:
-
-* Podcast próprio.
-* Conteúdo de especialistas no LinkedIn.
-* Newsletter.
-* Página da empresa no LinkedIn.
-* Mídia paga.
-* Vídeo no YouTube.
-* Lead magnet.
-* Webinar.
-* Identificação de empresas visitantes.
-* Evento presencial.
-* Comunidade.
-* Formulário comercial.
-* Pedido de demonstração.
-
-A ferramenta não determina se uma tática é boa ou ruim.
-
-Ela mostra o que cada tática permite observar e quais conclusões não podem ser tiradas a partir de seus números.
-
-As proporções devem ser tratadas como ilustração da lógica, não como benchmark universal.
-
-## Pode citar, copiar e usar
-
-Este manifesto é aberto de propósito.
-
-Não tem formulário, paywall ou pedido de e-mail.
-
-Se ele ajudar você a explicar alguma coisa para seu time, cliente ou conselho, use.
-
-O único pedido é atribuição com link.
-
-A forma canônica é:
-
-LIMA, David Costa. O funil de marketing morreu. O inbound marketing não. B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/
-
-Cada conceito importante deve possuir um link permanente, e existe uma versão em Markdown para uso em documentos internos, ferramentas de inteligência artificial e wikis.
-
-## O mercado continuará se movendo sem pedir permissão ao seu CRM
-
-Enquanto você lê este manifesto, alguém do seu mercado pode estar descobrindo um problema.
-
-Outra pessoa pode estar ouvindo uma conversa sobre a categoria.
-
-Uma conta pode estar pesquisando o nome da sua empresa.
-
-Um diretor pode estar perguntando em um grupo privado se alguém conhece você.
-
-Um comprador pode estar comparando fornecedores em uma ferramenta de inteligência artificial.
-
-Nada disso precisa aparecer no seu funil para estar acontecendo.
-
-O trabalho do marketing é construir presença antes da oportunidade, reconhecer movimento quando ele aparece e ajudar vendas a entrar na conversa com contexto.
-
-O trabalho de vendas é transformar contexto em compreensão, segurança e decisão.
-
-O trabalho da operação é aprender com o que acontece e devolver esse aprendizado ao mercado.
-
-Foi a forma de comprar que mudou.
-
-Agora, a forma de fazer marketing e vender precisa mudar junto.
-
-O funil de marketing morreu.
-
-O inbound marketing não.
-
-O que entra no lugar é um ciclo.
-
-Se você quiser aprender a implementar esse ciclo, o caminho principal é a [Formação em Geração de Demanda B2B](https://b2binsiders.com.br/formacao-e-mentoria/).
-
-Se quiser analisar primeiro onde sua operação está travando, você pode [marcar uma conversa de 30 minutos](https://calendly.com/david-b2binsiders/30min).
-
-Se quiser acompanhar o desenvolvimento do método, siga a [B2B Insiders no LinkedIn](https://www.linkedin.com/company/b2b-insiders/).
-
-## Referências
-
-[1] HubSpot. [Our Story](https://www.hubspot.com/our-story). História oficial da origem da HubSpot e do inbound marketing.
-
-HubSpot. [Brian Halligan](https://www.hubspot.com/company/management/brian-halligan). Perfil oficial do cofundador.
-
-HubSpot. [Dharmesh Shah](https://www.hubspot.com/company-news/author/dharmesh-shah). Perfil oficial do cofundador e referência ao OnStartups.
-
-[2] Gartner. [B2B Buying: How Top CSOs and CMOs Optimize the Journey](https://www.gartner.com/en/sales/insights/b2b-buying-journey). Pesquisa e orientação sobre a natureza não linear da compra B2B.
-
-[3] Gartner. [Build Sales and Marketing Alignment to Exceed Revenue Goals](https://www.gartner.com/en/sales/trends/sales-and-marketing-alignment). Pesquisa sobre grupos de compra, tarefas e comunicação assíncrona.
-
-[4] Google Search Central. [Guide to Optimizing for Generative AI Features](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide). Orientação sobre conteúdo original, útil e não comoditizado.
-
-[5] Dawes, John. [Advertising Effectiveness and the 95/5 Rule](https://marketingscience.info/news-and-insights/advertising-effectiveness-and-the-95-5-rule-most-b2b-buyers-are-not-in-the-market-right-now). Ehrenberg-Bass Institute for Marketing Science, 2021.
+David Costa Lima
