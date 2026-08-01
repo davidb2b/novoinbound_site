@@ -38,7 +38,7 @@ $$(".perma").forEach(function(b){
 var sh=$("#share");
 if(sh) sh.addEventListener("click",function(){
   var url=sh.getAttribute("data-url")||location.href;
-  var dados={title:document.title,text:"O funil de marketing morreu. O inbound marketing não.",url:url};
+  var dados={title:document.title,text:"O que é, afinal, o Novo Inbound?",url:url};
   if(navigator.share){ navigator.share(dados).catch(function(){}); }
   else copiar(url,"Link copiado");
 });
@@ -52,7 +52,7 @@ if(cpl) cpl.addEventListener("click",function(){
 });
 
 /* ---------- progresso e tempo restante ---------- */
-var TOTAL=28, prog=$("#prog"), tbtime=$("#tbtime"), fim=$("#ferramentas");
+var TOTAL=18, prog=$("#prog"), tbtime=$("#tbtime"), fim=$("#ferramentas");
 function medir(){
   var h=document.documentElement;
   var alvo = fim ? Math.max(1, fim.offsetTop - h.clientHeight*0.5) : Math.max(1,h.scrollHeight-h.clientHeight);
@@ -67,7 +67,7 @@ function medir(){
 }
 
 /* ---------- sumário ativo ---------- */
-var secoes=["funil","inbound","compra","metodo","ciclo","sinais","faq","glossario","ferramentas"];
+var secoes=["papel","origem","verdades","metodo","ciclo","metricas","faq","glossario","ferramentas"];
 var links=$$("#tocside a");
 function tocAtivo(){
   if(!links.length) return;
@@ -200,72 +200,60 @@ if(f1){
   });
 }
 
-/* ---------- ferramenta 2: mapa de taticas e sinais ---------- */
+/* ---------- ferramenta 2: camadas de metrica ---------- */
 var f2=$("#f2");
 if(f2){
-  var OBS={an:"Predominantemente anônimo", ct:"Conta parcialmente identificável", ps:"Pessoa identificável"};
-  var FOR={at:"Atenção", co:"Consideração", ic:"Intenção comercial"};
+  var CAM={inv:"Invisível",vis:"Visível",int:"De intenção"};
   var TATICAS=[
-    {id:"podcast", n:"Podcast próprio", o:["an"], f:["at","co"], lim:"Plays não revelam quem ouviu. É das táticas com maior poder de educação e menor observabilidade."},
-    {id:"tl", n:"Conteúdo de especialistas no LinkedIn", o:["ps"], f:["at","co"], lim:"Reação e comentário trazem nome, cargo e empresa. Identidade não é intenção."},
-    {id:"news", n:"Newsletter", o:["ps"], f:["at","co"], lim:"A inscrição identifica a pessoa. Leitura recorrente sugere consideração, não pedido de contato."},
-    {id:"pagina", n:"Página da empresa no LinkedIn", o:["an","ps"], f:["at"], lim:"Impressão é anônima. Seguidor é identificado. Os dois números não medem a mesma coisa."},
-    {id:"paga", n:"Mídia paga", o:["an","ct"], f:["at"], lim:"Serve para alcance e frequência. Clique não é sinal de consideração."},
-    {id:"yt", n:"Vídeo no YouTube", o:["an"], f:["at","co"], lim:"Retenção sugere profundidade, mas a identidade quase nunca vem junto."},
-    {id:"magnet", n:"Lead magnet", o:["ps"], f:["at","co"], lim:"Identifica quem aceitou trocar dado por material. Não prova avaliação de compra."},
-    {id:"webinar", n:"Webinar", o:["ps"], f:["co"], lim:"Presença e permanência sugerem consideração. Inscrição sozinha sugere menos."},
-    {id:"visit", n:"Identificação de empresas visitantes", o:["ct"], f:["at","co"], lim:"A associação com a empresa é probabilística e não diz quem dentro dela navegou."},
-    {id:"evento", n:"Evento presencial", o:["ps"], f:["co"], lim:"Alto contexto e baixo volume. A conversa vale mais que a lista de presença."},
-    {id:"comunidade", n:"Comunidade", o:["ps"], f:["at","co"], lim:"Sinal rico e lento. Ler como relacionamento, não como pipeline."},
-    {id:"form", n:"Formulário comercial", o:["ps"], f:["ic"], lim:"Intenção declarada. Mede quem levantou a mão, não quem você educou."},
-    {id:"demo", n:"Pedido de demonstração", o:["ps"], f:["ic"], lim:"O sinal mais explícito que existe. Também o mais raro."}
+    {id:"podcast",n:"Podcast próprio",c:["inv"],lim:"Gera quase 100% de métrica invisível. Isso não quer dizer que a tática não funciona, quer dizer que ela está cumprindo o papel dela, que é educar e criar demanda no invisível."},
+    {id:"yt",n:"Vídeo no YouTube",c:["inv"],lim:"Views e retenção. Você sabe que aconteceu e quanto aconteceu, mas não sabe o nome de ninguém."},
+    {id:"tl",n:"Post de thought leader no LinkedIn",c:["inv","vis"],lim:"A impressão é invisível. A curtida e o comentário viram visível, com identidade, cargo, empresa e setor. É outro nível de leitura."},
+    {id:"pagina",n:"Página da empresa no LinkedIn",c:["inv","vis"],lim:"Mesma lógica do thought leader, com alcance orgânico normalmente menor."},
+    {id:"paga",n:"Mídia paga",c:["inv"],lim:"Impressão de campanha. Serve para alcance e frequência, não para saber quem é."},
+    {id:"news",n:"Newsletter",c:["inv","int"],lim:"Visualizações e salvamentos são invisíveis. A inscrição é intenção baixa, porque a pessoa deu o contato em troca de algo."},
+    {id:"comunidade",n:"Comunidade",c:["vis"],lim:"Quem participa e interage tem nome. Sinal rico e lento, para ler como relacionamento."},
+    {id:"visit",n:"Visitor tracking no site",c:["vis"],lim:"Diz a empresa, não a pessoa. Ela não entregou o dado, mas o comportamento disse o nome da conta."},
+    {id:"evento",n:"Evento",c:["vis"],lim:"Alto contexto e baixo volume. A conversa vale mais que a lista de presença."},
+    {id:"magnet",n:"Lead magnet",c:["int"],lim:"Intenção baixa. A pessoa deu o contato em troca de algo, não necessariamente pra conversar com você."},
+    {id:"webinar",n:"Webinar",c:["int"],lim:"Intenção baixa. A disposição real de comprar ainda está baixa, porque ainda é educação."},
+    {id:"form",n:"Formulário de contato comercial",c:["int"],lim:"Intenção alta. Aqui a pessoa pediu, não foi o marketing que graduou ela num score."},
+    {id:"demo",n:"Pedido de demo",c:["int"],lim:"Intenção alta e o sinal mais raro dos três."}
   ];
   var f2go=$("#f2go"), f2re=$("#f2re"), f2res=$("#f2res");
   function sel(){ return $$("input[name=t]:checked",f2).map(function(i){return i.value}); }
   function f2estado(){
-    $$("input[name=t]",f2).forEach(function(i){
-      var l=i.closest("label"); if(l) l.classList.toggle("on",i.checked);
-    });
+    $$("input[name=t]",f2).forEach(function(i){var l=i.closest("label"); if(l) l.classList.toggle("on",i.checked)});
     if(f2go) f2go.disabled = sel().length===0;
   }
-  f2.addEventListener("change",f2estado);
-  f2estado();
+  f2.addEventListener("change",f2estado); f2estado();
   if(f2go) f2go.addEventListener("click",function(){
-    var ids=sel();
-    var escolhidas=TATICAS.filter(function(t){return ids.indexOf(t.id)>-1});
-    var temO={an:false,ct:false,ps:false}, temF={at:false,co:false,ic:false};
-    escolhidas.forEach(function(t){
-      t.o.forEach(function(k){temO[k]=true}); t.f.forEach(function(k){temF[k]=true});
-    });
+    var ids=sel(), esc=TATICAS.filter(function(t){return ids.indexOf(t.id)>-1});
+    var tem={inv:false,vis:false,int:false};
+    esc.forEach(function(t){t.c.forEach(function(k){tem[k]=true})});
     var cegos=[];
-    if(!temF.ic) cegos.push("Nenhuma tática selecionada produz intenção comercial explícita. A operação depende de alguém decidir sozinho pedir contato.");
-    if(!temF.at) cegos.push("Nenhuma tática de alcance amplo. Sem atenção no topo, a criação de demanda fica limitada aos que já conhecem a empresa.");
-    if(!temF.co) cegos.push("Nada no conjunto atual mostra consideração. Você enxerga quem viu e quem pediu, mas não quem está avaliando.");
-    if(!temO.an) cegos.push("Todas as táticas exigem identidade. Você não está lendo a parte do mercado que se educa sem se identificar, que costuma ser a maior.");
-    if(!temO.ct) cegos.push("Nenhuma tática associa comportamento a uma empresa sem cadastro. A leitura por conta fica incompleta.");
-    if(!temO.ps) cegos.push("Nenhuma tática identifica pessoas. Fica difícil ligar sinal a um participante do comitê de compra.");
-    if(temF.ic && !temF.at && !temF.co) cegos.push("O conjunto só enxerga quem já levantou a mão. Isso é captura de demanda, não criação.");
-    if(!cegos.length) cegos.push("O conjunto cobre as três camadas de observabilidade e as três forças de sinal. O trabalho passa a ser de leitura, não de cobertura.");
-
-    var linhas = escolhidas.map(function(t){
+    if(!tem.inv) cegos.push("Nenhuma tática sua gera métrica invisível. E é justamente no invisível que a maior parte da educação do comprador B2B acontece. Você está lendo o fim do processo, não o começo.");
+    if(!tem.vis) cegos.push("Nenhuma tática sua gera métrica visível. Sem isso não dá para saber quem do ICP está prestando atenção, e sobra esperar o formulário para descobrir que a pessoa existe.");
+    if(!tem.int) cegos.push("Nenhuma tática sua gera métrica de intenção. Não existe porta para quem já quer falar com você.");
+    if(tem.int && !tem.inv && !tem.vis) cegos.push("Você só enxerga quem levantou a mão. Isso é captura de demanda, não criação.");
+    if(tem.inv && !tem.vis && !tem.int) cegos.push("Você cria demanda e não consegue ler nada além do agregado. Falta a ponte entre o invisível e a conversa.");
+    if(!cegos.length) cegos.push("As três camadas estão cobertas. O trabalho agora é cruzar as três e ler a penetração de mercado como um sistema, e não olhar cada número separado.");
+    var linhas = esc.map(function(t){
       return '<li><p class="nm">'+t.n+'</p>'+
-        t.o.map(function(k){return '<span class="tag o">'+OBS[k]+'</span>'}).join("")+
-        t.f.map(function(k){return '<span class="tag f">'+FOR[k]+'</span>'}).join("")+
+        t.c.map(function(k){return '<span class="tag c-'+k+'">'+CAM[k]+'</span>'}).join("")+
         '<p class="lim">'+t.lim+'</p></li>';
     }).join("");
-
-    f2res.innerHTML =
-      '<div class="res"><span class="lbl">O que você enxerga</span>'+
-      '<h4>'+escolhidas.length+(escolhidas.length===1?" tática selecionada":" táticas selecionadas")+'</h4>'+
+    var cont={inv:0,vis:0,int:0};
+    esc.forEach(function(t){t.c.forEach(function(k){cont[k]++})});
+    f2res.innerHTML='<div class="res"><span class="lbl">O que você consegue ler</span>'+
+      '<h4>'+esc.length+(esc.length===1?" tática selecionada":" táticas selecionadas")+'</h4>'+
+      '<p>Invisível em '+cont.inv+', visível em '+cont.vis+' e de intenção em '+cont.int+'.</p>'+
       '<ul class="rowlist" style="padding-left:0">'+linhas+'</ul>'+
-      '<h5>Pontos cegos do conjunto atual</h5><ul class="cegos"><li>'+cegos.join("</li><li>")+'</li></ul>'+
-      '<p style="font-size:14.5px">A ferramenta não diz se uma tática é boa ou ruim. Ela mostra o que cada uma permite observar e quais conclusões não podem ser tiradas a partir dos números dela.</p></div>';
+      '<h5>Pontos cegos</h5><ul class="cegos"><li>'+cegos.join("</li><li>")+'</li></ul>'+
+      '<p style="font-size:14.5px">Lembre da regra: você tem que olhar as três camadas de métricas de frente pras táticas que está rodando. Sempre.</p></div>';
     if(f2re) f2re.hidden=false;
     f2res.scrollIntoView({behavior: reduz?"auto":"smooth", block:"nearest"});
   });
-  if(f2re) f2re.addEventListener("click",function(){
-    f2.reset(); f2estado(); f2res.innerHTML=""; f2re.hidden=true;
-  });
+  if(f2re) f2re.addEventListener("click",function(){ f2.reset(); f2estado(); f2res.innerHTML=""; f2re.hidden=true; });
 }
 
 /* ---------- sumario mobile abre por padrao em telas medias ---------- */
