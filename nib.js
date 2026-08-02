@@ -52,7 +52,7 @@ if(cpl) cpl.addEventListener("click",function(){
 });
 
 /* ---------- progresso e tempo restante ---------- */
-var TOTAL=18, prog=$("#prog"), tbtime=$("#tbtime"), fim=$("#ferramentas");
+var TOTAL=18, prog=$("#prog"), tbtime=$("#tbtime"), fim=$("#citar");
 function medir(){
   var h=document.documentElement;
   var alvo = fim ? Math.max(1, fim.offsetTop - h.clientHeight*0.5) : Math.max(1,h.scrollHeight-h.clientHeight);
@@ -67,7 +67,7 @@ function medir(){
 }
 
 /* ---------- sumário ativo ---------- */
-var secoes=["papel","origem","verdades","metodo","ciclo","metricas","faq","glossario","ferramentas"];
+var secoes=["papel","origem","verdades","metodo","ciclo","metricas","faq","glossario"];
 var links=$$("#tocside a");
 function tocAtivo(){
   if(!links.length) return;
