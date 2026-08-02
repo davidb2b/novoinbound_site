@@ -202,7 +202,7 @@ figcaption b{color:var(--tinta);font-weight:600}
 
 /* ---------- ferramentas ---------- */
 .tools{background:var(--paper-2);border-top:1px solid var(--filete);border-bottom:1px solid var(--filete);margin-top:74px;padding:60px 0}
-.tool{background:var(--paper);border:1px solid var(--filete);padding:32px 30px;margin-bottom:26px}
+.tool{background:var(--paper);border:1px solid #E7E1D4;border-radius:16px;box-shadow:0 2px 12px rgba(23,19,16,.07);padding:32px 30px;margin-bottom:26px}
 .tool:last-child{margin-bottom:0}
 .tool > .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px}
 .tool h3{margin:0 0 10px;font-size:clamp(22px,2.8vw,27px)}
@@ -213,18 +213,18 @@ figcaption b{color:var(--tinta);font-weight:600}
 fieldset{border:0;margin:0 0 26px;padding:0}
 legend{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.4;color:var(--tinta);margin-bottom:12px;padding:0}
 .opts{display:grid;gap:8px}
-.opt{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;border:1px solid var(--filete);background:var(--paper);cursor:pointer;font-family:var(--sans);font-size:15.5px;line-height:1.5;color:var(--tinta-2);transition:border-color .15s,background-color .15s}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;border:1px solid var(--filete);border-radius:10px;background:var(--paper);cursor:pointer;font-family:var(--sans);font-size:15.5px;line-height:1.5;color:var(--tinta-2);transition:border-color .15s,background-color .15s}
 .opt:hover{border-color:var(--laranja)}
 .opt input{margin:3px 0 0;accent-color:var(--vinho);flex:0 0 auto}
 .opt.on{border-color:var(--vinho);background:var(--paper-3);color:var(--tinta)}
 .opt .k{font-weight:700;color:var(--vinho);flex:0 0 auto}
-.btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:11px 22px;border:1px solid var(--tinta);background:var(--tinta);color:#fff;cursor:pointer;border-radius:0}
+.btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:11px 22px;border:1px solid var(--tinta);background:var(--tinta);color:#fff;cursor:pointer;border-radius:999px}
 .btn:hover{background:var(--vinho);border-color:var(--vinho)}
 .btn.ghost{background:none;color:var(--tinta);border-color:var(--filete)}
 .btn.ghost:hover{background:none;border-color:var(--laranja);color:var(--vinho)}
 .btn[disabled]{opacity:.4;cursor:not-allowed}
 .btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.res{margin-top:26px;padding:26px 26px;border:1px solid var(--vinho);background:var(--paper-3)}
+.res{margin-top:26px;padding:26px 26px;border:1px solid var(--vinho);border-radius:12px;background:var(--paper-3)}
 .res .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--vinho);margin-bottom:10px}
 .res h4{font-family:var(--serif);font-size:25px;font-weight:600;font-variation-settings:"opsz" 26;margin:0 0 12px;color:var(--tinta)}
 .res p{font-family:var(--sans);font-size:16px;line-height:1.62;color:var(--tinta-2);margin:0 0 14px;max-width:none}
@@ -232,7 +232,7 @@ legend{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.4;co
 .res h5{font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:18px 0 8px}
 .res :last-child{margin-bottom:0}
 .taticas{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:8px;margin:0 0 22px}
-.tag{display:inline-block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--filete);color:var(--tinta-2);margin:0 5px 5px 0;background:var(--paper)}
+.tag{display:inline-block;font-family:var(--label);font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;border:1px solid var(--filete);border-radius:999px;color:var(--tinta-2);margin:0 5px 5px 0;background:var(--paper)}
 .tag.o{border-color:#d9c3a8;color:#8a5a1e;background:#FBF2E6}
 .tag.f{border-color:#d8b8c8;color:var(--vinho);background:#FBEFF5}
 .rowlist{margin:0;padding:0;list-style:none}
@@ -244,7 +244,7 @@ legend{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.4;co
 .cegos li{margin-bottom:8px}
 
 /* ---------- bloco citar ---------- */
-.cite{margin-top:74px;padding:34px 32px;border:1px solid var(--tinta);background:var(--paper)}
+.cite{margin-top:74px;padding:34px 32px;border:1px solid var(--tinta);border-radius:16px;background:var(--paper)}
 .cite .lbl{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px}
 .cite h2{font-size:clamp(24px,3vw,30px);margin-bottom:14px}
 .cite p{font-family:var(--sans);font-size:16px;line-height:1.62;color:var(--tinta-2);max-width:46em}
@@ -254,7 +254,7 @@ legend{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.4;co
 .end{margin-top:74px;padding:60px 0 0;border-top:2px solid var(--tinta)}
 .end p{font-size:20.5px}
 .cta{margin:44px 0 0;display:grid;gap:14px}
-.cta a{display:flex;gap:16px;align-items:baseline;border:1px solid var(--filete);border-left-width:3px;padding:20px 24px;font-family:var(--sans);text-decoration:none;transition:border-color .15s,background-color .15s}
+.cta a{display:flex;gap:16px;align-items:baseline;border:1px solid var(--filete);border-left-width:3px;border-radius:12px;padding:20px 24px;font-family:var(--sans);text-decoration:none;transition:border-color .15s,background-color .15s}
 .cta a:hover{background:var(--paper-3)}
 .cta .c1{border-left-color:var(--laranja)}
 .cta .c2{border-left-color:var(--vinho)}
@@ -437,7 +437,7 @@ footer a{color:var(--tinta-2);border-bottom-color:var(--filete)}
 
 /* níveis de maturidade */
 .lvls{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px}
-.lvl{border:1px solid var(--filete);background:var(--paper-2);padding:16px 18px}
+.lvl{border:1px solid #E7E1D4;border-radius:12px;background:var(--paper-2);padding:16px 18px}
 .lvl-k{display:block;font-family:var(--label);font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--laranja);margin-bottom:7px}
 .lvl p{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--tinta-2);margin:0;max-width:none}
 @media (max-width:820px){.lvls{grid-template-columns:1fr}}
