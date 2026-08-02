@@ -573,3 +573,20 @@ figure .fig-in{border:1px solid #E7E1D4;background:linear-gradient(180deg,#F7F3E
 
 .segg .segp{opacity:1}
 .segg .segt{fill:#5c1338}
+/* ajustes figuras v2.1 */
+.fg-duo2{display:flex;align-items:flex-start;justify-content:center;gap:46px;padding:10px 0}
+.fg-d2c{display:flex;flex-direction:column;align-items:center;gap:16px}
+.fg-art2{height:204px;display:flex;align-items:center}
+.fg-duo2 .fg-arrow{align-self:center;margin-bottom:31px}
+.fg-cam3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.fg-mcol{padding:18px;display:flex;flex-direction:column;gap:7px}
+.fg-mlab{font-family:var(--label);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin-top:12px;padding-top:12px;border-top:1px solid #F0EBE1}
+.fg-mcol .fg-chips{margin-top:2px}
+.fg-mcol .fg-bq{min-height:34px}
+@media (max-width:860px){
+  .fg-duo2{flex-direction:column;align-items:center;gap:12px}
+  .fg-duo2 .fg-arrow{margin-bottom:0}
+  .fg-art2{height:auto}
+  .fg-cam3{grid-template-columns:1fr}
+  .fg-mcol .fg-bq{min-height:0}
+}
