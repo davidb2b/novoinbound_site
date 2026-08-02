@@ -260,3 +260,6 @@ if(f2){
 var tm=$("#tocmob");
 if(tm && window.innerWidth>=760) tm.open=true;
 })();
+
+/* ---------- vercel web analytics ---------- */
+(function(){var s=document.createElement("script");s.defer=true;s.src="/_vercel/insights/script.js";document.head.appendChild(s);})();
