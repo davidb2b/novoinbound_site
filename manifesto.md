@@ -200,13 +200,13 @@ O comprador B2B não depende mais do Google. Querendo ou não, o Google era onde
 
 Como dito acima, hoje o comprador B2B se educa no LinkedIn, em podcast, em comunidades fechadas, em grupos de WhatsApp, em newsletters no LinkedIn (oi, rs), em conversa com pares, etc.
 
-E mais, dados apontam que três quartos dessa educação acontece antes dele falar com qualquer vendedor.
+E mais, dados apontam que cerca de dois terços dessa educação acontece antes dele falar com qualquer vendedor.
 
 Isso é o tal dark social na prática. Invisível, distribuído e impossível de mensurar ou de capturar em formulário.
 
 E aqui tem uma consequência prática que muita gente ainda não digeriu, o seu conteúdo precisa cada vez mais ser ungated (aberto, sem fricção).
 
-Exatamente como este manifesto que você está lendo, porque o objetivo hoje é ser encontrado, consumido e compartilhado nesses espaços.
+Exatamente como esta página que você está lendo, porque o objetivo hoje é ser encontrado, consumido e compartilhado nesses espaços.
 
 ### 3. A terceira verdade é a comoditização do conteúdo.
 
