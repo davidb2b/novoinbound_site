@@ -181,6 +181,9 @@ figcaption b{color:var(--tinta);font-weight:600}
 .qa-bd{padding:0 0 22px;max-width:38em}
 .qa-bd p{font-size:18.5px;line-height:1.66;color:var(--tinta-2);margin:0 0 14px}
 .qa-bd p:last-child{margin-bottom:0}
+.qa-bd ol{font-size:18.5px;line-height:1.6;color:var(--tinta-2);margin:0 0 14px;padding-left:26px}
+.qa-bd ol li{margin-bottom:6px}
+.qa-bd ol:last-child{margin-bottom:0}
 .qa-bd .perma{opacity:0}
 .qa:hover .qa-bd .perma,.qa-bd .perma:focus{opacity:1}
 
@@ -452,7 +455,7 @@ footer a{color:var(--tinta-2);border-bottom-color:var(--filete)}
 
 /* citacao dentro do texto */
 .fala{margin:30px 0;padding:20px 24px;background:var(--paper-2);border-left:3px solid var(--filete)}
-.fala p{font-family:var(--serif);font-size:19px;line-height:1.62;color:var(--tinta-2);margin:0 0 10px;font-style:italic}
+.fala p{font-family:var(--serif);font-size:19px;line-height:1.62;color:var(--tinta-2);margin:0 0 10px}
 .fala p:last-child{margin-bottom:0}
 /* comparacao em duas colunas */
 .cmp2{grid-template-columns:1fr 1fr}
