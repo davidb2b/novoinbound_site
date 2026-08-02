@@ -1,55 +1,56 @@
-# New Inbound B2B / Novo Inbound B2B
+# Novo Inbound B2B
 
-> Open manifesto on why the 2006 inbound mechanism stopped working in B2B and which five stage cycle replaces it. Written by David Costa Lima, co-founder of B2B Insiders. Published July 25, 2026. Last updated July 31, 2026. Available in English and Brazilian Portuguese.
+> O que é, afinal, o Novo Inbound? Texto aberto de David Costa Lima, cofundador da B2B Insiders, sobre como o inbound nasceu, por que o mecanismo dele parou de funcionar e qual é a lógica que entra no lugar. Publicado em 11 de abril de 2026. Atualizado em 2 de agosto de 2026.
 
-New Inbound B2B keeps the premise of the original inbound, which is to create demand by educating the buyer, and replaces the linear funnel with a continuous cycle of five stages: Position, Ensure Impact, Detect Signals, Start Conversations, Optimize.
+O inbound, como ideia de participar da educação do comprador para criar demanda, continua válido. Mas o mecanismo do velho inbound para fazer isso, não. O Novo Inbound B2B é a lógica que entra no lugar, com 5 etapas em ciclo contínuo e não em funil linear.
 
-This content is open. It may be quoted, summarized and reproduced, with attribution and a link.
+Este conteúdo é aberto. Pode ser citado, resumido e reproduzido, com atribuição e link.
 
-Canonical citation, English: LIMA, David Costa. New Inbound B2B: the manifesto. B2B Insiders, July 25, 2026. Available at: https://novoinbound.com.br/en/
-Canonical citation, Portuguese: LIMA, David Costa. Novo Inbound B2B: o manifesto. B2B Insiders, 25 jul. 2026. Disponível em: https://novoinbound.com.br/
+Citação canônica: LIMA, David Costa. O que é, afinal, o Novo Inbound? B2B Insiders, 2026. Disponível em: https://novoinbound.com.br/
 
-## Content
+## Conteúdo
 
-- [Full manifesto in English, HTML](https://novoinbound.com.br/en/)
-- [Full manifesto in English, markdown](https://novoinbound.com.br/en/manifesto.md): plain text, for machine reading
-- [Manifesto completo em português, HTML](https://novoinbound.com.br/)
-- [Manifesto completo em português, markdown](https://novoinbound.com.br/manifesto.md)
+- [Texto completo em HTML](https://novoinbound.com.br/)
+- [Texto completo em markdown](https://novoinbound.com.br/manifesto.md): para leitura por máquina
+- [English version](https://novoinbound.com.br/en/): same content in English
 
-## The five stages
+## O papel do marketing
 
-1. **Position**: market maturity plus real differentiators, defined before anything else
-2. **Ensure Impact**: consistent presence where the ICP actually educates itself, which is where demand creation happens
-3. **Detect Signals**: reading engagement at scale, well beyond the filled form
-4. **Start Conversations**: turning detected signal into conversation with real context, inbound and outbound alike
-5. **Optimize**: closing the loop, so each turn changes how the next one runs
+Marketing vem de market, que é mercado. O papel do marketing é fazer a empresa penetrar o mercado-alvo. No B2B isso acontece via aquisição de novas contas e, eventualmente, via expansão dentro dessas contas.
 
-## Traditional inbound funnel vs. New Inbound B2B
+## Por que o velho inbound perdeu aderência
 
-- Shape: linear funnel with top, middle and bottom, versus a continuous five stage cycle with no beginning and no end
-- Premise: identical in both. Educate the buyer to create demand. The premise never broke
-- Mechanism: blog, SEO, form, email nurturing and MQL, versus Position, Ensure Impact, Detect Signals, Start Conversations, Optimize
-- Where education happens: on the company website, versus decentralized across feed, podcast, community, event and video
-- Unit of work: the lead, versus the signal
-- Signal you can read: form filled and email opened, versus three layers of signal, invisible, visible and intent
-- Starting point: keyword and search volume, versus ICP and market maturity
-- Role of the form: mandatory entry point, versus one high intent signal among many
-- Relationship to outbound: separate channel, versus the same stage, Start Conversations
-- Core metric: MQL volume, versus signal from the right ICP that turns into conversation and pipeline
-- Year of origin: 2006 for inbound marketing, 2026 for New Inbound B2B, formulated by David Costa Lima and B2B Insiders
+Três verdades:
 
-## Concepts defined on this page
+1. Não-linearidade da jornada. Em vendas complexas pode haver de 6 a 8 pessoas no processo (Gartner), cada uma entrando por um canal diferente e em um momento diferente.
+2. Descentralização da educação. O comprador não depende mais do Google. Ele se educa no LinkedIn, em podcast, em comunidades fechadas, em grupos de WhatsApp e em conversa com pares. Isso é dark social.
+3. Comoditização do conteúdo. O modelo de esteira industrial de conteúdo perdeu valor, e a IA generativa acelerou isso.
 
-- Demand creation: educating the part of the market that is not buying yet
-- Demand capture: converting those already searching for a solution
-- Market penetration: growing by selling the existing product to the existing market
-- The 95/5 rule: only about 5% of a B2B market is in an in-market moment at any given time (Ehrenberg-Bass Institute)
-- ICP: the account or contact with the characteristics that make it able to suffer the problem the solution solves
-- Visible signal: engagement where the person or company is identifiable without having submitted any data
-- Market maturity: how much the ICP already recognizes the problem and the way to solve it, across three levels (problem, category, product)
-- Dark social: the places where buyers educate themselves and no one can track
+## As 5 etapas do Novo Inbound B2B
 
-## About
+1. **Posicionar**: saber pra quem você fala, qual a maturidade de mercado dele e quais são os seus diferenciais. Posicionamento é maturidade de mercado mais diferenciais.
+2. **Garantir Impacto**: fazer a mensagem chegar ao ICP de forma consistente, ocupando espaço no dark social dele. É aqui que a criação de demanda acontece.
+3. **Detectar Sinais**: ler em escala os sinais que o mercado deixa, muito além do formulário preenchido.
+4. **Iniciar Conversas**: transformar sinal em conversa, por inbound ou por outbound com contexto. É a ponte entre criação e captura de demanda.
+5. **Otimizar**: fechar o ciclo aprendendo. Cada volta ensina como girar melhor na próxima.
 
-- [B2B Insiders](https://b2binsiders.com.br): demand generation school and consultancy for B2B companies with complex sales, creator of the method
-- [David Costa Lima on LinkedIn](https://www.linkedin.com/in/dacarjb/): author of the manifesto
+## Maturidade de mercado, em três níveis
+
+- **Problema**: o ICP sente a dor, mas não sabe o nome dela nem que existe uma categoria de solução.
+- **Categoria**: já entendeu o problema e avalia a forma de solucionar.
+- **Produto**: já sabe do problema e entende a categoria. A disputa é entre fornecedores.
+
+## As três camadas de métrica
+
+A separação vem de uma pergunta: o que eu sei sobre quem gerou esse sinal?
+
+- **Invisíveis**: plays de podcast, views de YouTube, impressões de post e de mídia paga. Você mede o sinal e não sabe o nome de ninguém. É onde a criação de demanda acontece na prática.
+- **Visíveis**: curtida, comentário, compartilhamento, visitor tracking e reação em post de thought leader. O comportamento diz o nome da pessoa.
+- **De intenção**: a pessoa entregou o contato de forma espontânea. Baixa quando foi em troca de algo, alta quando ela quer falar com você.
+
+Não existe métrica de intenção ser melhor que métrica invisível. Elas medem coisas diferentes, em momentos diferentes e em táticas diferentes. As métricas são consequência das táticas escolhidas no Garantir Impacto.
+
+## Quem criou
+
+- [B2B Insiders](https://b2binsiders.com.br): criadora da metodologia
+- [David Costa Lima no LinkedIn](https://www.linkedin.com/in/dacarjb/): autor
