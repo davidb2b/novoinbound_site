@@ -9,9 +9,9 @@ var T = EN ? {
   share:"What Is the New Inbound, Really?",
   leitura:function(n){return n+" min read"}, fim:"finished", falta:function(n){return n+" min left"}
 } : {
-  copiado:"Copiado", falhou:"Não foi possível copiar", link:"Link copiado", ref:"Referência copiada",
-  share:"O que é, afinal, o Novo Inbound?",
-  leitura:function(n){return n+" min de leitura"}, fim:"leitura concluída", falta:function(n){return "faltam "+n+" min"}
+  copiado:"Copiado", falhou:"N\\u00e3o foi poss\\u00edvel copiar", link:"Link copiado", ref:"Refer\\u00eancia copiada",
+  share:"O que \\u00e9, afinal, o Novo Inbound?",
+  leitura:function(n){return n+" min de leitura"}, fim:"leitura conclu\\u00edda", falta:function(n){return "faltam "+n+" min"}
 };
 
 /* ---------- toast ---------- */
