@@ -75,7 +75,7 @@ Ele pensou, em resumo:
 
 > Cara, enquanto eu estou aqui gastando energia pra interromper pessoas que não querem ser interrompidas, o Dharmesh tem uma audiência gigante vindo espontaneamente porque ele publica conteúdo útil.
 > Ou seja, as pessoas estão aprendendo sozinhas sobre o assunto que a gente quer vender.
-> Por que não jogar esse jogo, em vez de tentar interromper?"
+> Por que não jogar esse jogo, em vez de tentar interromper?
 
 E aqui vem um ponto que quase todo mundo esquece, e eu preciso que você grave isso.
 
@@ -112,7 +112,7 @@ Ou seja, o lead era o meio, não o fim. O fim era educar o comprador até o pont
 
 E deu muito certo, né?
 
-Essa lógica sustentou boa parte do marketing B2B dos últimos 15 anos e a própria HubSpot cresceu de dois caras num MIT para uma empresa listada em bolsa.
+Essa lógica sustentou boa parte do marketing B2B dos últimos 15 anos e a própria HubSpot cresceu de dois caras no MIT para uma empresa listada em bolsa.
 
 Só que aconteceu uma coisa no caminho.
 
