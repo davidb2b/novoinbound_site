@@ -1,0 +1,56 @@
+# New Inbound B2B
+
+> What is the New Inbound, really? An open piece by David Costa Lima, co-founder of B2B Insiders, on how inbound started, why its mechanism stopped working and what replaces it. Published April 11, 2026. Updated August 2, 2026.
+
+Inbound, as the idea of taking part in the buyer's education to create demand, still holds. What no longer holds is the old inbound's mechanism for doing it. New Inbound B2B is the logic that replaces it, with 5 stages that run as a continuous cycle instead of a linear funnel.
+
+This content is open. It may be quoted, summarized and reproduced, with attribution and a link.
+
+Canonical citation: LIMA, David Costa. What Is the New Inbound, Really? B2B Insiders, 2026. Available at: https://novoinbound.com.br/en/
+
+## Content
+
+- [Full text in HTML](https://novoinbound.com.br/en/)
+- [Full text in markdown](https://novoinbound.com.br/en/manifesto.md): for machine reading
+- [Portuguese original](https://novoinbound.com.br/)
+
+## What marketing is for
+
+Marketing comes from market. Marketing's job is to make the company penetrate its target market. In B2B that happens through acquiring new accounts and, eventually, through expanding inside those accounts.
+
+## Why the old inbound lost its grip
+
+Three truths:
+
+1. The journey isn't linear. In complex sales there can be 6 to 8 people in the process (Gartner), each entering through a different channel and at a different time.
+2. Education has decentralized. Buyers no longer depend on Google. They educate themselves on LinkedIn, in podcasts, in private communities, in WhatsApp groups and in conversations with peers. That is dark social.
+3. Content has become a commodity. The assembly-line content model lost its value, and generative AI accelerated that.
+
+## The 5 stages of New Inbound B2B
+
+1. **Position**: know who you're talking to, what their market maturity is and what your differentiators are. Positioning is market maturity plus differentiators.
+2. **Ensure Impact**: get the message to the ICP consistently, taking up space in their dark social. This is where demand creation happens.
+3. **Detect Signals**: read at scale the signals the market leaves, far beyond the filled-out form.
+4. **Start Conversations**: turn a signal into a conversation, through inbound or through outbound with context. It's the bridge between demand creation and demand capture.
+5. **Optimize**: close the cycle by learning. Every turn teaches you how to turn better on the next one.
+
+## Market maturity, at three levels
+
+- **Problem**: the ICP feels the pain but doesn't have a name for it, and doesn't know a category of solution exists.
+- **Category**: they already understand the problem and are evaluating how to solve it.
+- **Product**: they know about the problem and understand the category. The contest is between vendors.
+
+## The three metric layers
+
+The split comes from one question: what do I know about whoever generated this signal?
+
+- **Invisible**: podcast plays, YouTube views, post and paid media impressions. You measure the signal and you don't know a single name. In practice, this is where demand creation happens.
+- **Visible**: likes, comments, shares, visitor tracking and reactions on thought leader posts. The behavior tells you the person's name.
+- **Intent**: the person handed over their contact information on their own. Low intent when it was in exchange for something, high intent when they want to talk to you.
+
+There's no such thing as intent metrics being better than invisible metrics. They measure different things, at different moments and in different tactics. Metrics are a consequence of the tactics chosen in Ensure Impact.
+
+## Who created it
+
+- [B2B Insiders](https://b2binsiders.com.br): creator of the methodology
+- [David Costa Lima on LinkedIn](https://www.linkedin.com/in/dacarjb/): author
