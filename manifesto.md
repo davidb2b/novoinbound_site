@@ -55,7 +55,7 @@ Com essa pergunta em mente, agora faz sentido a gente voltar e entender onde o i
 
 A história do inbound é mais interessante do que parece, e vale a pena contar direito.
 
-Lá pelo início dos anos 2000, tinham dois caras no MIT, um chamado Brian Halligan e outro chamado Dharmesh Shah.
+Lá pelo início dos anos 2000, tinham dois caras no MIT, um chamado Brian Halligan e outro chamado Dharmesh Shah.[^1]
 
 O Brian vinha do mundo da venda.
 
@@ -184,7 +184,7 @@ Linha reta, um entrando de cada vez.
 
 Só que a compra B2B nunca foi linha reta, e hoje menos ainda.
 
-No B2B, principalmente em vendas complexas onde você trabalha em nível de conta, pode ter de 6 a 8 pessoas que participam do processo (dado do Gartner), cada uma entrando na jornada em um momento diferente e por um canal diferente.
+No B2B, principalmente em vendas complexas onde você trabalha em nível de conta, pode ter de 6 a 8 pessoas que participam do processo (dado do Gartner), cada uma entrando na jornada em um momento diferente e por um canal diferente.[^2]
 
 Na prática, alguém entra por um post no LinkedIn, outro por um podcast, outro porque ouviu o nome da sua empresa num grupo de WhatsApp e o outro porque um par que ele respeita comentou sobre você.
 
@@ -200,7 +200,7 @@ O comprador B2B não depende mais do Google. Querendo ou não, o Google era onde
 
 Como dito acima, hoje o comprador B2B se educa no LinkedIn, em podcast, em comunidades fechadas, em grupos de WhatsApp, em newsletters no LinkedIn (oi, rs), em conversa com pares, etc.
 
-E mais, dados apontam que cerca de dois terços dessa educação acontece antes dele falar com qualquer vendedor.
+E mais, dados apontam que cerca de dois terços dessa educação acontece antes dele falar com qualquer vendedor.[^4]
 
 Isso é o tal dark social na prática. Invisível, distribuído e impossível de mensurar ou de capturar em formulário.
 
@@ -495,3 +495,7 @@ Se você quer autonomia pra decidir o seu próximo passo de marketing, sem ficar
 Até a próxima,
 
 David Costa Lima
+
+[^1]: HubSpot, [Our Story](https://www.hubspot.com/our-story), sobre a origem da empresa e do inbound marketing.
+[^2]: Gartner, [B2B Buying: How Top CSOs and CMOs Optimize the Journey](https://www.gartner.com/en/sales/insights/b2b-buying-journey), sobre o tamanho do grupo de compra e a natureza não linear da compra B2B.
+[^4]: 6sense, [The B2B Buyer Experience Report](https://6sense.com/science-of-b2b/2024-buyer-experience-report/), sobre a parte da jornada de compra que acontece antes do comprador falar com um vendedor.

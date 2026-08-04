@@ -147,3 +147,23 @@ if(tm && window.innerWidth>=760) tm.open=true;
 
 /* ---------- vercel web analytics ---------- */
 (function(){var s=document.createElement("script");s.defer=true;s.src="/_vercel/insights/script.js";document.head.appendChild(s);})();
+
+/* ---------- eventos de navegacao e conversao assistida no GA4 ---------- */
+(function(){
+  function medir(nome,parametros){
+    if(typeof window.gtag==="function") window.gtag("event",nome,parametros||{});
+  }
+  document.addEventListener("click",function(e){
+    var link=e.target.closest&&e.target.closest("a");
+    if(link&&link.classList.contains("c1")){
+      medir("cta_click",{cta_id:"formacao",link_url:link.href,language:document.documentElement.lang});
+    }else if(link&&link.classList.contains("c2")){
+      medir("cta_click",{cta_id:"b2b_insiders",link_url:link.href,language:document.documentElement.lang});
+    }
+    var botao=e.target.closest&&e.target.closest("button");
+    if(!botao) return;
+    if(botao.id==="share") medir("share",{method:"site_header",content_type:"article",item_id:"novo_inbound"});
+    if(botao.id==="cpref") medir("citation_copy",{content_type:"article",item_id:"novo_inbound"});
+    if(botao.id==="cplink") medir("share",{method:"copy_link",content_type:"article",item_id:"novo_inbound"});
+  });
+})();
