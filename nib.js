@@ -148,10 +148,50 @@ if(tm && window.innerWidth>=760) tm.open=true;
 /* ---------- vercel web analytics ---------- */
 (function(){var s=document.createElement("script");s.defer=true;s.src="/_vercel/insights/script.js";document.head.appendChild(s);})();
 
+/* ---------- consentimento para GA4 e Clarity ---------- */
+(function(){
+  var KEY="nib_analytics_consent_v1";
+  var EN=(document.documentElement.lang||"").toLowerCase().indexOf("en")===0;
+  function atualizar(escolha){
+    if(typeof window.gtag==="function") window.gtag("consent","update",{
+      analytics_storage:escolha,
+      ad_storage:"denied",
+      ad_user_data:"denied",
+      ad_personalization:"denied"
+    });
+    if(typeof window.clarity==="function") window.clarity("consentv2",{
+      ad_Storage:"denied",
+      analytics_Storage:escolha
+    });
+  }
+  var salvo=localStorage.getItem(KEY);
+  if(salvo==="granted"||salvo==="denied"){
+    atualizar(salvo);
+    return;
+  }
+  var aviso=document.createElement("aside");
+  aviso.className="consent";
+  aviso.setAttribute("aria-label",EN?"Privacy preferences":"Preferências de privacidade");
+  aviso.innerHTML=EN
+    ? '<p>We use Analytics and behavior maps to understand what works on this site. You can accept measurement or continue without measurement cookies. See the <a href="https://b2binsiders.com.br/privacidade">Privacy Policy</a>.</p><div><button type="button" data-consent="denied">Continue without cookies</button><button class="primary" type="button" data-consent="granted">Accept measurement</button></div>'
+    : '<p>Usamos Analytics e mapas de comportamento para entender o que funciona neste site. Você pode aceitar a medição ou continuar sem cookies de medição. Veja a <a href="https://b2binsiders.com.br/privacidade">Política de Privacidade</a>.</p><div><button type="button" data-consent="denied">Continuar sem cookies</button><button class="primary" type="button" data-consent="granted">Aceitar medição</button></div>';
+  aviso.addEventListener("click",function(e){
+    var botao=e.target.closest&&e.target.closest("button[data-consent]");
+    if(!botao)return;
+    var escolha=botao.getAttribute("data-consent");
+    localStorage.setItem(KEY,escolha);
+    atualizar(escolha);
+    if(typeof window.gtag==="function") window.gtag("event","consent_update",{analytics_storage:escolha});
+    aviso.remove();
+  });
+  document.body.appendChild(aviso);
+})();
+
 /* ---------- eventos de navegacao e conversao assistida no GA4 ---------- */
 (function(){
   function medir(nome,parametros){
     if(typeof window.gtag==="function") window.gtag("event",nome,parametros||{});
+    if(typeof window.clarity==="function") window.clarity("event",nome);
   }
   document.addEventListener("click",function(e){
     var link=e.target.closest&&e.target.closest("a");
@@ -165,5 +205,20 @@ if(tm && window.innerWidth>=760) tm.open=true;
     if(botao.id==="share") medir("share",{method:"site_header",content_type:"article",item_id:"novo_inbound"});
     if(botao.id==="cpref") medir("citation_copy",{content_type:"article",item_id:"novo_inbound"});
     if(botao.id==="cplink") medir("share",{method:"copy_link",content_type:"article",item_id:"novo_inbound"});
+    if(botao.classList.contains("qa-btn")&&botao.getAttribute("aria-expanded")==="true"){
+      medir("accordion_open",{item_title:(botao.textContent||"").trim().slice(0,100),language:document.documentElement.lang});
+    }
   });
+  var atingidos={};
+  window.addEventListener("scroll",function(){
+    var total=document.documentElement.scrollHeight-window.innerHeight;
+    if(total<=0)return;
+    var profundidade=Math.round((window.pageYOffset/total)*100);
+    [25,50,75,90].forEach(function(marco){
+      if(profundidade>=marco&&!atingidos[marco]){
+        atingidos[marco]=true;
+        medir("scroll_depth",{percent_scrolled:marco,language:document.documentElement.lang});
+      }
+    });
+  },{passive:true});
 })();

@@ -576,6 +576,18 @@ figure .fig-in{border:1px solid #E7E1D4;background:linear-gradient(180deg,#F7F3E
 
 .segg .segp{opacity:1}
 .segg .segt{fill:#5c1338}
+
+/* preferencias de privacidade */
+.consent{position:fixed;z-index:1000;left:20px;right:20px;bottom:20px;max-width:780px;margin:auto;display:flex;align-items:center;gap:22px;padding:18px 20px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:#1D1320;color:#fff;box-shadow:0 18px 60px rgba(29,19,32,.34);font-family:var(--sans)}
+.consent p{flex:1;margin:0;color:#F3EDF1;font-size:14px;line-height:1.55}
+.consent a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.consent div{display:flex;gap:9px;flex-shrink:0}
+.consent button{min-height:42px;padding:0 15px;border:1px solid rgba(255,255,255,.38);border-radius:999px;background:transparent;color:#fff;font:700 13px var(--sans);cursor:pointer}
+.consent button:hover{background:rgba(255,255,255,.09)}
+.consent button.primary{border-color:var(--laranja);background:var(--laranja)}
+.consent button.primary:hover{filter:brightness(.96)}
+@media (max-width:680px){.consent{left:12px;right:12px;bottom:12px;align-items:stretch;flex-direction:column;gap:14px}.consent div{flex-direction:column}.consent button{width:100%}}
+
 /* ajustes figuras v2.1 */
 .fg-duo2{display:flex;align-items:flex-end;justify-content:center;gap:42px;padding:10px 0}
 .fg-d2c{display:flex;flex-direction:column;align-items:center;gap:18px}
