@@ -181,10 +181,14 @@ if(tm && window.innerWidth>=760) tm.open=true;
     var escolha=botao.getAttribute("data-consent");
     localStorage.setItem(KEY,escolha);
     atualizar(escolha);
-    if(typeof window.gtag==="function") window.gtag("event","consent_update",{analytics_storage:escolha});
+    if(typeof window.gtag==="function"){
+      window.gtag("event","consent_update",{analytics_storage:escolha,consent_surface:"banner"});
+      window.gtag("event","consent_"+escolha,{consent_surface:"banner"});
+    }
     aviso.remove();
   });
   document.body.appendChild(aviso);
+  if(typeof window.gtag==="function") window.gtag("event","consent_banner_view",{consent_surface:"banner"});
 })();
 
 /* ---------- eventos de navegacao e conversao assistida no GA4 ---------- */
